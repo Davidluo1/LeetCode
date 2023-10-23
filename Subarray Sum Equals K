@@ -1,0 +1,32 @@
+"""
+Given an array of integer numbers and an integer k, return the total number of subarrays whose sum equals to k.
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+Example 1:
+Input: nums = [1,1,1], k = 2
+Output: 2
+
+Example 2:
+Input: nums = [1,2,3], k = 3
+Output: 2
+"""
+
+class Solution:
+  def subarraySum(self, nums: List[int], k: int) -> int:
+    res = 0
+    prefix_sum = 0
+    d = {0 : 1}
+
+    for num in nums:
+      prefix_sum = prefix_sum + num
+      # increment if the prefix sum exist in the dictionary
+      if prefix_sum - k in d:
+        res = res + d[prefix_sum - k]
+      # store the new prefix sum in the dictionary, else increment the count of the prefix sum
+      if prefix_sum not in d:
+        d[prefix_sum] = 1
+      else:
+        d[prefix_sum] = d[prefix_sum] + 1
+
+
+    return res
