@@ -36,6 +36,7 @@ s contains only digits and may contain leading zero(s).
 class Solution:
     def numDecodings(self, s: str) -> int:
         n = len(s)
+        # initialize dp list plus 1
         dp = [0] * (n+1)
         dp[n] = 1
         for i in range(n-1, -1, -1):
