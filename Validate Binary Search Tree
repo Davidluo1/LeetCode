@@ -33,6 +33,7 @@ class Solution:
             # check right subtree
             if inorder(root.right) == False:
                 return False
+        # return false if inorder traversal outputs an incorrect list
         if inorder(root) == False:
             return False
         return True
