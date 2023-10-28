@@ -49,7 +49,9 @@ class Solution:
             while cur:
                 res.append(cur.val)
                 cur = cur.next
-
+        # edge case when lists is empty
+        if not res:
+            return
         # get sorted list
         res = sorted(res)
         head = ListNode(res[0])
