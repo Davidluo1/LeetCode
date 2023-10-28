@@ -35,4 +35,5 @@ class Solution:
     # return the root if both p and q are found
     if l_tree and r_tree:
       return root
+
     return l_tree or r_tree
