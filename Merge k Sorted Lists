@@ -40,6 +40,7 @@ The sum of lists[i].length will not exceed 104.
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         res = []
+        # edge case when lists is empty
         if len(lists) == 0:
             return
 
@@ -48,9 +49,7 @@ class Solution:
             while cur:
                 res.append(cur.val)
                 cur = cur.next
-        # edge case when lists is empty
-        if not res:
-            return
+
         # get sorted list
         res = sorted(res)
         head = ListNode(res[0])
