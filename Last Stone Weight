@@ -27,16 +27,23 @@ Constraints:
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         heap=[]
+        # create a max heap
         for i in stones:
             heapq.heappush(heap,-i)
         heapq.heapify(heap)
+
+        # calculate new heap
         while len(heap)>1:
             print(heap)
             max1=-heapq.heappop(heap)
             max2=-heapq.heappop(heap)
             print(max1,max2)
+
+            # push to the heap if the first and second biggest element are not equal to each other
             if max1!=max2:
                 heapq.heappush(heap,-(max1-max2))
+
+        # return the heap if it contains an item
         if heap:
             return -heapq.heappop(heap)
         else:
