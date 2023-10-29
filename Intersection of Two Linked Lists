@@ -21,22 +21,30 @@ intersectVal is 0 if listA and listB do not intersect.
 intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
 """
 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         print(headA.val)
         print(headB.val)
         first_set=[]
         cur=headA
-       
+        
+        # get all elements from the head A
         while cur:
             first_set.append(cur)
             cur=cur.next
         cur = headB
+        
+        # find if there is a intersection
         while cur:
             if cur in first_set:
                 print(cur.val)
                 return cur
             cur=cur.next
-
 
         return None
