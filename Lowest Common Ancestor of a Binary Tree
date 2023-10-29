@@ -14,7 +14,6 @@ p != q
 p and q will exist in the tree.
 """
 
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
