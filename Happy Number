@@ -32,6 +32,7 @@ class Solution:
             # update visited list
             visited.append(n)
             cur_sum = 0
+
             # calculate the sum of cur n
             for digit in str(n):
                 cur_sum += int(digit)*int(digit)
