@@ -20,13 +20,15 @@ n == height.length
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
+        # easy case
         if len(height) == 2:
             return min(height)
 
         left = 0      
         right = len(height) - 1
         maxWater = 0
-       
+
+        # continue until left and right pointers meet
         while left < right:
             # Get the width of the current container
             width = right - left    
