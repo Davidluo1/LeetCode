@@ -67,6 +67,7 @@ class UndergroundSystem:
         total_time, count = self.time_list[travel]
         return total_time/count
 
+
 # Your UndergroundSystem object will be instantiated and called as such:
 # obj = UndergroundSystem()
 # obj.checkIn(id,stationName,t)
