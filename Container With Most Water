@@ -38,6 +38,7 @@ class Solution:
             water = width * h
             # Update the current maximum water capacity
             maxWater = max(maxWater, water)
+
             # Move the left and right pointers towards each other
             if height[left] < height[right]:
                 left += 1
