@@ -36,9 +36,11 @@ class Solution:
             # calculate the sum of cur n
             for digit in str(n):
                 cur_sum += int(digit)*int(digit)
+
             # base case
             if cur_sum == 1:
                 return True
             # update new n
             n = cur_sum
+
         return False
