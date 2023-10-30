@@ -44,6 +44,7 @@ class UndergroundSystem:
         self.time_list = {}
 
     def checkIn(self, id: int, stationName: str, t: int) -> None:
+        # add station into the check in list
         self.check_in_list[id] = (stationName,t)
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
