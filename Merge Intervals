@@ -21,6 +21,7 @@ intervals[i].length == 2
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         res = []
+
         # sort the intervals
         intervals.sort(key=lambda x: x[0])
         prev = intervals[0]
