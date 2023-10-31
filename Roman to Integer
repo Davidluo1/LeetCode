@@ -40,6 +40,7 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 class Solution:
     def romanToInt(self, s: str) -> int:
+        # romnan numeral dictionary/memo
         Roman_numeral_dict = {
             'I': 1,
             'V': 5,
