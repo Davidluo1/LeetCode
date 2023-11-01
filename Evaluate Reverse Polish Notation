@@ -39,7 +39,7 @@ tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the ran
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         arr = []
-
+        # iterate through the tokens from left to right
         for token in tokens:
             if token == '+' :
                 # get last two elements 
