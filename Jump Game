@@ -21,7 +21,7 @@ Constraints:
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         max_step = 0
-
+        
         for i in range(len(nums)):
             # return false when max step is less than current step
             if i>max_step:
