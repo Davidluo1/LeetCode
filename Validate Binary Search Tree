@@ -21,6 +21,7 @@ class TreeNode:
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         arr = [float('-inf')]
+
         def inorder(root):
             if root is None: return None
             # check left subtree
@@ -31,9 +32,11 @@ class Solution:
                 return False
             else:
                 arr.append(root.val)
+
             # check right subtree
             if inorder(root.right) == False:
                 return False
+
         # return false if inorder traversal outputs an incorrect list
         if inorder(root) == False:
             return False
