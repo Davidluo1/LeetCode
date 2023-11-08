@@ -33,15 +33,15 @@ class Solution:
         heapq.heapify(heap)
 
         # calculate new heap
-        while len(heap)>1:
+        while len(heap) > 1:
             print(heap)
-            max1=-heapq.heappop(heap)
-            max2=-heapq.heappop(heap)
+            max1 = -heapq.heappop(heap)
+            max2 = -heapq.heappop(heap)
             print(max1,max2)
 
             # push to the heap if the first and second biggest element are not equal to each other
-            if max1!=max2:
-                heapq.heappush(heap,-(max1-max2))
+            if max1 != max2:
+                heapq.heappush(heap, -(max1-max2))
 
         # return the heap if it contains an item
         if heap:
