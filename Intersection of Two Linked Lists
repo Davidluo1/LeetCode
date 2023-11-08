@@ -29,8 +29,6 @@ Constraints:
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        print(headA.val)
-        print(headB.val)
         first_set=[]
         cur=headA
         
@@ -43,7 +41,6 @@ class Solution:
         # find if there is a intersection
         while cur:
             if cur in first_set:
-                print(cur.val)
                 return cur
             cur=cur.next
 
