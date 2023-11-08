@@ -29,19 +29,19 @@ Constraints:
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        first_set=[]
-        cur=headA
+        first_set = []
+        cur = headA
         
         # get all elements from the head A
         while cur:
             first_set.append(cur)
-            cur=cur.next
+            cur = cur.next
         cur = headB
         
         # find if there is a intersection
         while cur:
             if cur in first_set:
                 return cur
-            cur=cur.next
+            cur = cur.next
 
         return None
