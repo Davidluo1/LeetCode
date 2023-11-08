@@ -23,10 +23,10 @@ Explanation: The following cells can flow to the Pacific and Atlantic oceans, as
        [4,0] -> Atlantic Ocean
 
 Constraints:
-m == heights.length
-n == heights[r].length
-1 <= m, n <= 200
-0 <= heights[r][c] <= 105
+-m == heights.length
+-n == heights[r].length
+-1 <= m, n <= 200
+-0 <= heights[r][c] <= 105
 """
 
 
