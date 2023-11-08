@@ -25,9 +25,11 @@ class Solution:
     for num in nums:
       # prefix sum calculation
       prefix_sum = prefix_sum + num
+
       # increment if the prefix sum exist in the dictionary
       if prefix_sum - k in d:
         res += d[prefix_sum - k]
+
       # store the new prefix sum in the dictionary, else increment the count of the prefix sum
       if prefix_sum not in d:
         d[prefix_sum] = 1
