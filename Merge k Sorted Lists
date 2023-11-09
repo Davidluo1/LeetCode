@@ -51,13 +51,16 @@ class Solution:
             while cur:
                 res.append(cur.val)
                 cur = cur.next
+
         # edge case when lists is empty
         if not res:
             return
+
         # get sorted list
         res = sorted(res)
         head = ListNode(res[0])
         tail = head
+
         # get a linked list out of the sorted list
         for val in res[1:]:
             temp = ListNode(val)
