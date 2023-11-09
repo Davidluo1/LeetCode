@@ -27,6 +27,7 @@ Constraints:
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         heap=[]
+
         # create a max heap
         for i in stones:
             heapq.heappush(heap,-i)
