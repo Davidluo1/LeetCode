@@ -1,4 +1,5 @@
 """
+
 Given the root of a binary tree, determine if it is a valid binary search tree (BST).
 A valid BST is defined as follows:
 The left subtree of a node contains only nodes with keys less than the node's key.
@@ -8,6 +9,7 @@ Both the left and right subtrees must also be binary search trees.
 Constraints:
 -The number of nodes in the tree is in the range [1, 104].
 --231 <= Node.val <= 231 - 1
+
 """
 
 # Binary tree node.
@@ -27,6 +29,7 @@ class Solution:
             # check left subtree
             if inorder(root.left) == False:
                 return False
+
             # check if next item is bigger or equal to the previous item
             if arr[-1] >= root.val:
                 return False
