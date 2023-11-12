@@ -41,6 +41,7 @@ Constraints:
 
 class Solution:
     def romanToInt(self, s: str) -> int:
+        # pre-identified rome numeral dictionary
         Roman_numeral_dict = {
             'I': 1,
             'V': 5,
