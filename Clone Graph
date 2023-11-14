@@ -54,7 +54,6 @@ class Solution:
         if not node:
             return node
 
-
         visited_dict={}
         def dfs(node):
             if node in visited_dict:
@@ -67,9 +66,6 @@ class Solution:
             # traverse the current node’s neighbors and append it to the cur_copy neighbors
             for nei in node.neighbors:
                 cur_copy.neighbors.append(dfs(nei))
-
-
             return cur_copy
-
 
         return dfs(node)
