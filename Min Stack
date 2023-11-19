@@ -39,12 +39,9 @@ Constraints:
 
 
 class MinStack:
-
-
     def __init__(self):
         self.stack = []
         self.MinStack = []
-
 
     def push(self, val: int) -> None:
         self.stack.append(val)
@@ -53,25 +50,18 @@ class MinStack:
         # update min stack
         self.MinStack.append(cur_min)
 
-
     def pop(self) -> None:
         # pop the last item from stack and MinStack
         self.stack.pop()
         self.MinStack.pop()
 
-
     def top(self) -> int:
         # return last item in stack
         return self.stack[-1]
 
-
-
-
     def getMin(self) -> int:
         # return last item in min Stack
         return self.MinStack[-1]
-
-
 
 
 # Your MinStack object will be instantiated and called as such:
