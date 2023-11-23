@@ -30,3 +30,37 @@ Constraints:
 -At most 2 * 105 calls will be made to set and get.
 
 """
+
+
+class TimeMap:
+    def __init__(self):
+        self.map = {}
+
+
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        if not key in self.map:
+            self.map[key] = []
+
+
+        # update value
+        self.map[key].append([value, timestamp])
+
+
+    def get(self, key: str, timestamp: int) -> str:
+        # default return
+        if key not in self.map:
+            return ""
+
+
+        for i in range(len(self.map[key])-1,-1,-1):    
+            val, time = self.map[key][i]
+
+
+            if time <= timestamp:
+                return val
+
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
