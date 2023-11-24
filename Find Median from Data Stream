@@ -34,24 +34,19 @@ import bisect
 import heapq
 class MedianFinder:
 
-
     def __init__(self):
         self.stream = []
         self.count = 0
 
-
     def addNum(self, num: int) -> None:
         bisect.insort(self.stream, num)
         self.count += 1
-
 
     def findMedian(self) -> float:
         if self.count % 2 == 0:
             return (self.stream[self.count//2-1]+self.stream[self.count//2]) / 2
         else:
             return self.stream[self.count//2]
-
-
 
 
 # Your MedianFinder object will be instantiated and called as such:
