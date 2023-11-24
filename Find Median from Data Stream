@@ -39,6 +39,7 @@ class MedianFinder:
         self.count = 0
 
     def addNum(self, num: int) -> None:
+        # Append in sorted
         bisect.insort(self.stream, num)
         self.count += 1
 
