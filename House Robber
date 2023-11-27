@@ -24,7 +24,6 @@ Constraints:
 class Solution:
     def rob(self, nums: List[int]) -> int:
         n = len(nums)
-       
         rob_next_next = 0
         rob_next = nums[0]
        
