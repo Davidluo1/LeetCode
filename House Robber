@@ -21,4 +21,20 @@ Constraints:
 
 """
 
-
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        n = len(nums)
+       
+        rob_next_next = 0
+        rob_next = nums[0]
+       
+        for i in range(1,n):
+            # calculate the max with the next non-adjacent house and the next next non-adjacent house
+            current = max(rob_next, rob_next_next + nums[i])
+           
+            # keep track of the previous sum
+            rob_next_next = rob_next
+            # keep track of the current sum
+            rob_next = current
+           
+        return rob_next
