@@ -19,7 +19,6 @@ class TreeNode:
        self.left = left
        self.right = right
 
-
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         arr = [float('-inf')]
@@ -43,4 +42,5 @@ class Solution:
         # return false if inorder traversal outputs an incorrect list
         if inorder(root) == False:
             return False
+
         return True
