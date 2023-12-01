@@ -36,12 +36,10 @@ class Solution:
         p1 = dummy_head
         p2 = head
 
-
         # move pointer one to n position
         while n > 0:
             p2 = p2.next
             n -= 1
-
 
         # both pointers move together till p1 reaches the last node
         while p2:
@@ -50,7 +48,6 @@ class Solution:
        
         # remove the nth node
         p1.next = p1.next.next
-
 
         return dummy_head.next
 
