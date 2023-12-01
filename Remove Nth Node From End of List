@@ -33,6 +33,7 @@ class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:     
         # create a dummy head
         dummy_head = ListNode(0, head)
+
         p1 = dummy_head
         p2 = head
 
