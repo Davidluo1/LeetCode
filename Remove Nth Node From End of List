@@ -28,34 +28,29 @@ Constraints:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-
 class Solution:
-    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        if head.next == None:
-            return None
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:     
+        # create a dummy head
+        dummy_head = ListNode(0, head)
+        p1 = dummy_head
+        p2 = head
+
+
+        # move pointer one to n position
+        while n > 0:
+            p2 = p2.next
+            n -= 1
+
+
+        # both pointers move together till p1 reaches the last node
+        while p2:
+            p1 = p1.next
+            p2 = p2.next
        
-        cur = head
-        length = 0
+        # remove the nth node
+        p1.next = p1.next.next
 
-        # get the length of the linked list
-        while cur != None:
-            cur = cur.next
-            length += 1
 
-        cur = head
-        prev = None
-       
-        # move to nth position from end of linked list
-        for i in range(length-n):
-            prev = cur
-            cur = cur.next
-
-        # remove nth node
-        if prev == None:
-            head = head.next
-        else:
-            prev.next = cur.next
-                   
-        return head
+        return dummy_head.next
 
 
