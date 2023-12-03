@@ -21,7 +21,7 @@ Constraints:
 
 """
 
-
+Solution 1:
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -52,6 +52,7 @@ class Solution:
         return dummy_head.next
 
 
+Solution 2:
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
