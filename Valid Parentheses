@@ -29,7 +29,6 @@ Constraints:
 class Solution:
     def isValid(self, s: str) -> bool:
         # edge cases when the item length is odd  
-
         if len(s)%2 != 0:
             return False
 
@@ -39,13 +38,13 @@ class Solution:
         Since it only iterates the string once, the runtime should be O(N), with space time of O(N).
         """
 
-
         stack = []
         parentheses_dict = {
             '(': ')',
             '{': '}',
             '[': ']'
         }
+
         for bracket in s:
             if bracket in parentheses_dict:
                 stack.append(bracket)
