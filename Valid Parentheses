@@ -24,3 +24,32 @@ Constraints:
 -s consists of parentheses only '()[]{}'.
 
 """
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        # edge cases when the item length is odd  
+
+        if len(s)%2 != 0:
+            return False
+
+        """
+        Method:
+        Use a parentheses dictionary to store an open bracket with its corresponding closing bracket. Append the open bracket to a stack, pop it off if its corresponding closing bracket is found on the next bracket. If all open brackets are matched, the size of the item should be empty.
+        Since it only iterates the string once, the runtime should be O(N), with space time of O(N).
+        """
+
+
+        stack = []
+        parentheses_dict = {
+            '(': ')',
+            '{': '}',
+            '[': ']'
+        }
+        for bracket in s:
+            if bracket in parentheses_dict:
+                stack.append(bracket)
+            elif len(stack) == 0 or bracket != parentheses_dict[stack.pop()]:
+                return False
+
+        return len(stack) == 0
