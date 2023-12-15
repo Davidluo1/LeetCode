@@ -26,6 +26,7 @@ Constraints:
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         """
+
         nums = [1,2]
         output = [[],[1],[2],[1,2]]
 
@@ -34,8 +35,8 @@ class Solution:
 
         From this I can see there is a partern where an addtional input will double the amount of output, and half of the new output is equal to the previous output. For the new subsets generated in the output are the combination of old output with the new input. Therefore, the next added input will generate the subsets of old output and add all the old subset with the new input.
         The runtime will be O(2N) by adding the old subsets to the new generated subsets. The space time wil be O(2^N) by generating 2 to the n number of subset base on the input.
+        
         """
-
 
         res = [[]]
 
