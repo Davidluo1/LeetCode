@@ -17,3 +17,45 @@ Constraints:
 -It is guaranteed that the answer is unique.
 
 """
+
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        """
+        To achieve runtime O(N), iterate the nums list only once.
+        Information to acquire: total number of the same integer for each integer in the nums list.
+        Method: dictionary, update its count while iterating the nums list.
+
+        Issue: output the k most frequent elements, dictionary is unsorted.
+        After sorting the dictionary from the highest count to the lowest, it runs O(N).
+
+        Similar question to output k biggest number of a list. Used solution of sliding window
+        precedure: create a k length list and update the list while iterate through the list, the final elements in the list will be the k largest elements.
+        """
+
+        count_dictionary = {}
+        res = []
+        length = 0
+
+        for ele in nums:
+            if ele not in count_dictionary.keys():
+                count_dictionary[ele] = 1
+                length += 1
+            else:
+                count_dictionary[ele] += 1
+        
+        sorted_dictionary = sorted(count_dictionary.items(), key=lambda x:x[1])
+        
+        # print(count_dictionary)
+        # print(sorted_dictionary)
+        # print(type(sorted_dictionary))
+
+        for i in range(length-1,-1,-1):
+            if k == 0: break
+            res.append(sorted_dictionary[i][0])
+            k -= 1
+
+        return res
+
+        
+        
