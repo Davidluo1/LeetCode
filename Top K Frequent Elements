@@ -22,6 +22,7 @@ Constraints:
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         """
+
         To achieve runtime O(N), iterate the nums list only once.
         Information to acquire: total number of the same integer for each integer in the nums list.
         Method: dictionary, update its count while iterating the nums list.
@@ -31,6 +32,7 @@ class Solution:
 
         Similar question to output k biggest number of a list. Used solution of sliding window
         precedure: create a k length list and update the list while iterate through the list, the final elements in the list will be the k largest elements.
+
         """
 
         count_dictionary = {}
