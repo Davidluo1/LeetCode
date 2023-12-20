@@ -43,6 +43,7 @@ class Solution:
         n = len(heights)
         match = []
         temp_dict = {}
+
         for i in range(n):
             left_to_right_biggest = 0
             left_to_right_match = []
