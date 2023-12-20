@@ -59,7 +59,6 @@ class Solution:
                         left_to_right_match = [[i,j]]
                         left_to_right_biggest = heights[i][j]
 
-
                 if heights[j][i] >= top_to_bottom_biggest:
                     if heights[j][i] == top_to_bottom_biggest:
                         top_to_bottom_match.append([j,i])
