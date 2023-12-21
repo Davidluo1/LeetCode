@@ -25,6 +25,7 @@ class KthLargest:
         self.k = k
         self.heap = nums
         heapq.heapify(self.heap)
+
         # removing small items from heap until the k size of heap
         while len(self.heap) > k:
             heapq.heappop(self.heap)
@@ -32,6 +33,7 @@ class KthLargest:
     def add(self, val: int) -> int:
         # heap push the element into the max heap
         heapq.heappush(self.heap, val)
+
         # remove the smallest if the length of heap is bigger than k
         if len(self.heap) > self.k:
             heapq.heappop(self.heap)
