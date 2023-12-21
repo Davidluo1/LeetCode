@@ -32,8 +32,8 @@ Constraints:
 
 import bisect
 import heapq
-class MedianFinder:
 
+class MedianFinder:
     def __init__(self):
         self.stream = []
         self.count = 0
