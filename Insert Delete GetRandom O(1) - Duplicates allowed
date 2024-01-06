@@ -59,13 +59,7 @@ class RandomizedCollection:
         self.collection_dict[val] = 1 
         return True
 
-        # try:
-        #     self.collection_dict[val]
-        #     self.collection_list.append(val)
-        #     return False
-        # except:
-        #     self.collection_list.append(val)
-        #     return True
+
 
     def remove(self, val: int) -> bool:
         if self.collection_dict.get(val):
@@ -77,12 +71,6 @@ class RandomizedCollection:
         else:
             return False
         
-        # try:
-        #     self.collection_list.remove(val)
-        #     del self.collection_dict[val]
-        #     return True
-        # except:
-        #     return False
 
     def getRandom(self) -> int:
         return random.choice(self.collection_list)
