@@ -43,7 +43,6 @@ Constraints:
 
 
 class RandomizedCollection:
-
     def __init__(self):
         self.collection_list = []
         self.collection_dict = {}
