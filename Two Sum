@@ -25,3 +25,29 @@ Constraints:
 -Only one valid answer exists.
 
 """
+
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+        This question is very similar to one question: Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k. I could use the same method calculating the prefix sum to check if there are two numbers add up to the target. Runtime of O(N), with space time of O(N).
+        Since the output is the index of the elements, when adding new prefix sum in the dictionary, I need to include the index as well.
+        """
+
+        # method 1
+        d = {}
+        
+        for i, value in enumerate(nums):
+            prefix_sum = target - value
+            if prefix_sum in d:
+                for x,y in d.items():
+                    print(x,y)
+                return [d[prefix_sum], i]
+            d[nums[i]] = i
+
+        # method 2
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i,j]
+
