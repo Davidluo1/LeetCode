@@ -22,3 +22,53 @@ Constraints:
 --104 <= target <= 104
 
 """
+
+
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> bool:
+        """
+        Since this is the advance problem that includes duplicate values, to avoid checking each duplicate values everytime, simply pass on to the next left or right value when sees a duplicate.
+
+
+        """
+        start, end = 0, len(nums) - 1
+        duplicate = {}
+
+        while start <= end:
+            mid = (start + end) // 2
+            if nums[mid] == target:
+                return True
+
+            # check duplicate
+            # if duplicate.get(nums[mid]):
+            #     if nums[mid] > nums[end]:
+            #         end -= 1
+            #     else:
+            #         start += 1
+            #     continue
+            # duplicate[nums[mid]] = True
+
+
+            if nums[start] == nums[mid]:
+                start += 1
+                continue
+
+
+            # Check if start half is sorted
+            if nums[start] <= nums[mid]:
+                print(start, mid, end)
+                # check if target is in left half
+                if nums[start] <= target <= nums[mid]:
+                    end = mid - 1
+                else:
+                    start = mid + 1
+                print(start, mid, end)
+            else:
+                # check if target is in right half
+                if nums[mid] < target <= nums[end]:
+                    start = mid + 1
+                else:
+                    end = mid - 1
+
+        return False
