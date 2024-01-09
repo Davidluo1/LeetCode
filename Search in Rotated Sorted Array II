@@ -39,6 +39,7 @@ class Solution:
             if nums[mid] == target:
                 return True
 
+            # skip when duplicate found
             if nums[start] == nums[mid]:
                 start += 1
                 continue
