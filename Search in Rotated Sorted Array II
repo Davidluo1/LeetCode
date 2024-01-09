@@ -28,10 +28,11 @@ Constraints:
 class Solution:
     def search(self, nums: List[int], target: int) -> bool:
         """
+
         Since this is the advance problem that includes duplicate values, to avoid checking each duplicate values everytime, simply pass on to the next left or right value when sees a duplicate.
 
-
         """
+
         start, end = 0, len(nums) - 1
         duplicate = {}
 
@@ -39,16 +40,6 @@ class Solution:
             mid = (start + end) // 2
             if nums[mid] == target:
                 return True
-
-            # check duplicate
-            # if duplicate.get(nums[mid]):
-            #     if nums[mid] > nums[end]:
-            #         end -= 1
-            #     else:
-            #         start += 1
-            #     continue
-            # duplicate[nums[mid]] = True
-
 
             if nums[start] == nums[mid]:
                 start += 1
