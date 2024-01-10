@@ -33,6 +33,7 @@ class Solution:
                 # assume this cell is surrounded by island from all sides
                 if grid[i][j] == 1:
                     perimeter += 4
+
                     # subtract one for each intersection of each island
                     # check boundary
                     if i+1 < len(grid):
