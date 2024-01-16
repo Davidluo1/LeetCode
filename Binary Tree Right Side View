@@ -36,7 +36,7 @@ class Solution:
         Solution: Seach on the left child, if it is none, seach on the right child. Append all the node value via the traversal, and return the list when the node does not have any child.
         """
 
-        # base case
+        # base/edge case
         if not root:
             return []
 
