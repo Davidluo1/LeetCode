@@ -51,6 +51,7 @@ class Solution:
         while cur.right is not None:
             cur = cur.right
             output.append(cur.val)
+
             if cur.right is None:
                 if cur.left is not None:
                     cur = cur.left
