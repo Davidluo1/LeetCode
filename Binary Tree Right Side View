@@ -75,7 +75,7 @@ class Solution:
         def helper(n, h):
             if n is None:
                 return
-            if len(ret) <= h:
+            if len(output) <= h:
                 output.append(0)
             output[h] = n.val
             # move to the next level if a right child is found, otherwise, left child
