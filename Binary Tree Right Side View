@@ -28,33 +28,62 @@ Constraints:
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         """
         Patern: return the right nodes/child
-        Solution: Seach on the left child, if it is none, seach on the right child. Append all the node value via the traversal, and return the list when the node does not have any child.
+        Solution: tree search by level, store the right most child
         """
 
-        # base/edge case
+        # base case
         if not root:
             return []
 
         output = [root.val]
         cur = root
 
-        if cur.right is None:
-            cur = cur.left
-            if cur is not None:
-                output.append(cur.val)
+        # if cur.right is None:
+        #     cur = cur.left
+        #     if cur is not None:
+        #         output.append(cur.val)
 
-        while cur.right is not None:
-            cur = cur.right
-            output.append(cur.val)
+        # while cur.right is not None:
+        #     cur = cur.right
+        #     output.append(cur.val)
+        #     if cur.right is None:
+        #         if cur.left is not None:
+        #             cur = cur.left
+        #             output.append(cur.val)
 
-            if cur.right is None:
-                if cur.left is not None:
-                    cur = cur.left
-                    output.append(cur.val)
+        # while True:
+        #     # check right child
+        #     if cur.right:
+        #         cur = cur.right
+        #         output.append(cur.val)
+        #     # check right child
+        #     elif cur.left:
+        #         cur = cur.left
+        #         output.append(cur.val)
+        #     # no child
+        #     else:
+        #         break
+        
+        # return output
 
-        return output
+        ret = []
+        # update and add the current level node to its left most node val
+        def helper(n, h):
+            if n is None:
+                return
+            if len(ret) <= h:
+                ret.append(0)
+            ret[h] = n.val
+            # move to the next level if a right child is found, otherwise, left child
+            if n.left is not None:
+                helper(n.left, h + 1)
+            if n.right is not None:
+                helper(n.right, h + 1)
+        
+        helper(root, 0)
+        return ret
+
