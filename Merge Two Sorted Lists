@@ -59,9 +59,7 @@ class Solution:
 
 
         cur_list1, cur_list2 = list1, list2
-
         merged_list = ListNode()
-
         head = merged_list
 
         while cur_list1 and cur_list2:
