@@ -25,3 +25,58 @@ Constraints:
 - Both list1 and list2 are sorted in non-decreasing order.
 
 """
+
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Two sorted linked lists, ordered
+        Number of nodes could be 0
+        Value from -100 to 100
+
+        Solution: Compare each node of the linked lists to create a merged sorted linked list. If one of the linked list reaches null, form the merged sorted linked list with the remaining linked list.
+        """
+
+        """ 
+        easy cases:
+        -Both linked list are empty
+        -one of the linked list is empty
+        """
+
+        if list1 == None and list2 == None:
+            return None
+        elif list1 == None:
+            return list2
+        elif list2 == None:
+            return list1
+
+
+        cur_list1, cur_list2 = list1, list2
+
+        merged_list = ListNode()
+
+        head = merged_list
+
+        while cur_list1 and cur_list2:
+            if cur_list1.val <= cur_list2.val:
+                node = ListNode(cur_list1.val) 
+                merged_list.next = node
+                cur_list1 = cur_list1.next
+            else:
+                node = ListNode(cur_list2.val) 
+                merged_list.next = node
+                cur_list2 = cur_list2.next
+            merged_list = merged_list.next
+
+
+        if cur_list1 or cur_list2:
+            merged_list.next = cur_list1 if cur_list1 else cur_list2
+
+
+        return head.next
