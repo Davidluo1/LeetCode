@@ -57,7 +57,6 @@ class Solution:
         elif list2 == None:
             return list1
 
-
         cur_list1, cur_list2 = list1, list2
         merged_list = ListNode()
         head = merged_list
@@ -74,9 +73,7 @@ class Solution:
                 cur_list2 = cur_list2.next
             merged_list = merged_list.next
 
-
         if cur_list1 or cur_list2:
             merged_list.next = cur_list1 if cur_list1 else cur_list2
-
 
         return head.next
