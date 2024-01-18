@@ -73,6 +73,7 @@ class Solution:
                 cur_list2 = cur_list2.next
             merged_list = merged_list.next
 
+        # add the remaining linked list
         if cur_list1 or cur_list2:
             merged_list.next = cur_list1 if cur_list1 else cur_list2
 
