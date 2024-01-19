@@ -14,9 +14,9 @@ Output
 [null, true, false, true, 2, true, false, 2]
 
 Constraints:
---231 <= val <= 231 - 1
--At most 2 * 105 calls will be made to insert, remove, and getRandom.
--There will be at least one element in the data structure when getRandom is called.
+- -231 <= val <= 231 - 1
+- At most 2 * 105 calls will be made to insert, remove, and getRandom.
+- There will be at least one element in the data structure when getRandom is called.
 """
 
 
