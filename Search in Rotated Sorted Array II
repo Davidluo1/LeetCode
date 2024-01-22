@@ -15,10 +15,10 @@ Input: nums = [2,5,6,0,0,1,2], target = 3
 Output: false
  
 Constraints:
--1 <= nums.length <= 5000
---104 <= nums[i] <= 104
--nums is guaranteed to be rotated at some pivot.
---104 <= target <= 104
+- 1 <= nums.length <= 5000
+- -104 <= nums[i] <= 104
+- nums is guaranteed to be rotated at some pivot.
+- -104 <= target <= 104
 
 """
 
