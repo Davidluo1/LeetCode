@@ -18,3 +18,37 @@ Constraints:
 The number of nodes in the list is the range [0, 5000].
 -5000 <= Node.val <= 5000
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Reverse the pointer of each node backward. 
+
+        linked list could be empty
+        node only have one attribute to other node
+
+        solution: use three pointers, one track the previous node, one link the next node to the previous node, and one guide to the next node.
+        """
+
+        # base/edge case
+        if not head:
+            return None
+
+        prev = None
+        cur = head
+        nex = cur.next
+
+        while cur:
+            cur.next = prev
+            prev = cur
+            cur = nex
+            if nex:
+                nex = nex.next
+
+        return prev
