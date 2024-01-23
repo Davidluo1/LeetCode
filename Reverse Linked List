@@ -39,6 +39,8 @@ class Solution:
         solution: use three pointers, one track the previous node, one link the next node to the previous node, and one guide to the next node.
         """
 
+        # Method 1
+
         # base/edge case
         if not head:
             return None
@@ -55,3 +57,24 @@ class Solution:
                 nex = nex.next
 
         return prev
+
+
+        # Method 2
+
+        def reverse(head):
+
+            # If head is empty or has reached the list end
+            if head is None or head.next is None:
+                return head
+    
+            # Reverse the rest list
+            rest = reverse(head.next)
+    
+            # Put first element at the end
+            head.next.next = head
+            head.next = None
+    
+            # Fix the header pointer
+            return rest
+
+        return reverse(head)
