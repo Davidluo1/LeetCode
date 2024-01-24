@@ -33,3 +33,30 @@ Constraints:
 - -1000 <= nums[i] <= 1000
 
 """
+
+
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        """
+        Goal: find the pivot index of an array, the sum of all the numbers strictly to the left of the index is equal to the sum of right index.
+
+        length of the nums list could be 1
+        numbers could be negative
+
+        Task:
+        Keep track of the right and left numbers sum.
+
+        Solution: Assume one side of the sum is the total of nums array, taking one number out to the other side will increase the sum of that side and reduce the sum of current side. Check each swap of the number, if left and right sides are equal, return the current index as the pivot index. Otherwise when it reaches to the last index of the list, return -1.
+        """
+
+
+        leftSum, rightSum = 0, sum(nums)
+
+        for i, val in enumerate(nums):
+            rightSum -= val
+
+            if leftSum == rightSum:
+                return i   
+            leftSum += val
+            
+        return -1   
