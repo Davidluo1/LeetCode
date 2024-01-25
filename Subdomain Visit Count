@@ -28,3 +28,55 @@ Constraints:
 - d1i, d2i, and d3i consist of lowercase English letters.
 
 """
+
+
+
+class Solution:
+    def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
+        """
+        Goal: count the paried domains
+
+        edge case:
+        - cpdomains length must be at least one
+        - domain length could be less than 3
+        - two formats "rep d1.d2.d3" or "rep d1.d2"
+        - .co / .com / .ca / .us / .network
+
+        Since we need to sum up the paried domains, it requires updating the count of the paried doamins when iterate through all the cpdomains. Dicitonary is a great method to keep track of the domain counts.
+
+        Solution: Create a dictionary to store the paired domains. Use string split to get the two formats of domain and update its count in the dicionary. Add the paried domains from the dictionary into a list fomated as count and domain.
+        """
+
+        # helper function to update the memo dictionary
+        def update(number, domain):
+            if memo_dictionary.get(domain):
+                memo_dictionary[domain] += number
+            else:
+                memo_dictionary[domain] = number
+
+        memo_dictionary = {}
+        output = []
+
+        for domain in cpdomains:
+            # edge case
+            if len(domain) < 6:
+                continue
+
+            rep, d = domain.split(' ')
+            
+            if len(d.split('.')) > 2:
+                y = d[d.index('.')+1:]
+                print(y)
+                update(int(rep), y)
+                update(int(rep), y[y.index('.')+1:])
+                update(int(rep), d)
+            else:
+                update(int(rep), d[d.index('.')+1:])
+                update(int(rep), d)
+        
+        for domain, count in memo_dictionary.items():
+            output.append(str(count) + ' ' + domain)
+        print(output)
+
+        return output
+
