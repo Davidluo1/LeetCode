@@ -17,3 +17,31 @@ The number of nodes in the tree is in the range [0, 104].
 -100 <= Node.val <= 100
 
 """
+
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        """
+        Goal: return the maximum depth of the binary tree
+
+        Edge case:
+        - number of node in the tree could be 0
+        - node's value could be negative
+
+        Solution: Recursively call the maxDepth function to the current root's left and right child. Return the maximum of the subtree and add one to include the level of the begining root.
+        """
+
+        if root is None:
+            return 0
+        
+        l_depth = self.maxDepth(root.left)
+        r_depth = self.maxDepth(root.right)
+ 
+        return max(l_depth, r_depth) + 1
