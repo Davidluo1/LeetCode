@@ -37,3 +37,50 @@ Constraints:
 - At most 5000 calls will be made to visit, back, and forward
 
 """
+
+
+class BrowserHistory:
+    """
+    Create a list to store visited urls. Use its index to track back and 
+    forward. If back steps cause the index to be negative, return url at 
+    index 0. If forward steps cause the index to be greater than the length 
+    of the list, return the last item. 
+    """
+
+    def __init__(self, homepage: str):
+        self.home_page_memo = [homepage]
+        self.cur = 0
+
+    def visit(self, url: str) -> None:
+        self.home_page_memo = self.home_page_memo[:self.cur+1]
+        self.cur += 1
+        self.home_page_memo.append(url)
+
+    def back(self, steps: int) -> str:
+        """
+        only return up to x steps
+        """
+        if steps <= self.cur:
+            self.cur-=steps
+        else:
+            self.cur=0
+   
+        return self.home_page_memo[self.cur]
+
+    def forward(self, steps: int) -> str:
+        """
+        only forward up to x steps
+        """
+        if self.cur + steps < len(self.home_page_memo):
+            self.cur += steps
+        else:
+            self.cur = len(self.home_page_memo)-1
+        return self.home_page_memo[self.cur]
+        
+
+
+# Your BrowserHistory object will be instantiated and called as such:
+# obj = BrowserHistory(homepage)
+# obj.visit(url)
+# param_2 = obj.back(steps)
+# param_3 = obj.forward(steps)
