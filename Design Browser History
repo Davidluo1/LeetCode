@@ -29,7 +29,6 @@ browserHistory.back(7);                   // You are in "google.com", you can mo
  
 
 Constraints:
-
 1 <= homepage.length <= 20
 1 <= url.length <= 20
 1 <= steps <= 100
