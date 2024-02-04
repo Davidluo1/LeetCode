@@ -36,8 +36,8 @@ class Solution:
 
         max_profit = 0
         min_price = float('inf')
-        i = 0
 
+        i = 0
         while i < len(prices):
             # update current min price
             min_price = min(min_price, prices[i])
