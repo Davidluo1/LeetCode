@@ -28,7 +28,6 @@ browserHistory.forward(2);                // You are in "linkedin.com", you cann
 browserHistory.back(2);                   // You are in "linkedin.com", move back two steps to "facebook.com" then to "google.com". return "google.com"
 browserHistory.back(7);                   // You are in "google.com", you can move back only one step to "leetcode.com". return "leetcode.com"
  
-
 Constraints:
 - 1 <= homepage.length <= 20
 - 1 <= url.length <= 20
