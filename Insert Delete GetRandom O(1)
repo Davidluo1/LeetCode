@@ -14,7 +14,6 @@ Input
 Output
 [null, true, false, true, 2, true, false, 2]
 
-
 Constraints:
 - -231 <= val <= 231 - 1
 - At most 2 * 105 calls will be made to insert, remove, and getRandom.
