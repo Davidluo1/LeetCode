@@ -57,8 +57,6 @@ class Solution:
         #             negative.insert(2,num)
                     
 
-        # print(positive)
-        # print(negative)
         # return max(positive[0]*positive[1]*positive[2], positive[0]*
         # negative[0]*negative[1])
         
