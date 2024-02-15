@@ -16,3 +16,39 @@ Constraints:
 - s[i] is a printable ascii character.
 
 """
+
+
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+
+        Goal: Reverse the input string list
+
+        Must be in O(1) extra memory
+        Contains upper and lower characters
+        Length of the string list must be at least one.
+
+        Easy case:
+        - string list is 1
+        
+        Solution:
+        - use reverse built-in function to reverse the string list
+        - use list index to assign the characters in the string list reverse
+        - use two pointer from left and right, swap each element until both pointers meet
+        
+        Runtime: O(N)
+        Spacetime: O(1)
+        """
+        
+        # if len(s) != 1:
+        #     s[:] = s[::-1]
+        
+        s.reverse()
+
+        # j = len(s)-1
+        # i = 0
+        # while i < j:
+        #   s[i], s[j] = s[j], s[i]
+        #   i += 1
+        #   j -= 1
