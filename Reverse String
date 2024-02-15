@@ -40,12 +40,15 @@ class Solution:
         Runtime: O(N)
         Spacetime: O(1)
         """
-        
+
+        # Method 1
         # if len(s) != 1:
         #     s[:] = s[::-1]
-        
+
+        # Method 2
         s.reverse()
 
+        # Method 3
         # j = len(s)-1
         # i = 0
         # while i < j:
