@@ -59,6 +59,7 @@ class BrowserHistory:
         """
         only return up to x steps
         """
+
         if steps <= self.cur:
             self.cur-=steps
         else:
