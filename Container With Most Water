@@ -36,6 +36,7 @@ class Solution:
         while left < right:
             # Get the width of the current container
             width = right - left    
+
             # Get the min height of the container
             h = min(height[left], height[right])
             # Calculate the current max water capacity
