@@ -46,6 +46,7 @@ class Solution:
             # Single digit
             if s[i] != '0':
                 dp[i] = dp[i+1]
+
             # Double digits
             if i+1 < n and (s[i] == '1' or s[i] == '2' and s[i+1] <= '6'):
                 dp[i] += dp[i+2]
