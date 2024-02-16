@@ -39,6 +39,7 @@ class Solution:
 
             # Get the min height of the container
             h = min(height[left], height[right])
+
             # Calculate the current max water capacity
             water = width * h
             # Update the current maximum water capacity
