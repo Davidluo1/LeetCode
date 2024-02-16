@@ -53,6 +53,7 @@ class UndergroundSystem:
         # get station and check in time from check in list
         station, check_in_time = self.check_in_list.pop(id)
         travel = (station, stationName)
+
         # calculate time t from check in time
         time = t - check_in_time
 
