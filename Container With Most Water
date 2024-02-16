@@ -42,6 +42,7 @@ class Solution:
 
             # Calculate the current max water capacity
             water = width * h
+
             # Update the current maximum water capacity
             maxWater = max(maxWater, water)
 
