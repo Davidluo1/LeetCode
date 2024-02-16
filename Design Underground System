@@ -66,6 +66,7 @@ class UndergroundSystem:
 
     def getAverageTime(self, startStation: str, endStation: str) -> float:
         travel = (startStation, endStation)
+
         # get total time and count from the time list
         total_time, count = self.time_list[travel]
         return total_time/count
