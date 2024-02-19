@@ -33,3 +33,34 @@ Constraints:
 - The node to be deleted is in the list and is not a tail node.
 
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def deleteNode(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+
+        Not be given access to the first node of the head
+        Given node is not the last node in the linked list
+
+        Given a node before the last, it have .next link to the next node but 
+        does not have any access to the previous node. Thus, the next node will 
+        be the node to delete/skip. Copy the value of the next node to the given 
+        node and skip the next node by reconnect the given node to the next.next 
+        node. 
+
+        Runtime: O(1)
+        Spcetime: O(1)
+        """
+        
+        # copy next node's value
+        node.val, node.next.val = node.next.val, node.val
+        # skip the next node
+        node.next = node.next.next
