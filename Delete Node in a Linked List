@@ -60,7 +60,8 @@ class Solution:
         Spcetime: O(1)
         """
         
-        # copy next node's value
+        # swap current node's value with the next node's value
         node.val, node.next.val = node.next.val, node.val
+
         # skip the next node
         node.next = node.next.next
