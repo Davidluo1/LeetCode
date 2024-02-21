@@ -57,6 +57,7 @@ class Solution:
         Spacetime: O(1)
         """
 
+        # Easy case
         if not head:
             return None
 
