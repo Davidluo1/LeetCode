@@ -63,6 +63,7 @@ class Solution:
         hash_table = {}
         cur = head
 
+        # Create a new node and copy the current node into a dictionary
         while cur:
             hash_table[cur] = Node(cur.val)
             cur = cur.next
