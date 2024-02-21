@@ -32,3 +32,54 @@ Constraints:
 - Node.random is null or is pointing to some node in the linked list.
 
 """
+
+
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+"""
+
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        """
+        Goal: deep copy the input linked list
+
+        Easy case:
+        - when there is no node in the linked list / head is null
+
+        Steps:
+        - Copy each node in the linked list to a hash table
+        - Assign each node.next and node.random from the copy in the hash table
+        
+        {node(7):7, node(13):13, node(11):11, node(10):10, node(1):1}
+
+        Runtime: O(n)
+        Spacetime: O(1)
+        """
+
+        if not head:
+            return None
+
+        hash_table = {}
+        cur = head
+
+        while cur:
+            hash_table[cur] = Node(cur.val)
+            cur = cur.next
+
+        cur = head
+
+        while cur:
+            # new node.next = original node.next
+            hash_table[cur].next = hash_table.get(cur.next)
+            # new node.random = original node.random
+            hash_table[cur].random = hash_table.get(cur.random)
+            cur = cur.next
+
+        return hash_table[head]
+      
+        
