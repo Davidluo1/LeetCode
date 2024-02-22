@@ -32,3 +32,47 @@ Constraints:
 - All the calls to pop and peek are valid.
 
 """
+
+
+class MyQueue:
+    """
+    May stimulate a stack using a list or deque
+    [1]
+    [1,2]
+    [2]
+
+    Push value x is betweeen 1 and 9
+    """
+
+    def __init__(self):
+        self.queue = []
+
+    def push(self, x: int) -> None:
+        """Add element to the back of the queue"""
+        # list append puts the new item to the back
+        self.queue.append(x)
+
+    def pop(self) -> int:
+        """Remove the element from the front of the queue, return the element"""
+        # list pop(0) removes the front element
+        return self.queue.pop(0)
+
+    def peek(self) -> int:
+        """Return the element at the front of the queue"""
+        # list index 0 is the front element of the queue
+        return self.queue[0]
+
+    def empty(self) -> bool:
+        """Check if the queue is empty, return true, false otherwise"""
+        # list length of 0 represent as empty
+        if len(self.queue) == 0:
+            return True
+        return False
+
+
+# Your MyQueue object will be instantiated and called as such:
+# obj = MyQueue()
+# obj.push(x)
+# param_2 = obj.pop()
+# param_3 = obj.peek()
+# param_4 = obj.empty()
