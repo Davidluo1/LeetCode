@@ -2,3 +2,72 @@
 
 
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Goal: get the total of the two linked list integer value, find its sum, and create a node in reverse
+
+        Steps:
+        1. Iterate through both linked list and find out their integer sum
+        2. Iterate the string sum reversly and create linked list
+        3. return head of the new linked list
+
+        Runtime: O(3N)
+        Spacetime: O(N)
+        """
+
+        l1_ptr = l1
+        l2_ptr = l2
+        l1s = ""
+        l2s = ""
+
+        while l1_ptr and l2_ptr:
+            l1s += str(l1_ptr.val)
+            l2s += str(l2_ptr.val)
+            l1_ptr = l1_ptr.next
+            l2_ptr = l2_ptr.next
+        if l1_ptr:
+            while l1_ptr:
+                l1s += str(l1_ptr.val)
+                l1_ptr = l1_ptr.next
+        if l2_ptr:
+            while l2_ptr:
+                l2s += str(l2_ptr.val)
+                l2_ptr = l2_ptr.next
+
+
+        # cur = l1
+        # l1s = ""
+        # while cur:
+        #     l1s += str(cur.val)
+        #     cur = cur.next
+        
+        # cur = l2
+        # l2s = ""
+        # while cur:
+        #     l2s += str(cur.val)
+        #     cur = cur.next
+
+        #print(l1s, l2s)
+        total = int(l1s[::-1]) + int(l2s[::-1])
+        #print(total)
+
+        temp = str(total)
+        new_node = ListNode(temp[-1])
+        head = new_node
+        cur = head
+        for i in range(len(temp)-2,-1,-1):
+            new_node = ListNode(temp[i])
+            cur.next = new_node
+            cur = new_node
+
+        return head
+
+    
