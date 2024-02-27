@@ -1,8 +1,6 @@
 """
 
-Given an integer array nums, return the length of the longest strictly increasing 
-subsequence
-Subsequence
+Given an integer array nums, return the length of the longest strictly increasing subsequence.
 A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
 Example 1:
@@ -17,7 +15,8 @@ Output: 4
 Example 3:
 Input: nums = [7,7,7,7,7,7,7]
 Output: 1
- 
+
+Follow up: Can you come up with an algorithm that runs in O(n log(n)) time complexity?
 
 Constraints:
 - 1 <= nums.length <= 2500
