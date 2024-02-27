@@ -23,3 +23,106 @@ Constraints:
 - -104 <= nums[i] <= 104
 
 """
+
+
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        """
+        Goal: find the longest length of increasing subsequence
+
+        The nums list length has to be at least one
+        Elements in nums list could be negative
+
+        Easy case:
+        - when the nums list length is 1, return 1
+
+        Iterate through the list from left to right, use max function to keep 
+        track of the current longest subsequence. It will require two lists to 
+        store and compare the length of subsequence while traverse through the 
+        nums list.
+
+        Runtime: O(N)
+        Spacetime: O(2N)
+
+        [10] []
+        [10]
+        [10] [10]
+        [9] 
+        [9] [10]    same length, comapre the right most number
+        [9] [9]
+        [2]
+        [2] [9]
+        [2]
+        [5] [2]     add the number to the list if the current number is bigger than the prev right most number
+        [5] [2,5]   replace the right most number if it is smaller than the current number
+        [3]
+        [3] [2,3]
+        [2,3]
+        [2,3,7] [2,3]
+        [2,3,7,101] [2,3,7]
+        [2,3,7,18] [2,3,7,101]
+        [2,3,7,18]
+
+        [0] []
+        [0,1] []
+        [0,1] [0,1]
+        [0,1,3] [0,1]
+        [0,1,2] [0,1,3]        replace the right most number if the current number is smaller than the right most but bigger than the second right most
+        [0,1,2,3] [0,1,2]
+        [0,1,2,3]
+
+        [10]
+        [9]
+        [2]
+        [2,5]
+        [2,3]
+        [2,3,7]
+        [2,3,7,101]
+        [2,3,7,18]
+        Steps:
+        
+        [3,5,6,19]
+        [2,5,19]
+        [4,19]
+        [5,6,7,12]
+        """
+
+        if len(nums) == 1:
+            return 1
+
+        cur = [nums[0]]
+        """
+        [2,4,5,6,7,12]
+        [2,4,5,6,7,12]
+        [3,5,6] 2
+        [2,5,6] 5
+
+        [2,4,5,6,7,12]
+        """
+        for i in range(1,len(nums)):
+            if nums[i] > cur[-1]:
+                cur.append(nums[i])
+            else:
+                left, right = 0, len(cur)-1
+                while left < right:
+                    mid = (left+right) // 2
+                    if cur[mid] < nums[i]:
+                        left = mid + 1
+                    else:
+                        right = mid
+                cur[left] = nums[i]
+
+        return len(cur)
+
+        cur = [nums[0]]
+
+        for i in range(1,len(nums)):
+            if nums[i] > cur[-1]:
+                cur.append(nums[i])
+            else:
+                for j in range(len(cur)):
+                    if nums[i] <= cur[j]:
+                        cur[j] = nums[i]
+                        break
+        print(cur)
+        return len(cur)
