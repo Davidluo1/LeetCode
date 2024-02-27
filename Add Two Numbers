@@ -44,6 +44,7 @@ class Solution:
         Spacetime: O(N)
         """
 
+        # Method 1
         l1_ptr = l1
         l2_ptr = l2
         l1s = ""
@@ -63,7 +64,7 @@ class Solution:
                 l2s += str(l2_ptr.val)
                 l2_ptr = l2_ptr.next
 
-
+        # Method 2
         # cur = l1
         # l1s = ""
         # while cur:
