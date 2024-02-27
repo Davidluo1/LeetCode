@@ -4,10 +4,6 @@ subsequence
 Subsequence
 A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
 
-.
-
- 
-
 Example 1:
 
 Input: nums = [10,9,2,5,3,7,101,18]
