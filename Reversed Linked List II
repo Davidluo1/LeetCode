@@ -57,7 +57,6 @@ class Solution:
         store the node before the left pointer
         if left = head, no need to store node before the left pointer
 
-        
         if left != head, store the node before the left pointer
         if right != tail, store the node after the right pointer
 
