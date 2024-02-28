@@ -16,3 +16,88 @@ Constraints:
 - 1 <= left <= right <= n
 
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+        """
+        Goal: reverse the nodes of the list from position left to position right and return it
+
+        Easy case:
+        - when the linked list only have one node, return head
+
+        Contraints:
+        - nodes' value could be negative
+        - left and right must be at least one
+
+        Left could be the head of the linked list
+        right could be the tail of the linked list
+
+        Method 1: swap value        left ->     <- right
+        [1,*2,3,4,5,6,7,*8,9], left = 2, right = 8
+        [1,8,*3,4,5,6,7,*2,9]
+        Append each node into a list in order O(N)
+        list[left].val = list[right].val
+        left += 1, right -= 1
+
+        X Method 2: assign next pointer X
+        [1,*2,3,4,5,6,7,*8,9], left = 2, right = 8
+        [1,*2,9][8,3,4,5,6,7,8]
+
+        Method 3: Reverse pointer
+        [1->*2->3->4->5->6->7->*8->9], left = 2, right = 8
+        store right.next
+        [1->*2<-3<-4<-5<-6<-7<*8->9]
+        store the node before the left pointer
+        if left = head, no need to store node before the left pointer
+
+        
+        if left != head, store the node before the left pointer
+        if right != tail, store the node after the right pointer
+
+        Reverse a linked list:
+        current node pointer and a next node pointer
+        prev = null
+        current node pointer.next = prev
+        prev = cur node
+        cur node pointer = next node pointer
+        next node pointer = next node pointer.next
+
+        if next node pointer = right node pointer, start pointer.next = right node pointer
+        if left node pointer.next = end pointer
+
+        Steps:
+        1. Get to the left position and right position node. 
+        2. Get the node before the left pointer during the process (start pointer)
+        3. Get the node after the right pointer during the process (end pointer)
+        4. Reverse the linked list from position left to position right
+        5. link start pointer to the right position and link end pointer to the left position
+        6. return head
+
+        Runtime: O(L+R+N) worst case, reverse the whole linked list
+        Spacetime: O(6), 6 pointers
+        """
+
+        # Easy case
+        if not head.next:
+            return head
+
+        cur = head
+        node_list = []
+        while cur:
+            node_list.append(cur)
+            cur = cur.next
+        
+        left -= 1
+        right -= 1
+        while left < right:
+            node_list[left].val, node_list[right].val = node_list[right].val, node_list[left].val
+            left += 1
+            right -= 1
+        
+        return head
