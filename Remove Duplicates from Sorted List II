@@ -1,0 +1,158 @@
+"""
+
+
+"""
+
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Goal: Remove duplicate nodes with the same value.
+
+        Easy case:
+        - when there is no node in the linked list, return None
+        - when there is only one node in the linked list, return head
+
+        Method 1: Use a visited list
+        - compare current node with the next node, if not equal and not in visited list, append current node to the list
+        - append current node in the visited list if not in visited list
+        - increment nodes by one
+        Runtime: O(2N)
+        Spacetime: O(2N)
+        v:[] [1,2] [1]
+        v:[1,2] [2,3] [1,2]
+        v:[1,2] [3,3] [1,2]
+        v:[1,2,3] [3,4] [1,2]
+        v:[1,2,3,4] [4,4] [1,2]
+        v:[1,2,3,4] [4,5] [1,2]
+        v:[1,2,3,4] [5,None] [1,2,5] if cur.next == None, append to the new_list if not in visited list, new_list[-1].next = None
+
+        v:[] [1,1]
+        v:[1] [1,1]
+        v:[1] [1,2] only add to visited of the current node
+        v:[1] [2,3] [2]
+        v:[1,2] [3,None] [1,2,3]
+
+        Method 2: Modify pointers
+        - Create a new dumy node
+        - current node start from head. If current node = cur.next, cur = cur.next
+        - if they are not equal, if current node = duplicate skip.
+        - dumy node points to the current node if current node != duplicate
+        [1,2] [d->*1] 
+        [2,3] [d->1->*2] 
+        [3,3] [d->1->*2] ![3]
+        [3,4] [d->1->*2] ![3]
+        [4,4] [d->1->*2] ![4]
+        [4,5] [d->1->*2] ![4]
+        [5,None] [d->1->*2] ![4]
+        [d->1->2->*5] return d.next
+
+        [1,1] [d] ![1]
+        [1,1] [d] ![1]
+        [1,2] [d] ![1]
+        [2,3] [d->*2] [2]
+        [3,None] [d->2->*3] [2]
+        edge case: if last item is duplicate, dumy pointer.next = None
+        return dumy_head
+        Runtime: O(N)
+        Spacetime: O(N)
+
+        Method 3: Hash Map
+        - Iterate through the linked list, record its count
+        - iterate through the linked list, append unquie node where its count is 1 to a list
+        - Iterate through the list and reconnect the pointers
+        [1,2,3,3,4,4,5]
+        [1:c1, 2:c1, 3:c2, 4:c2, 5:1]
+        [1,2,5]
+        Runtime: O(3N)
+        Spacetime: O(2N)
+        """
+
+        # Easy case
+        if not head:
+            return None
+        if not head.next:
+            return head
+
+        # Method 3
+        hash_map = {}
+        #unquie_list = []
+
+        cur = head
+        while cur:
+            if hash_map.get(cur.val):
+                hash_map[cur.val] += 1
+            else:
+                hash_map[cur.val] = 1
+            cur = cur.next
+        temp_ptr = ListNode(0)
+        temp_head = None
+        i = 1
+        for key, val in hash_map.items():
+            # unquie node value
+            if val == 1:
+                if i == 1:
+                    temp_head = ListNode(key)
+                    temp_ptr = temp_head
+                    i -= 1
+                #unquie_list.append(key)
+                else:
+                    temp_ptr.next = ListNode(key)
+                    temp_ptr = temp_ptr.next
+        
+        temp_ptr.next = None
+        return temp_head
+
+        # Method 2
+        dumy = ListNode(0)
+        dumy_head = dumy
+        cur = head
+        duplicate = None
+
+        while cur.next:
+            if cur.val != cur.next.val and cur.val != duplicate:
+                dumy.next = cur 
+                dumy = cur
+            else:
+                duplicate = cur.val
+            cur = cur.next
+
+        if cur.val != duplicate:
+            dumy.next = cur 
+            dumy = cur
+        else:
+            # handle edge case when last node is a duplicate
+            dumy.next = None
+
+        return dumy_head.next
+
+        # Method 1
+        # visited = []
+        # new_list = [ListNode(0)]
+        # cur = head
+
+        # while cur.next:
+        #     if cur.val != cur.next.val and cur.val not in visited:
+        #         new_list.append(cur)
+        #     if cur.val not in visited:
+        #         visited.append(cur.val)
+        #     cur = cur.next
+        #     # Edge case
+        #     if not cur.next:
+        #         if cur.val not in visited:
+        #             new_list.append(cur)
+        #         else:
+        #             # skip the last duplicate item
+        #             new_list[-1].next = None
+
+        # # reconnect the linked list
+        # for i in range(len(new_list)-1):
+        #     new_list[i].next = new_list[i+1]
+
+        # return new_list[0].next
