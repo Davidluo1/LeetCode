@@ -22,3 +22,71 @@ Constraints:
 - 1 <= Node.val <= 1000
 
 """
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+
+        Goal: Reorder a linked list in L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+
+        first node -> last node -> second first node -> second last node...
+
+        two pointer from left and right
+
+        Easy case:
+        - If the number of nodes is 1, return head
+
+        Contraints:
+        - Cannot change the values in the list's nodes
+
+        l = [1,2,3,4]
+        [1->4->None]
+        [1->4->2]
+        [1->4->2->3]
+        [1->4->2->3->3]
+        left, right = 0, len(l) - 1
+        while left < right
+        l[left].next = l[right]
+        left += 1
+        if left < right:
+            l[right].next = l[left]
+            right -= 1
+        l[left].next = None
+
+        l = [1,2,3,4,5]
+        [1->5]
+        [1->5->2]
+        [1->5->2->4]
+        [1->5->2->4->3]
+        l[left].next = None
+
+        Runtime: O(N)
+        Spacetime: O(N)
+        """
+        
+        # Easy case
+        if not head.next:
+            return head
+        
+        cur = head
+        l = []
+        while cur:
+            l.append(cur)
+            cur = cur.next
+
+        left, right = 0, len(l) - 1
+        while left < right:
+            l[left].next = l[right]
+            left += 1
+            if left < right:
+                l[right].next = l[left]
+                right -= 1
+        l[left].next = None
+
+        return head
