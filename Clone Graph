@@ -61,6 +61,7 @@ class Solution:
             return node
 
         visited_dict={}
+
         def dfs(node):
             if node in visited_dict:
                 return visited_dict[node]
