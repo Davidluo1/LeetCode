@@ -56,6 +56,7 @@ class Solution:
         """
         Use depth first search to traverses trhough the tree and store into a dictionary.
         """
+
         # Easy case
         if not node:
             return node
