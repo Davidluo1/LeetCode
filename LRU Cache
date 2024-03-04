@@ -35,3 +35,45 @@ Constraints:
 - At most 2 * 105 calls will be made to get and put.
 
 """
+
+
+
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        self.capacity = capacity
+        self.cache = {}
+        self.size = 0
+        
+    def get(self, key: int) -> int:
+        if self.cache.get(key) is not None:
+            value = self.cache[key]
+            del self.cache[key]
+            self.cache[key] = value
+            #print("Get:",self.cache)
+            return value
+        else:
+            #print("Get:",self.cache)
+            return -1
+
+    def put(self, key: int, value: int) -> None:
+        if len(self.cache) == self.capacity:
+            if self.cache.get(key) is None:
+                for k,v in self.cache.items():
+                    del self.cache[k]
+                    break
+                self.cache[key] = value
+            else:
+                del self.cache[key]
+                self.cache[key] = value
+        else:
+            if self.cache.get(key) is not None:
+                del self.cache[key]
+            self.cache[key] = value
+        #print("Put:",self.cache)
+
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
