@@ -57,7 +57,6 @@ class Solution:
         if the bottom-right grid is an obstcale, return 0
         """
 
-
         m = len(obstacleGrid)
         n = len(obstacleGrid[0])
 
