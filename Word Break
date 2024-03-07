@@ -130,27 +130,3 @@ class Solution:
         
         return dp[-1]
 
-        # start = 0
-        # for i in range(1,len(s)+1):
-        #     temp = []
-        #     for j in range(start+1,len(s)+1):
-        #         if s[start:j] in wordDict:
-        #             temp.append(j)
-        #     print(temp)
-        #     if len(temp) == 0:
-        #         break
-        #     word_len = max(temp)
-        #     start = word_len
-        
-        # if start == len(s): return True
-        # return False
-
-        # total = 0
-        # for word in wordDict:
-        #     total += s.count(word) * len(word)
-        
-        # if total == len(s):
-        #     return True
-        
-        # print(total, len(s))
-        # return False
