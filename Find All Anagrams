@@ -28,3 +28,42 @@ Constraints:
 s and p consist of lowercase English letters.
 
 """
+
+
+
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        """
+        Goal: return all start index of p's anagrams in s.
+
+        Anagram: len(a) == len(b) and sorted(a) == sorted(b)
+
+        cdbaebabacd, abc
+
+        Easy case:
+        - if len(s) == len(p), if sorted(s) == sorted(p), return 0, otherwise return []
+        
+        Steps:
+        1. Iterate through the substring of length p from string s. 
+        2. If sorted(substring) is equal to sorted(p), add the first index to the result list.
+        3. return the result list
+
+        Runtime: O((s-p-1)*2NlogN)
+        Spacetime: O(N)
+        """
+
+        #Easy case
+        if len(s) == len(p):
+            if sorted(s) == sorted(p):
+                return [0]
+            else:
+                return []
+        
+        res = []
+        sorted_p = sorted(p)
+        for i in range(len(s)-len(p)+1):
+            # check anagram
+            if sorted(s[i:i+len(p)]) == sorted_p:
+                res.append(i)
+        
+        return res
