@@ -46,5 +46,4 @@ class Solution:
                 profit = prices[i] - min_price
                 max_profit = max(max_profit, profit)
             i += 1
-
         return max_profit
