@@ -74,6 +74,3 @@ class Solution:
         if target in memo_dict.keys():
             return memo_dict[target]
         return 0
-
-        # 1+0+2+5-4 = 4
-        # 1+0+2+5-4 = 4
