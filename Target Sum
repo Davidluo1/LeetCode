@@ -32,3 +32,53 @@ Constraints:
 0 <= sum(nums[i]) <= 1000
 -1000 <= target <= 1000
 """
+
+
+
+class Solution:
+    def findTargetSumWays(self, nums: List[int], target: int) -> int:
+        """
+        Goal: Find the number of different expressions that could be build to the given target.
+       
+        Easy case:
+        - if the length of the nums list is one, return 1
+
+        [1,0,5,6]
+        (1,5),(6),(6,0)
+        [6:2]
+
+        dict: [0:1]     [target:#combination] 
+        if the [target:combination] is in dictionary, add its count.
+
+        Runtime: O(N)
+        Spacetime: O(N)
+        """
+            
+        if len(nums) == 1:
+            if nums[0] == target or nums[0] == -target:
+                return 1
+            else:
+                return 0
+
+        memo_dict = {0:1}
+
+        for num in nums:
+            temp_dict = {}
+            for key,value in memo_dict.items():
+                if key + num in temp_dict.keys():
+                    temp_dict[key+num] += memo_dict[key]
+                else:
+                    temp_dict[key+num] = memo_dict[key]
+                
+                if key - num in temp_dict.keys():
+                    temp_dict[key-num] += memo_dict[key]
+                else:
+                    temp_dict[key-num] = memo_dict[key]
+            memo_dict = temp_dict
+        print(memo_dict)
+        if target in memo_dict.keys():
+            return memo_dict[target]
+        return 0
+
+        # 1+0+2+5-4 = 4
+        # 1+0+2+5-4 = 4
