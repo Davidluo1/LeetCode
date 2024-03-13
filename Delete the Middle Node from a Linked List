@@ -33,3 +33,42 @@ Constraints:
 The number of nodes in the list is in the range [1, 105].
 1 <= Node.val <= 105
 """
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Goal: Delete the middle node of a linked list.
+
+        Easy case:
+        - if only one node inside the linked list, return None
+
+        Steps:
+        1. Turn the linked list into a regular list with nodes
+        2. Set the pointer to the middle node: length of the list divide by 2
+        3. Remove the middle node: previous node.next to next node
+        4. Return the head
+
+        Runtime: O(N)
+        Spacetime: O(N)
+        """
+
+        # Easy case
+        if not head.next:
+            return
+
+        cur = head
+        node_list = []
+        while cur:
+            node_list.append(cur)
+            cur = cur.next
+
+        middle_node = len(node_list) // 2
+        node_list[middle_node-1].next = node_list[middle_node].next
+
+        return head
