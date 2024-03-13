@@ -72,5 +72,4 @@ class Solution:
 
         middle_node = len(node_list) // 2
         node_list[middle_node-1].next = node_list[middle_node].next
-
         return head
