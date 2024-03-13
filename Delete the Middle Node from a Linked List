@@ -12,9 +12,8 @@ Explanation:
 The above figure represents the given linked list. The indices of the nodes are written below.
 Since n = 7, node 3 with value 7 is the middle node, which is marked in red.
 We return the new list after removing this node. 
+
 Example 2:
-
-
 Input: head = [1,2,3,4]
 Output: [1,2,4]
 Explanation:
