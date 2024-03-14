@@ -29,3 +29,51 @@ Constraints:
 - s[i] is either'(' , ')', or lowercase English letter.
 
 """
+
+
+
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        """
+        Goal: remove the minimum number of parentheses.
+
+        Easy case:
+        - if the length of the string s is 1, if s[0] is ( or ), return empty string, otherwise, return s
+
+        dictionary
+        open: 
+        close: ):12
+        if close barcket but no open brakcet, remove the close brakcet using replace to ''
+        remove(index)
+        append open bracket, remove open brakcet when a close braket is found
+        Runtime: O(3N)
+        Spacetime: O(2N)
+
+        
+        """
+
+        # Easy case
+        if len(s) == 1:
+            if s[0] in ('(',')'):
+                return ""
+            return s
+
+        open_b = []
+        s = list(s)
+        
+        for i in range(len(s)):
+            if s[i] == ')':
+                # check open bracket
+                if len(open_b) > 0:
+                    open_b.pop()
+                    continue
+                s[i] = "0"
+            elif s[i] == '(':
+                open_b.append(i)
+
+        if open_b:
+            for index in open_b:
+                s[index] = "0"
+
+        return "".join([c for c in s if c != "0"])
+            
