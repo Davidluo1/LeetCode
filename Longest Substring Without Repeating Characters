@@ -30,3 +30,63 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
 
 """
+
+
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        """
+        Goal: find the length of the longest substring without repeating characters.
+
+        Easy case:
+        - if the length of the string s is 0, return 0
+        - if only one character inside the string s, return 1
+
+        v: 
+        biggest = 3
+
+        if length of the string s minus the current index is equal or less than the biggest value, break
+
+        Runtime: O(N^2)
+        spacetime: O(N)
+        """
+
+        # Easy case
+        if len(s) == 0: return 0
+        if len(s) == 1: return 1
+
+        longest = 0
+        v = [s[0]]
+        i = 0
+        for char in s[1:]:
+            i += 1
+            if char not in v:
+                v.append(char)
+                if i == len(s)-1 and len(v) > longest:
+                    return len(v)
+            else:
+                while v[0] != char:
+                    v.pop(0)
+                v.append(v.pop(0))
+            print(v, i)
+            if len(v) > longest:
+                longest = len(v)
+        return longest
+
+        longest = 0
+        visited = []
+        for i in range(len(s)):
+            if len(visited) > longest:
+                longest = len(visited)
+            visited = [s[i]]
+            for j in range(i+1,len(s)):
+                if s[j] not in visited:
+                    visited.append(s[j])
+                    if j == len(s)-1 and len(visited) > longest:
+                        return len(visited)
+                else:
+                    break
+            if len(s) - i <= longest:
+                break
+
+        return longest
