@@ -37,3 +37,67 @@ It is guaranteed that k is less than or equal to the length of the decoded strin
 The decoded string is guaranteed to have less than 263 letters.
 
 """
+
+
+
+class Solution:
+    def decodeAtIndex(self, s: str, k: int) -> str:
+        """
+        Goal: Decode the string to a tape and return the kth letter in the decoded string.
+
+        "leet2code3", k = 10
+        tape += if current index is not digit
+        if current inde is digit
+        tape = tape * int(digit)
+
+        if k < current tape, return tape[k-1]
+
+        Runtime: O(N)
+        Spacetime: O(N)
+
+        "leet2code3", k = 10
+        leet = 4, 4*2 = 8
+        leetleetc = 9, leetleetco = 10
+
+        leet2 = 8, code = 12, leetleetcode
+        code3 = 12*3 = 36
+        36//3 = 12
+        k: 10%12 = 10
+        return o
+
+        ha2 = 4, 2 = 2*4 = 8, k = 5
+        8//2 = 4
+        k: 5%4 = 1
+        4//2 = 2, 2-1 = 1
+        """
+        
+        length = 0
+        for letter in s:
+            if not letter.isdigit():
+                length += 1
+            else:
+                length = length * int(letter)
+
+        for i in range(len(s)-1,-1,-1):
+            if s[i].isdigit():
+                length //= int(s[i])
+                k %= length
+            else:
+                if k == length or k == 0:
+                    return s[i]
+                length -= 1
+
+        # tape = []
+
+        # for letter in s:
+        #     if not letter.isdigit():
+        #         tape.append(letter)
+        #     else:
+        #         count = int(letter)
+        #         if len(tape) * count >= k:
+        #             count = -(-k // len(tape))
+        #             tape = tape * count
+        #             return tape[k-1]
+        #         tape = tape * count
+        
+        # return -1
