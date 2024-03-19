@@ -21,7 +21,6 @@ Input: s = "a2345678999999999999999", k = 1
 Output: "a"
 Explanation: The decoded string is "a" repeated 8301530446056247680 times.
 The 1st letter is "a".
- 
 
 Constraints:
 -2 <= s.length <= 100
