@@ -66,6 +66,7 @@ class Solution:
         """
         
         length = 0
+        # get total length of decoded string
         for letter in s:
             if not letter.isdigit():
                 length += 1
