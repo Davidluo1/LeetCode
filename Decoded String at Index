@@ -8,13 +8,12 @@ Given an integer k, return the kth letter (1-indexed) in the decoded string.
  
 
 Example 1:
-
 Input: s = "leet2code3", k = 10
 Output: "o"
 Explanation: The decoded string is "leetleetcodeleetleetcodeleetleetcode".
 The 10th letter in the string is "o".
-Example 2:
 
+Example 2:
 Input: s = "ha22", k = 5
 Output: "h"
 Explanation: The decoded string is "hahahaha".
