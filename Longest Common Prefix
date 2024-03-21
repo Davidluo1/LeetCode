@@ -56,27 +56,3 @@ class Solution:
         return res
 
 
-        if "" in strs: return ""
-        res = ""
-        common = True
-        temp = ""
-        for char in strs[0]:
-            if common:
-                temp += char
-            else:
-                temp = char
-                common = True
-            for word in strs[1:]:
-                if temp not in word or strs[0].index(temp) != word.index(temp):
-                    common = False
-                    break
-                # if strs.index(temp) != word.index(temp):
-            if common:
-                if len(temp) > len(res):
-                    res = temp
-
-        return res
-
-
-        # temp: d
-        # res: 
