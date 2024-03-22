@@ -86,5 +86,4 @@ class Solution:
         #     elif value > t_map[key]:
         #         count += value - t_map[key]
             
-        
         return count
