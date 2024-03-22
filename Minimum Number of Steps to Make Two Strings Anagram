@@ -31,3 +31,68 @@ s.length == t.length
 s and t consist of lowercase English letters only.
 
 """
+
+
+
+class Solution:
+    def minSteps(self, s: str, t: str) -> int:
+        """
+        Goal: Find the mimimum steps to make two string anagram.
+
+        Easy case:
+        - string s and t == 1, if s != t, return 1, otherwise return 0
+        
+        abb, aab
+
+        Runtime: O(2NlogN+N)
+        Spacetime: O(1)
+
+        b:2, a:1 | a:2, b:1
+
+        Runtime: O(2N)
+        Spacetime: O(2N)
+
+        b, t.index(b), memo =[b:1]
+        a, t.index(a), add to memo
+        find all index of b, each time when found a b in string, subtract 1 from the length of memo
+        
+        Runtime: O(2N)
+        Spacetime: O(N)
+        """
+
+        # Easy case
+        if len(s) == 1:
+            if s == t: return 0
+            return 1
+
+        s_map,t_map = {},{}
+        
+        count = 0
+        for i in range(len(s)):
+            # if not s_map.get(s[i]):
+            #     s_map[s[i]] = 1
+            # else:
+            #     s_map[s[i]] += 1
+            if not t_map.get(t[i]):
+                t_map[t[i]] = 1
+            else:
+                t_map[t[i]] += 1
+            
+        
+        for letter in s:
+            if not t_map.get(letter):
+                count += 1
+            else:
+                if t_map[letter] <= 0:
+                    count += 1
+                else:
+                    t_map[letter] -= 1
+
+        # for key, value in s_map.items():
+        #     if not t_map.get(key):
+        #         count += value
+        #     elif value > t_map[key]:
+        #         count += value - t_map[key]
+            
+        
+        return count
