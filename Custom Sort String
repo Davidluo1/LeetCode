@@ -37,3 +37,48 @@ Constraints:
 order and s consist of lowercase English letters.
 All the characters of order are unique.
 """
+
+
+
+class Solution:
+    def customSortString(self, order: str, s: str) -> str:
+        """
+        Goal: output the string s following the seuqence in string order.
+
+        Easy case:
+        - when length order == length s == 1, return s
+
+        order: c:1, b:1, a:1    initlize the order map and track the count of each letter in string s
+        rest += d
+
+        for key, val in order_map:
+            if val > 0:
+                res += key*val
+        if rest:
+            res += rest
+
+        Runtime: O(2N+M+r)
+        Spacetime: O(N+r)
+        """
+
+        # Easy case
+        if len(order) == 1 or len(s) == 1: return s
+
+        order_map = {key : 1 for key in order}
+        print(order_map)
+
+        res = ""
+    
+        for letter in s:
+            if order_map.get(letter):
+                order_map[letter] += 1
+            else:
+                res += letter
+        print(order_map)
+        print(res)
+
+        for letter, val in order_map.items():
+            if val > 1:
+                res += letter*(val-1)
+
+        return res
