@@ -66,5 +66,4 @@ class Solution:
         for letter, val in order_map.items():
             if val > 1:
                 res += letter*(val-1)
-
         return res
