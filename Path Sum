@@ -33,3 +33,58 @@ The number of nodes in the tree is in the range [0, 5000].
 -1000 <= Node.val <= 1000
 -1000 <= targetSum <= 1000
 """
+
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        """
+        Goal: check if the binary tree has a root-leaf sum euqals to the targetSum.
+
+        Easy case:
+        If there is no nodes in the binary tree, return False
+
+        Root-to-leaf
+        Method: DFS
+        [5,4,11,7] == 22
+        [5,4,11,2] == 22
+
+        Runtime: O(N^2)
+        Spacetime: O(1)
+
+        Create a memo to boost recursive calls memory usage
+        """
+
+        if not root: return False
+
+        targetSum -= root.val
+
+        if not root.left and not root.right:
+            return targetSum == 0
+        
+        return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)
+
+        # if not root: return False
+
+        # def dfs(node, targetSum):
+        #     if not node: return False
+
+        #     targetSum -= node.val
+        #     # memo.append(targetSum)
+        #     # if targetSum in memo:
+        #     #     return
+
+        #     if not node.left and not node.right:
+        #         return targetSum == 0
+            
+        #     return dfs(node.left, targetSum) or dfs(node.right, targetSum)
+
+        # return dfs(root, targetSum)
+
+
