@@ -81,7 +81,6 @@ class Solution:
                 if left == right:
                     return 0
 
-
         # peak = left = 0
         # right = len(nums)-1
 
