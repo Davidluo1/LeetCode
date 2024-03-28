@@ -28,3 +28,81 @@ Constraints:
 nums[i] != nums[i + 1] for all valid i.
 
 """
+
+
+
+class Solution:
+    def findPeakElement(self, nums: List[int]) -> int:
+        """
+        Goal: return the index of the peak element inside the nums array.
+        Must runt O(logN)
+
+        Binary search
+        - sorted array
+
+        Easy case:
+        - nums array with size 1, return 0
+
+        [1,1] 1, index 0
+        [2,3] 3, index 2
+
+        [1,4] 4, index 6
+        [2,6] 6, index 5
+        [1,5] 5, index 5
+
+        Runtime: O(N)
+        Spacetime: O(1)
+
+        mid = 3
+        check left and right ajacent elements
+        //\ , return mid
+
+        mid = 3
+        1,3,5
+        ///
+        mid = 6
+        5,6,4
+        //\, return 5
+
+        """
+
+        # Easy case
+        if len(nums) == 1: return 0
+        if len(nums) == 2: return 0 if nums[0] > nums[1] else 1
+
+        left, right = 0, len(nums)-1
+        
+        while left < right:
+            mid = (left + right) // 2
+
+            # peak
+            if nums[mid-1] < nums[mid] > nums[mid+1]:
+                return mid
+            # curve up
+            elif nums[mid-1] < nums[mid] < nums[mid+1]:
+                left = mid + 1
+                if left == right:
+                    return len(nums) - 1
+            # curve down
+            else:
+                right = mid
+                if left == right:
+                    return 0
+
+
+        # peak = left = 0
+        # right = len(nums)-1
+
+        # while left < right:
+        #     if nums[left] >= nums[right]:
+        #         temp = nums[left]
+        #         temp_i = left
+        #     else:
+        #         temp =  nums[right]
+        #         temp_i = right
+        #     if temp > peak:
+        #         peak = temp
+        #         peak_i = temp_i
+
+        # return peak_i
+            
