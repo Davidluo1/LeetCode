@@ -24,3 +24,92 @@ Constraints:
 The number of nodes in the list is in the range [0, 100].
 0 <= Node.val <= 100
 """
+
+
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        Goal: Swap the position of every two nodes in the linked list.
+
+        Easy case:
+        - empty linked list, return nothing
+        - one node linked list, return the head
+
+        Create a list of nodes [1,2,3,4]
+        Swap every two index nodes to form [2,1,4,3], 0 swap 1, 2 swap 3
+            - if i+2 < len(nodelist), if i+1 is none, skip. Otherwise swap the two nodes
+        Iterate through the nodelist and restablish the connection from left to right
+        Runtime: O(2N(N/2))
+        Spacetime: O(N)
+            - node index i+1.next = node index i
+            - prev equal to a dumy, set it next to the node index i+1, prev = node index i
+        Runtime: O(N/2)
+        Spacetime: O(N)
+
+        Start at the second node of the linked list as current node, prev node assign to the first node, 
+        and a next_node to the thrid node.
+        1.current set next to prev
+        2.prev set next to the next node of the next_node
+        3.current set equal to next_node.next
+        4.prev set equal to next_node
+        5.next_node set equal to next_node.next
+        
+        if next_node.next is none, set prev.next to the next_node before step 5
+        Runtime: O(logN)
+        Spacetime: O(1)
+        """
+
+        # Easy case
+        if not head: return
+        if not head.next: return head
+
+        cur = head.next
+        prev = head
+        head = cur
+
+        while cur:
+            next_node = cur.next
+            cur.next = prev
+            if next_node:
+                if next_node.next:
+                    prev.next = next_node.next
+                else:
+                    prev.next = next_node
+                prev = next_node
+                next_node = next_node.next
+            else:
+                prev.next = next_node
+                
+            cur = next_node
+
+        return head
+
+        # cur = head
+        # node_list = []
+        # while cur:
+        #     node_list.append(cur)
+        #     cur = cur.next
+        
+        # # swap each two nodes
+        # i = 0
+        # while i < len(node_list)-1:
+        #     node_list[i], node_list[i+1] = node_list[i+1], node_list[i]
+        #     i += 2
+        
+        # print(node_list)
+        # # restablish connection
+        # i = 0
+        # new_head = node_list[0]
+        # for i in range(len(node_list)-1):
+        #     node_list[i].next = node_list[i+1]
+        # node_list[-1].next = None
+
+        # return new_head
+
+
