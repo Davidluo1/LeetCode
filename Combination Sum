@@ -35,3 +35,108 @@ All elements of candidates are distinct.
 1 <= target <= 40
 
 """
+
+
+
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        """
+        Goal: return a list of all unique combinartions of candidates that could sum up to the target.
+
+        Same candidate could be reuse
+        Chosen numbers sum up to target
+
+        Use set variable to return unqiue combinations
+
+        Easy case:
+        - if only one candidate, if target is bigger than the candidate and target mod candidate equals to 0
+            return [candidate*(target // candidate)], otherwise, return 
+        - if target equals to 1, return
+
+
+        7-2 = 5
+        5-2 = 3
+        [2,2,3]
+        7-3 = 4
+        4-3 = 1
+        7-6 = 1
+        7-7 = 0
+        [7]
+
+        Push all candidates in a dictionary
+        every time to find that pre-fix, use get function
+        8-2 = 6
+        6-2 = 4
+        4-2 = 2
+        [2,2,2,2]
+        while current prefix > current candidate
+        8-3 = 5
+        [3,5]
+        5-3 = 2
+        [3,3,2]
+        8-5 = 3
+        [5,3]
+
+        Runtime: O(NK)
+        Spacetime: O(N)
+        """
+
+        # Easy case
+        if target == 1: return
+        if len(candidates) == 1:
+            c = candidates[0]
+            if target < c or target % c != 0: return 
+            else:
+                return [[c]*(target//c)]
+        
+        def backtrack(start, target, path):
+            if target == 0:
+                result.append(path)
+                return
+            if target < 0:
+                return
+            for i in range(start, len(candidates)):
+                backtrack(i, target - candidates[i], path + [candidates[i]])
+
+        result = []
+        # candidates.sort()
+        backtrack(0, target, [])
+        return result
+        
+        # c_map = {}
+        # for c in candidates:
+        #     c_map[c] = 1
+
+        # res = []
+        # visited = []
+        # for c in candidates:
+        #     temp = target
+        #     temp_list = []
+        #     if temp - c == 0:
+        #         res.append([c])
+        #         continue
+        #     while temp - c > 0:
+        #         print(temp)
+        #         temp -= c
+        #         if temp > 0:
+        #             temp_list.append(c)
+        #         print(temp_list)
+        #         print(temp)
+        #         if c_map.get(temp) and temp not in visited:
+        #             x = temp_list.copy()
+        #             x.append(temp)
+        #             x = sorted(x)
+        #             print("x:",x)
+        #             if x not in visited:
+        #                 print("Visited:",visited)
+        #                 print("Append:",x)
+        #                 res.append(x)
+        #             visited.append(x)
+        #         elif temp == 0:
+        #             res.append(temp_list)
+        
+        #     print(res)
+        # return res
+
+
+
