@@ -44,7 +44,6 @@ class Solution:
             return [candidate*(target // candidate)], otherwise, return 
         - if target equals to 1, return
 
-
         7-2 = 5
         5-2 = 3
         [2,2,3]
