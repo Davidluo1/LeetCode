@@ -38,3 +38,55 @@ The number of nodes in the tree is in the range [1, 1000].
 The depth of the tree will not exceed 10.
 
 """
+
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def sumNumbers(self, root: Optional[TreeNode]) -> int:
+        """
+        Goal: Return the sum of all root to leafs numbers.
+
+        Easy case:
+        if the root does not have a left and right child, return the root value
+
+        DFS to get each root to leaf path
+        - return nodes from the root to the leafs
+        if node is null, return
+        search left first, and then search right child
+
+        number = 0 * 10 + 1
+        number = 1 * 10 + 2 = 12
+        total * 10 + node.val
+
+        total: 4
+        total = total * 10 + 9
+        total = total * 10 + 5 = 495
+
+        search left + search right
+
+        Runtime: O(N^2)
+        Spacetime: O(1)
+        """
+
+        # Easy case
+        if not root.left and not root.right: return root.val
+
+        # Depth first search
+        def dfs(node, total):
+            # base case
+            if not node: return 0
+
+            total = total * 10 + node.val
+
+            if not node.left and not node.right:
+                return total
+
+            return dfs(node.left, total) + dfs(node.right, total)
+
+        return dfs(root, 0)
