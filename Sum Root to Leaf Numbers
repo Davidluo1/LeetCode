@@ -79,5 +79,4 @@ class Solution:
                 return total
 
             return dfs(node.left, total) + dfs(node.right, total)
-
         return dfs(root, 0)
