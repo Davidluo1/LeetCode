@@ -61,6 +61,7 @@ class Solution:
         if n < 4: return n
 
         perfect_squares = []
+
         # Store all perfect squares up to sqrt of n
         for i in range (1,int(sqrt(n))+1):
             if i*i <= n:
