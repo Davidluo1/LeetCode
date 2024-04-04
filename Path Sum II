@@ -32,3 +32,56 @@ The number of nodes in the tree is in the range [0, 5000].
 -1000 <= targetSum <= 1000
 
 """
+
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], SumSum: int) -> List[List[int]]:
+        """
+
+        # Easy case:
+        if the tree is empty, return []
+        if there is only one node in the tree, if root.val == targetSum, return [root.val]
+
+        DFS
+
+        if the current node does not have any left or right child = leaf node
+            DFS(root.left, path, total)
+            DFS(root.right, path, total)
+            if current total == targetSum, append the current path to the ans
+            if current targetSum == 0, append the current path to the ans
+
+        Runtime: O(N^2)
+        Spacetime: O(N*M)
+        """
+
+        ans = []
+        # Easy case
+        if not root: return []
+        if not root.left and not root.right:
+            if root.val == SumSum:
+                return [[root.val]]
+
+        # def dfs(node, path, total):
+        def dfs(node, path):
+            # base case
+            if not node: return
+
+            # leaf node
+            if not node.left and not node.right:
+                path.append(node.val)
+                if sum(path) == SumSum:
+                    ans.append(path)
+            
+            # Iterate through all directions
+            dfs(node.left, path+[node.val])
+            dfs(node.right, path+[node.val])
+            
+        dfs(root, [])
+        return ans
