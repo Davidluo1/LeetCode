@@ -73,9 +73,6 @@ class Solution:
         # Easy case
         if len(rooms) == 2:
             if 1 not in rooms[0]: return False
-
-        #key_map = [False] + [True] * (len(rooms)-1)
-        #print(key_map)
         
         pending_rooms = rooms[0]
         visited = {0:1}
