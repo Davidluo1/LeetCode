@@ -92,9 +92,6 @@ class Solution:
             for k in rooms[key]:
                 if k != 0 and not visited.get(k):
                     pending_rooms.append(k)
-        
-        #print(key_map)
-        #print(count)
 
         return count == len(rooms)
 
