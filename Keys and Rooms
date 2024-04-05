@@ -35,3 +35,84 @@ n == rooms.length
 All the values of rooms[i] are unique.
 
 """
+
+
+
+class Solution:
+    def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
+        """
+        Goal: Check it is possible visit all room, return True or False.
+
+        Return false if missing a key to open a room
+
+        Easy case:
+        - where length of the rooms list is two, if the room 0 doesn't have the key 1, return False.
+
+        The keys in a room could be 0 to 1000
+
+        Store all visited key in a visited list
+        use a set
+        Iterate through all rooms from left to right
+        if the next room number is in the visited list key, continue. Otherwise, return false
+
+        Runtime: O(N*M)
+        Spacetime: O(N-x)
+
+        Improve runtime: store visited key in a dictionary, use get function to check the key exist or not in O(1) Runtime
+        d: 1:1, 3:1
+        Ignore key already in the dictionary and key 0
+        0, False
+
+        Runtime: O(N)
+        Spacetime: O(N)
+
+        x = [False, True, False, True]
+        if not x: return False
+        else: return True
+
+        Runtime: O(N*M)
+        Spacetime: O(N)
+        """
+        
+
+        # Easy case
+        if len(rooms) == 2:
+            if 1 not in rooms[0]: return False
+
+        #key_map = [False] + [True] * (len(rooms)-1)
+        #print(key_map)
+        
+        pending_rooms = rooms[0]
+        visited = {0:1}
+        count = 1
+
+        while pending_rooms:
+            key = pending_rooms.pop()
+            if not visited.get(key):
+                count += 1
+                # key_map[key] = False
+                visited[key] = 1
+            else: continue
+            # collect all keys in current room
+            for k in rooms[key]:
+                if k != 0 and not visited.get(k):
+                    pending_rooms.append(k)
+        
+        #print(key_map)
+        #print(count)
+
+        return count == len(rooms)
+
+        # if True in key_map: return False
+        # return True
+
+        # key_map = {0:1}
+
+        # for i in range (len(rooms)):
+        #     if not key_map.get(i): return False
+        #     for key in rooms[i]:
+        #         if not key_map.get(key) and key != 0:
+        #             key_map[key] = 1
+
+        # return True
+            
