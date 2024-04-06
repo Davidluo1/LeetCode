@@ -21,20 +21,40 @@ Constraints:
 
 
 
-Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        """
+        Goal: Generate all combinations of parentheses of n.
 
- 
+        Easy case:
+        if n is 1, return ()
+        1
+        n = 2, (()), ()()       2
+        n = 3, "((()))","(()())","(())()","()(())","()()()"     5
+        n = 4, "(((())))","((()()))","((())())","((()))()","(()(()))","(()()())","(()())()","(())(())","(())()()","()((()))","()(()())","()(())()","()()(())","()()()()"
+        14
 
-Example 1:
+        DFS recursively add new braket to the previous output
 
-Input: n = 3
-Output: ["((()))","(()())","(())()","()(())","()()()"]
-Example 2:
+        Runtime: O(N^2)
+        Spacetime: O(N^2)
 
-Input: n = 1
-Output: ["()"]
- 
+        """
 
-Constraints:
+        # Easy case
+        # if n == 1: return ["()"]
 
-1 <= n <= 8
+        def DFS(left, right, s):
+            # base case
+            if len(s) == 2*n:
+                res.append(s)
+                return
+            
+            if left < n:
+                DFS(left+1, right, s+'(')
+            if right < left:
+                DFS(left, right+1, s+')')
+
+        res = []
+        DFS(0,0,'')
+        return res
