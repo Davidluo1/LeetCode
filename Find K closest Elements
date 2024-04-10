@@ -69,7 +69,9 @@ class Solution:
         """
 
         # Easy case
+        # left boundary
         if x <= arr[0]: return arr[:k]
+        # right boundary
         if x >= arr[-1]: return arr[len(arr)-k:]
 
         res = []
