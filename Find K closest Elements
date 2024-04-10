@@ -88,5 +88,4 @@ class Solution:
                     i += 1
                     res.pop(0)
                     res.append(item[0])
-
         return res
