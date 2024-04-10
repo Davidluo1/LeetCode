@@ -50,6 +50,7 @@ class Solution:
         [a,s,y,w,m,h] x = y
 
         largest difference is the first or the last item
+
         Method 2:
         Iterate through the input arr from left to right, create a new dictionary and 
         update its absolute distance to x.
