@@ -25,3 +25,73 @@ arr is sorted in ascending order.
 -104 <= arr[i], x <= 104
 
 """
+
+
+
+class Solution:
+    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
+        """
+        Goal: return the k closest integer in the arr list.
+
+        Easy case:
+        if the arr length is one, return the item in the arr
+        Check left and right boundary
+        - if true, return the substring k from left or right
+
+        Method 1:
+        Iterate through the input arr from left to right, create a new list and 
+        update its absolute distance to x.
+        if the current list is equal to k, examine the next item in the list, 
+        if the absolute difference is smaller than one of the list value, replace.
+        Return sorted(res)
+        Runtime: O(N+(N-k)+logN)
+        Spacetime: O(N)
+
+        Smart method perference:
+        - accending order result list
+        
+        5,4,3,2,1,0,2,4,6,8
+        5,4,3,2,1,2,4,6,8
+        [a,s,y,w,m,h] x = y
+
+        largest difference is the first or the last item
+        Method 2:
+        Iterate through the input arr from left to right, create a new dictionary and 
+        update its absolute distance to x.
+        Iterate through the new dictionary, stroe up to k elements, return its index 
+        of k if arr.length == k
+        Otherwise, check the next item, if its absolute value is smaller than the 
+        first item in the new dictionary, remove the first item and append the new item
+
+        [1,2,3,4,5] k=4
+        1:d1, 2:d2, 3:d3, 4:d4, 5:d5
+        [1,2,3,4]
+        
+        Runtime: O(2N)
+        Spacetime: O(2N)
+
+        Any left or right boundary cases will run O(1) runtime
+        """
+
+        # Easy case
+        if x <= arr[0]: return arr[:k]
+        if x >= arr[-1]: return arr[len(arr)-k:]
+
+        res = []
+        arr_map = [(num,abs(num-x)) for num in arr]
+          
+        i = 0
+        for item in arr_map:
+            if k > 0:
+                k -= 1
+                res.append(item[0])
+            else:
+                if item[0] != res[0]:
+                    if item[1] >= arr_map[i][1]:
+                        return res
+                if item[1] < arr_map[i][1]:
+                    i += 1
+                    res.pop(0)
+                    res.append(item[0])
+
+        return res
