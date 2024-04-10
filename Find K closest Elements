@@ -80,6 +80,7 @@ class Solution:
           
         i = 0
         for item in arr_map:
+            # get size k sliding window
             if k > 0:
                 k -= 1
                 res.append(item[0])
