@@ -82,5 +82,4 @@ class Solution:
         #             index = j
         #     if change:
         #         res[index] = points[i]
-
         # return res
