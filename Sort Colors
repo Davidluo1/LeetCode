@@ -24,3 +24,45 @@ n == nums.length
 1 <= n <= 300
 nums[i] is either 0, 1, or 2.
 """
+
+
+
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+
+        return the sorted array
+
+        Easy case:
+        when n equals to one return
+
+        Any kind of sorting algorithm
+
+        Iterate through the nums list, count the number using a dictionary.
+        Iterate through the dictionary, return the key times its count
+
+        0:2, 1:2, 2:2
+        i = 0
+        [0,0,1,1,2,2]
+
+        Runtime: O(N+NK)
+        Spacetime: O(N)
+
+        0,2,2,1,1,0
+        0,1,2,2,1,0
+        0,1,1,2,2,0
+        0,0,1,1,2,2
+        """
+
+        for i in range(1,len(nums)):
+            x = i
+            while nums[x-1] > nums[x] and x > 0:
+                nums[x], nums[x-1] = nums[x-1], nums[x]
+                x = x-1
+            
+
+        
+
+
+        
