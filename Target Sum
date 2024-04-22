@@ -69,7 +69,8 @@ class Solution:
                 else:
                     temp_dict[key-num] = memo_dict[key]
             memo_dict = temp_dict
-        print(memo_dict)
+        
+        #print(memo_dict)
         if target in memo_dict.keys():
             return memo_dict[target]
         return 0
