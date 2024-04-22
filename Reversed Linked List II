@@ -95,6 +95,7 @@ class Solution:
         
         left -= 1
         right -= 1
+
         while left < right:
             node_list[left].val, node_list[right].val = node_list[right].val, node_list[left].val
             left += 1
