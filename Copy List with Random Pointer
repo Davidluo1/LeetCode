@@ -39,7 +39,6 @@ class Node:
         self.random = random
 """
 
-
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         """
