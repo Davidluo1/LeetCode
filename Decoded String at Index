@@ -40,8 +40,8 @@ class Solution:
         Goal: Decode the string to a tape and return the kth letter in the decoded string.
 
         "leet2code3", k = 10
-        tape += if current index is not digit
-        if current inde is digit
+        tape += if the current index is not a digit
+        if the current index is digit
         tape = tape * int(digit)
 
         if k < current tape, return tape[k-1]
