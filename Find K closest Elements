@@ -34,10 +34,10 @@ class Solution:
         - if true, return the substring k from left or right
 
         Method 1:
-        Iterate through the input arr from left to right, create a new list and 
+        Iterate through the input arr from left to right, create a new list, and 
         update its absolute distance to x.
         if the current list is equal to k, examine the next item in the list, 
-        if the absolute difference is smaller than one of the list value, replace.
+        if the absolute difference is smaller than one of the list values, replace.
         Return sorted(res)
         Runtime: O(N+(N-k)+logN)
         Spacetime: O(N)
@@ -49,7 +49,7 @@ class Solution:
         5,4,3,2,1,2,4,6,8
         [a,s,y,w,m,h] x = y
 
-        largest difference is the first or the last item
+        the largest difference is the first or the last item
 
         Method 2:
         Iterate through the input arr from left to right, create a new dictionary and 
