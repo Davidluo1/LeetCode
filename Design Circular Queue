@@ -54,7 +54,7 @@ class MyCircularQueue:
         self.k = k
 
     def enQueue(self, value: int) -> bool:
-        """insert element into the queue, return false if the queue is full"""
+        """insert an element into the queue, return false if the queue is full"""
         if self.isFull():
             return False
         self.circular_q.append(value)
@@ -75,7 +75,7 @@ class MyCircularQueue:
         return self.circular_q[0]
 
     def Rear(self) -> int:
-        """"return the last tiem from the queue, return -1 if queue is empty"""
+        """" return the last item from the queue, return -1 if queue is empty"""
         if self.isEmpty():
             return -1
         return self.circular_q[-1]
