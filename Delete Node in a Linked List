@@ -53,14 +53,14 @@ class Solution:
         Given a node before the last, it have .next link to the next node but 
         does not have any access to the previous node. Thus, the next node will 
         be the node to delete/skip. Copy the value of the next node to the given 
-        node and skip the next node by reconnect the given node to the next.next 
+        node and skip the next node by reconnecting the given node to the next.next 
         node. 
 
         Runtime: O(1)
         Spcetime: O(1)
         """
         
-        # swap current node's value with the next node's value
+        # swap the current node's value with the next node's value
         node.val, node.next.val = node.next.val, node.val
 
         # skip the next node
