@@ -42,8 +42,8 @@ class Solution:
         Runtime: O(N+(N-k)+logN)
         Spacetime: O(N)
 
-        Smart method perference:
-        - accending order result list
+        Smart method preference:
+        - ascending order result list
         
         5,4,3,2,1,0,2,4,6,8
         5,4,3,2,1,2,4,6,8
