@@ -46,12 +46,12 @@ class Solution:
         Goal: Delete the middle node of a linked list.
 
         Easy case:
-        - if only one node inside the linked list, return None
+        - if only one node is inside the linked list, return None
 
         Steps:
         1. Turn the linked list into a regular list with nodes
-        2. Set the pointer to the middle node: length of the list divide by 2
-        3. Remove the middle node: previous node.next to next node
+        2. Set the pointer to the middle node: length of the list divided by 2
+        3. Remove the middle node: previous node.next to the next node
         4. Return the head
 
         Runtime: O(N)
