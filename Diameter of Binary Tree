@@ -35,7 +35,7 @@ class Solution:
             if not node:
                 return 0
            
-            # traverse left and right subtree
+            # Traverse left and right subtree
             left = dfs(node.left)
             right = dfs(node.right)
            
