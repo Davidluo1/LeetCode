@@ -48,6 +48,7 @@ class MyCircularQueue:
     [] [2] [3]
     [4] [2] [3]
     """
+
     def __init__(self, k: int):
         # self.circular_q = [None] * k
         self.circular_q = []
