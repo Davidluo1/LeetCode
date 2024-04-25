@@ -45,7 +45,7 @@ class Solution:
         # iterate through the tokens from left to right
         for token in tokens:
             if token == '+' :
-                # get last two elements 
+                # get the last two elements 
                 a , b = arr.pop() , arr.pop()
                 # append new sum
                 arr.append( a + b ) 
