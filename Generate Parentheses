@@ -29,7 +29,7 @@ class Solution:
         n = 4, "(((())))","((()()))","((())())","((()))()","(()(()))","(()()())","(()())()","(())(())","(())()()","()((()))","()(()())","()(())()","()()(())","()()()()"
         14
 
-        DFS recursively add new braket to the previous output
+        DFS recursively adds new bracket to the previous output
 
         Runtime: O(N^2)
         Spacetime: O(N^2)
