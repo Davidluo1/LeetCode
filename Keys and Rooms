@@ -85,7 +85,7 @@ class Solution:
                 # key_map[key] = False
                 visited[key] = 1
             else: continue
-            # collect all keys in current room
+            # collect all keys in the current room
             for k in rooms[key]:
                 if k != 0 and not visited.get(k):
                     pending_rooms.append(k)
