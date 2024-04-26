@@ -36,7 +36,7 @@ Constraints:
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         """
-        Goal: Check it is possible visit all room, return True or False.
+        Goal: Check it is possible to visit all rooms, return True or False.
 
         Return false if missing a key to open a room
 
