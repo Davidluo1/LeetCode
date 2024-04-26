@@ -41,12 +41,12 @@ class Solution:
         Return false if missing a key to open a room
 
         Easy case:
-        - where the length of the rooms list is two, if the room 0 doesn't have the key 1, return False.
+        - where the length of the rooms list is two, if room 0 doesn't have the key 1, return False.
 
         The keys in a room could be 0 to 1000
 
-        Store all visited key in a visited list
-        use a set
+        Store all visited keys in a visited list
+        and use a set
         Iterate through all rooms from left to right
         if the next room number is in the visited list key, continue. Otherwise, return false
 
