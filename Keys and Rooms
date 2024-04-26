@@ -36,12 +36,12 @@ Constraints:
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         """
-        Goal: Check it is possible to visit all rooms, return True or False.
+        Goal: Check if it is possible to visit all rooms, and return True or False.
 
         Return false if missing a key to open a room
 
         Easy case:
-        - where length of the rooms list is two, if the room 0 doesn't have the key 1, return False.
+        - where the length of the rooms list is two, if the room 0 doesn't have the key 1, return False.
 
         The keys in a room could be 0 to 1000
 
