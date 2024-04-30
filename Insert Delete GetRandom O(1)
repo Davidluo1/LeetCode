@@ -24,6 +24,7 @@ Constraints:
 
 
 class RandomizedSet:
+    # Initilize dictionary
     def __init__(self):
         self.my_dict = {}
 
