@@ -45,6 +45,7 @@ class MyQueue:
     Push value x is betweeen 1 and 9
     """
 
+    # initilize queue
     def __init__(self):
         self.queue = []
 
