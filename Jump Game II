@@ -57,7 +57,7 @@ class Solution:
                 step += 1
                 break
             
-            # Keep track of the maxstep step could go at the current index and update the number of step taken
+            # Keep track of the max step step could go at the current index and update the number of steps taken
             if i == end:
                 step += 1
                 end = maxstep
