@@ -28,7 +28,7 @@ class KthLargest:
         self.heap = nums
         heapq.heapify(self.heap)
 
-        # removing small items from heap until the k size of heap
+        # removing small items from the heap until the k size of heap
         while len(self.heap) > k:
             heapq.heappop(self.heap)
        
