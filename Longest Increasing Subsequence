@@ -48,13 +48,13 @@ class Solution:
         [10]
         [10] [10]
         [9] 
-        [9] [10]    same length, comapre the right most number
+        [9] [10]    same length, compared the right most number
         [9] [9]
         [2]
         [2] [9]
         [2]
-        [5] [2]     add the number to the list if the current number is bigger than the prev right most number
-        [5] [2,5]   replace the right most number if it is smaller than the current number
+        [5] [2]     add the number to the list if the current number is bigger than the prev right number
+        [5] [2,5]   replace the right-most number if it is smaller than the current number
         [3]
         [3] [2,3]
         [2,3]
