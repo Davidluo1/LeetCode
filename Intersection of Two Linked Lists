@@ -40,7 +40,7 @@ class Solution:
             cur = cur.next
         cur = headB
         
-        # find if there is a intersection
+        # find if there is an intersection
         while cur:
             if cur in first_set:
                 return cur
