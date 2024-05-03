@@ -37,7 +37,7 @@ class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         """
         Two sorted linked lists, ordered
-        Number of nodes could be 0
+        The number of nodes could be 0
         Value from -100 to 100
 
         Solution: Compare each node of the linked lists to create a merged sorted linked list. If one of the linked list reaches null, form the merged sorted linked list with the remaining linked list.
@@ -45,8 +45,8 @@ class Solution:
 
         """ 
         easy cases:
-        -Both linked list are empty
-        -one of the linked list is empty
+        -Both linked lists are empty
+        -one of the linked lists is empty
         """
 
         if list1 == None and list2 == None:
