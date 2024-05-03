@@ -28,7 +28,7 @@ class Solution:
         intervals.sort(key=lambda x: x[0])
         prev = intervals[0]
 
-        # compare the y of the first interval and x of the second interval, merge them if they are overlapping where y is less or equal to x
+        # compare the y of the first interval and x of the second interval, and merge them if they are overlapping where y is less or equal to x
         for interval in intervals[1:]:
             if interval[0] <= prev[1]:
                 prev[1] = max(prev[1], interval[1])
