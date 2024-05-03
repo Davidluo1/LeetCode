@@ -28,7 +28,7 @@ class Solution:
 
         Easy case:
         - if the length of the strs is 1, return strs
-        - if there is a empty string inside the strs list, return ""
+        - if there is an empty string inside the strs list, return ""
 
         Iterate from right to left, if the current substring is less or equal to the current max substring, continue
 
@@ -41,7 +41,7 @@ class Solution:
         # Easy case
         if len(strs) == 1: return strs[0] if strs[0] != "" else ""
         
-        # hint 1: has to be the same from start
+        # hint 1: has to be the same from the start
         # hint 2: iterate from the smallest word length
         # hint 3: Match one should match the rest
 
