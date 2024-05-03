@@ -40,7 +40,7 @@ class Solution:
         The number of nodes could be 0
         Value from -100 to 100
 
-        Solution: Compare each node of the linked lists to create a merged sorted linked list. If one of the linked list reaches null, form the merged sorted linked list with the remaining linked list.
+        Solution: Compare each node of the linked lists to create a merged sorted linked list. If one of the linked lists reaches null, form the merged sorted linked list with the remaining linked list.
         """
 
         """ 
