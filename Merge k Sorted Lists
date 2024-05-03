@@ -28,7 +28,7 @@ Constraints:
 - 0 <= k <= 104
 - 0 <= lists[i].length <= 500
 - -104 <= lists[i][j] <= 104
-- lists[i] is sorted in ascending order.
+- lists[i] are sorted in ascending order.
 - The sum of lists[i].length will not exceed 104.
 
 """
@@ -43,7 +43,7 @@ Constraints:
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         res = []
-        # edge case when lists is empty
+        # edge case when lists are empty
         if len(lists) == 0:
             return
 
@@ -53,11 +53,11 @@ class Solution:
                 res.append(cur.val)
                 cur = cur.next
 
-        # edge case when lists is empty
+        # edge case when lists are empty
         if not res:
             return
 
-        # get sorted list
+        # get a sorted list
         res = sorted(res)
         head = ListNode(res[0])
         tail = head
