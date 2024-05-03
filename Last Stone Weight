@@ -43,7 +43,7 @@ class Solution:
             max2 = -heapq.heappop(heap)
             print(max1,max2)
 
-            # push to the heap if the first and second biggest element are not equal to each other
+            # push to the heap if the first and second biggest elements are not equal to each other
             if max1 != max2:
                 heapq.heappush(heap, -(max1-max2))
 
