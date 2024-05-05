@@ -30,17 +30,17 @@ class Solution:
             if inorder(root.left) == False:
                 return False
 
-            # check if next item is bigger or equal to the previous item
+            # check if the next item is bigger or equal to the previous item
             if arr[-1] >= root.val:
                 return False
             else:
                 arr.append(root.val)
 
-            # check right subtree
+            # check the right subtree
             if inorder(root.right) == False:
                 return False
 
-        # return false if inorder traversal outputs an incorrect list
+        # return false if in order traversal outputs an incorrect list
         if inorder(root) == False:
             return False
 
