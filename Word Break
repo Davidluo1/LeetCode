@@ -118,8 +118,8 @@ class Solution:
         [T,0,0,T,T,0,0,T,0,0]
 
         Steps:
-        1. Turn the last index of the valid word in s to true to indicate the availability of next found word in the string s.
-        2. If the previous last index is not true after testing all the words in the word dictionary, the last index wont turn to true.
+        1. Turn the last index of the valid word in s to true to indicate the availability of the next found word in the string s.
+        2. If the previous last index is not true after testing all the words in the word dictionary, the last index won't turn to true.
         3. Return the last value of the dp.
 
         Runtime: O(N*M)
