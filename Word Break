@@ -32,7 +32,7 @@ Constraints:
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         """
-        Goal: check if the string s have separated sequence in the dictionary words.
+        Goal: check if the string s have separate sequence in the dictionary words.
 
         leetcode, [leet,code]
         if leet in leetcode, s = s.split('leetcode')
