@@ -59,9 +59,9 @@ class Solution:
 
         Step:
         1. Iterate through each word in the given dictionary
-        2. Find the count of the each word * the length of the word
+        2. Find the count of each word * the length of the word
         3. Add up the total length of the word 
-        4. if total equals to the length of the string s, return true, otherwise, return false
+        4. if total equals the length of the string s, return true, otherwise, return false
 
         Runtime: O(N*N) = O(N^2)
         Spacetime: O(1)
