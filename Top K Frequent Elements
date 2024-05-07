@@ -31,7 +31,7 @@ class Solution:
         After sorting the dictionary from the highest count to the lowest, it runs O(N).
 
         Similar question to outputting the biggest number of a list. Used solution of sliding window
-        precedure: create a k-length list and update the list while iterating through the list, the final elements in the list will be the k-largest elements.
+        procedure: create a k-length list and update the list while iterating through the list, the final elements in the list will be the k-largest elements.
 
         """
 
@@ -39,7 +39,7 @@ class Solution:
         res = []
         length = 0
 
-        # assign element count into dictionary
+        # assign element count into the dictionary
         for ele in nums:
             if ele not in count_dictionary.keys():
                 count_dictionary[ele] = 1
