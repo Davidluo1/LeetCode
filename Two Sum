@@ -29,7 +29,7 @@ Constraints:
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         """
-        This question is very similar to one question: Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals k. I could use the same method of calculating the prefix sum to check if two numbers add up to the target. Runtime of O(N), with space-time of O(N).
+        This question is very similar to one question: Given an array of integer nums and an integer k, return the total number of subarrays whose sum equals k. I could use the same method of calculating the prefix sum to check if two numbers add up to the target. Runtime of O(N), with space-time of O(N).
         Since the output is the index of the elements, when adding a new prefix sum in the dictionary, I need to include the index as well.
         """
 
