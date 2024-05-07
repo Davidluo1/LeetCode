@@ -32,7 +32,7 @@ Constraints:
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         """
-        Goal: Find the number of different expressions that could be build to the given target.
+        Goal: Find the number of different expressions that could be built to the given target.
        
         Easy case:
         - if the length of the nums list is one, return 1
@@ -42,7 +42,7 @@ class Solution:
         [6:2]
 
         dict: [0:1]     [target:#combination] 
-        if the [target:combination] is in dictionary, add its count.
+        if the [target:combination] is in the dictionary, add its count.
 
         Runtime: O(N)
         Spacetime: O(N)
