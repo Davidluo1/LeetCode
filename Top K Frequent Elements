@@ -30,8 +30,8 @@ class Solution:
         Issue: output the k most frequent elements, the dictionary is unsorted.
         After sorting the dictionary from the highest count to the lowest, it runs O(N).
 
-        Similar question to output k biggest number of a list. Used solution of sliding window
-        precedure: create a k length list and update the list while iterate through the list, the final elements in the list will be the k-largest elements.
+        Similar question to outputting the biggest number of a list. Used solution of sliding window
+        precedure: create a k-length list and update the list while iterating through the list, the final elements in the list will be the k-largest elements.
 
         """
 
