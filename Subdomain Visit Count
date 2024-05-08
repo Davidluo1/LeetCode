@@ -38,7 +38,7 @@ class Solution:
         - two formats "rep d1.d2.d3" or "rep d1.d2"
         - .co / .com / .ca / .us / .network
 
-        Since we need to sum up the paried domains, it requires updating the count of the paried doamins when iterate through all the cpdomains. Dicitonary is a great method to keep track of the domain counts.
+        Since we need to sum up the paired domains, it requires updating the count of the paired domains when iterating through all the cpdomains. Dicitonary is a great method to keep track of the domain counts.
 
         Solution: Create a dictionary to store the paired domains. Use string split to get the two formats of domain and update its count in the dicionary. Add the paried domains from the dictionary into a list fomated as count and domain.
         """
