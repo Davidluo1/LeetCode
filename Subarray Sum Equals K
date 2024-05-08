@@ -28,7 +28,7 @@ class Solution:
       # prefix sum calculation
       prefix_sum = prefix_sum + num
 
-      # increment if the prefix sum exist in the dictionary
+      # increment if the prefix sum exists in the dictionary
       if prefix_sum - k in d:
         res += d[prefix_sum - k]
 
