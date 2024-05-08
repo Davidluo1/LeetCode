@@ -30,7 +30,7 @@ Constraints:
 class Solution:
     def subdomainVisits(self, cpdomains: List[str]) -> List[str]:
         """
-        Goal: count the paried domains
+        Goal: count the paired domains
 
         edge case:
         - cpdomains length must be at least one
@@ -40,7 +40,7 @@ class Solution:
 
         Since we need to sum up the paired domains, it requires updating the count of the paired domains when iterating through all the cpdomains. The dictionary is a great method to keep track of the domain counts.
 
-        Solution: Create a dictionary to store the paired domains. Use string split to get the two formats of domain and update its count in the dictionary. Add the paired domains from the dictionary into a list fomated as count and domain.
+        Solution: Create a dictionary to store the paired domains. Use string split to get the two formats of domain and update its count in the dictionary. Add the paired domains from the dictionary into a list formated as count and domain.
         """
 
         # helper function to update the memo dictionary
