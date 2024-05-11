@@ -42,5 +42,6 @@ class Solution:
         # search left and right subtrees
         l_depth = self.maxDepth(root.left)
         r_depth = self.maxDepth(root.right)
- 
+
+        # Update the current tree depth
         return max(l_depth, r_depth) + 1
