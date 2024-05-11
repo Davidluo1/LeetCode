@@ -38,7 +38,8 @@ class Solution:
         # base case
         if root is None:
             return 0
-        
+
+        # search left and right subtrees
         l_depth = self.maxDepth(root.left)
         r_depth = self.maxDepth(root.right)
  
