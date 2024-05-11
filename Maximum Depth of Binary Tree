@@ -33,7 +33,7 @@ class Solution:
         - number of node in the tree could be 0
         - node's value could be negative
 
-        Solution: Recursively call the maxDepth function to the current root's left and right child. Return the maximum of the subtree and add one to include the level of the begining root.
+        Solution: Recursively call the maxDepth function to the current root's left and right child. Update its current maximum depth and return the final maximum of the subtree, and add one to include the level of the begining root.
         """
         # base case
         if root is None:
