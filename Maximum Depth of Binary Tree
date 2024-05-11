@@ -35,7 +35,7 @@ class Solution:
 
         Solution: Recursively call the maxDepth function to the current root's left and right child. Return the maximum of the subtree and add one to include the level of the begining root.
         """
-
+        # base case
         if root is None:
             return 0
         
