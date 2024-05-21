@@ -29,7 +29,7 @@ class Solution:
         return the sorted array
 
         Easy case:
-        when n equals to one return
+        when n equals one return
 
         Any kind of sorting algorithm
 
