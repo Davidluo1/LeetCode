@@ -31,7 +31,7 @@ class Solution:
         Easy case:
         when n equals one return
 
-        Any kind of sorting algorithm
+        Any kind sorting algorithm
 
         Iterate through the nums list, and count the numbers using a dictionary.
         Iterate through the dictionary, return the key times its count
