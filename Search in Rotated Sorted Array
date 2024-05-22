@@ -30,7 +30,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         start, end = 0, len(nums) - 1
 
-        # Divide and conquer using a mid point
+        # Divide and conquer using a midpoint
         while start <= end:
             mid = (start + end) // 2
 
