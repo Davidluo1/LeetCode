@@ -39,7 +39,7 @@ class Solution:
 
             # Check if the start half is sorted
             if nums[start] <= nums[mid]:
-                # check if target is in left half
+                # check if the target is in the left half
                 if nums[start] <= target < nums[mid]:
                     end = mid - 1
                 else:
