@@ -47,7 +47,7 @@ class Solution:
         Easy case:
         if the root does not have a left and right child, return the root value
 
-        DFS to get each root to leaf path
+        DFS to get each root-to-leaf path
         - return nodes from the root to the leafs
         if node is null, return
         search left first, and then search right child
