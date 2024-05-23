@@ -42,7 +42,7 @@ class Solution:
         if not p and not q:
             return True
 
-        # only tree or subtree-ended
+        # Only tree or subtree-ended
         if not p or not q:
             return False
 
