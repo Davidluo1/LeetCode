@@ -46,7 +46,7 @@ class Solution:
         if not p or not q:
             return False
 
-        # if one of the trees of the subtree node does not match
+        # If one of the trees of the subtree node does not match
         if p.val != q.val:
             return False
 
