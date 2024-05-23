@@ -42,7 +42,7 @@ Constraints:
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         """
-        Goal: Return the sum of all roots to leafs numbers.
+        Goal: Return the sum of all roots to leaf numbers.
 
         Easy case:
         if the root does not have a left and right child, return the root value
