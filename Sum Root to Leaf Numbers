@@ -49,7 +49,7 @@ class Solution:
 
         DFS to get each root-to-leaf path
         - return nodes from the root to the leafs
-        if node is null, return
+        if the node is null, return
         search left first, and then search right child
 
         number = 0 * 10 + 1
