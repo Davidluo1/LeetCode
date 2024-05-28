@@ -26,6 +26,7 @@ Constraints:
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         """
+
         Goal: return all possible permutations.
 
         Easy case:
@@ -53,8 +54,6 @@ class Solution:
 
         Runtime: O(N^2)
         Spacetime: O(N^2)
-
-
 
         """
 
