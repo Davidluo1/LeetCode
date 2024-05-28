@@ -24,3 +24,58 @@ Constraints:
 -10 <= nums[i] <= 10
 All the integers of nums are unique.
 """
+
+
+
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        """
+        Goal: return all possible permutations.
+
+        Easy case:
+        when the nums length is one, return list(nums)
+        when the nums length is two, append the elements reversely to the 
+        nums list and return
+
+        [1]
+        [1,2]
+        [1,2],[2,1] | [1,3],[3,1] | [2,3],[3,2]
+        [1,2,3],[2,1,3] | [1,3,2],[3,1,2] | [2,3,1],[3,2,1]
+
+        Updated the whole possible permutations paralle
+
+        Approach (swaping):
+        find the pattern to swap integers to get all the possible permutations
+
+        Pro: modify in-place O(1) for each execution
+
+        [1,2,3], [2,1,3], [2,3,1]
+        [2,1,3], [1,2,3], [1,3,2]
+        [3,1,2], [1,3,2], [1,2,3]
+        
+        reduce memory, don't list that equals to the original list
+
+        Runtime: O(N^2)
+        Spacetime: O(N^2)
+
+
+
+        """
+
+        # Easy case
+        if len(nums) == 1: return [nums]
+        # if len(nums) == 2: return [nums,nums[::-1]]
+
+        def backtrack(start_index):
+            # base case
+            if start_index == len(nums):
+                permutation.append(nums[:])
+            else:
+                for i in range(start_index, len(nums)):
+                    nums[start_index], nums[i] = nums[i], nums[start_index]
+                    backtrack(start_index + 1)
+                    nums[start_index], nums[i] = nums[i], nums[start_index]
+
+        permutation = []
+        backtrack(0)
+        return permutation
