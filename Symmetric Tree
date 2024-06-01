@@ -31,7 +31,7 @@ class Solution:
 
         Easy case:
         If there is only one node in the binary tree, return True
-        If left or right subtree root is none, return False
+        If the left or right subtree root is none, return False
 
         Solution:
         1. Two tree traversal, one on the left subtree, and one on the right subtree.
