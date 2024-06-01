@@ -34,7 +34,7 @@ class Solution:
         If left or right subtree root is none, return False
 
         Solution:
-        1.Two tree traversal, one on the left subtree, and one on the rigth subtree.
+        1. Two tree traversal, one on the left subtree, and one on the right subtree.
             - Pre-order on one subtree, and post-order on the other subtree.
         2. Store all the nodes into two lists, return true if one list is the 
         reverse of the other list.
