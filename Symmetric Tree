@@ -1,0 +1,88 @@
+"""
+
+
+
+"""
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        """
+        Goal: Check if the binary tree is symmetric around its center.
+
+        Easy case:
+        If there is only one node in the binary tree, return True
+        If left or right subtree root is none, return False
+
+        Solution:
+        1.Two tree traversal, one on the left subtree, and one on the rigth subtree.
+            - Pre-order on one subtree, and post-order on the other subtree.
+        2. Store all the nodes into two lists, return true if one list is the 
+        reverse of the other list.
+
+        Runtime: O(N-1)
+        Spacetime: O((xL+xR)-1)
+    
+        """
+        
+        # Easy case
+        if not root.left and not root.right: return True
+        if not root.right or not root.left: return False
+
+        def preorder(l_root):
+            if l_root:
+                l_list.append(l_root.val)
+                preorder(l_root.left)
+                preorder(l_root.right)
+            else:
+                l_list.append(None)
+
+            
+        def r_preorder(r_root):
+            if r_root:
+                r_list.append(r_root.val)
+                r_preorder(r_root.right)
+                r_preorder(r_root.left)
+            else:
+                r_list.append(None)
+
+        l_list, r_list = [], []
+
+        preorder(root.left)
+        r_preorder(root.right)
+
+        return l_list == r_list
+
+
+        # def preorder(l_root):
+        #     if l_root:
+        #         l_list.append(l_root.val)
+        #         preorder(l_root.left)
+        #         preorder(l_root.right)
+        #     else:
+        #         l_list.append(None)
+
+            
+        # def postorder(r_root):
+        #     if r_root:
+        #         postorder(r_root.left)
+        #         postorder(r_root.right)
+        #         r_list.append(r_root.val)
+        #     else:
+        #         r_list.append(None)
+
+        # l_list, r_list = [], []
+
+        # preorder(root.left)
+        # postorder(root.right)
+
+        # return l_list == r_list[::-1]
+
+        
+
