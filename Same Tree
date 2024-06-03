@@ -40,21 +40,21 @@ class Solution:
         if one of the tree from p and q is empty, return false
 
         Solution:
-        1. Use tree traversal on both tree p and tree q, and check all node's values 
+        1. Use tree traversal on both tree p and tree q and check all node's values 
         at the same position. From root to leaf. 
         Runtime: O(N)
         Spacetime: O(1)
 
-        2. Store the node's value using tree traversal in a list, compare both 
+        2. Store the node's value using tree traversal in a list, and compare both 
         lists generated from tree p and tree q, if both lists are equal to each 
         other, return true.
         Runtime: O(N)
         Spacetime: O(2N)
 
 
-        Can't just do if p == q because they are binary tree
+        Can't just do it if p == q because they are binary tree
         Identical:
-        Same node at the same location in the binary tree
+        The same node at the same location in the binary tree
 
         """
 
