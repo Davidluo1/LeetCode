@@ -40,7 +40,7 @@ class Solution:
         if one of the tree from p and q is empty, return false
 
         Solution:
-        1. Use tree traversal on both tree p and tree q, check all node's value 
+        1. Use tree traversal on both tree p and tree q, and check all node's values 
         at the same position. From root to leaf. 
         Runtime: O(N)
         Spacetime: O(1)
