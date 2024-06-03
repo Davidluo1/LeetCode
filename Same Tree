@@ -30,10 +30,11 @@ Constraints:
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         """
-        Goal: Check if tree p and q are structurally identical.
+        Goal: Check if trees p and q are structurally identical.
 
         Easy case:
         if one of the tree from p and q is empty, return false
