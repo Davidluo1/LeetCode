@@ -1,0 +1,86 @@
+"""
+
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return [-1, -1].
+
+You must write an algorithm with O(log n) runtime complexity.
+
+ 
+
+Example 1:
+
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+Example 2:
+
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+Example 3:
+
+Input: nums = [], target = 0
+Output: [-1,-1]
+ 
+
+Constraints:
+
+0 <= nums.length <= 105
+-109 <= nums[i] <= 109
+nums is a non-decreasing array.
+-109 <= target <= 109
+
+"""
+
+
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        """
+        Goal: find the target starting and ending position in an array.
+
+        Must be O(logN) runtime -> Binary Search
+
+        Easy case:
+        - if the nums list is empty, return [-1,-1]
+        - if there is only one element in the nums list, return [0,0] if it equals to 
+        the target value, [-1,-1] otherwise
+
+        Condition:
+        if the target is not found in the array, return [-1,-1]
+
+        0. Initlize the left and right to -1,-1.
+        1. Divide and conquer the array and find the first target value.
+        2. explore left and right of the target value.
+        3. Loop to find the start and end position of the target value.
+
+        Runtime: O(logN + K)
+        Spacetime: O(logN + K)
+
+        """
+
+        # Easy case
+        if len(nums) == 0: return [-1,-1]
+        #if len(nums) == 1: return [0,0] if nums[0] == target else [-1,-1]
+
+        left, right, found = 0, len(nums) - 1, False
+
+
+        while left <= right:
+            mid = (left+right) // 2
+
+            if nums[mid] < target: left = mid + 1
+            elif nums[mid] > target: right = mid - 1
+            else:
+                left = mid
+                found = True
+                break
+
+        if not found: return [-1,-1]
+        
+        first, end = left, left
+
+        while first > 0 and nums[first-1] == target:
+            first -= 1
+        while end < len(nums)-1 and nums[end+1] == target:
+            end += 1
+
+        return [first,end]
