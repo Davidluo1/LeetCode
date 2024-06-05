@@ -44,7 +44,7 @@ class Solution:
 
         0. Initlize the left and right to -1,-1.
         1. Divide and conquer the array and find the first target value.
-        2. explore left and right of the target value.
+        2. explore the left and right of the target value.
         3. Loop to find the start and end position of the target value.
 
         Runtime: O(logN + K)
