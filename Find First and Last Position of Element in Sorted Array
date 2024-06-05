@@ -30,6 +30,7 @@ Constraints:
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         """
+
         Goal: find the target starting and ending position in an array.
 
         Must be O(logN) runtime -> Binary Search
