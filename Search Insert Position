@@ -33,16 +33,16 @@ class Solution:
 
         Easy case: (left and right boundary)
         if the length of the nums list is one, return 0 if nums[0] is bigger or equals
-        than the target value.
+        then the target value.
         if the last element of the nums list is smaller than the target, return the 
         length of the nums list.
 
         O(logN) = divide and conquer method
         Spacetime: O(1)
 
-        1. set a mid point
+        1. set a midpoint
         2. loop while the left index is less than the right index
-        3. update the mid point accordingly
+        3. update the midpoint accordingly
         4. return the index if the target is found or not found
 
         """
