@@ -29,10 +29,10 @@ class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         """
         Goal: return the target position if it is in the nums list. Otherwise, 
-        return the apporiate index.
+        return the appropriate index.
 
         Easy case: (left and right boundary)
-        if the length of the nums list is one, return 0 if nums[0] bigger or equals
+        if the length of the nums list is one, return 0 if nums[0] is bigger or equals
         than the target value.
         if the last element of the nums list is smaller than the target, return the 
         length of the nums list.
