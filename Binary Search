@@ -37,8 +37,8 @@ class Solution:
 
         1. set a midpoint from the left and right boundary of the nums list.
         2. loop and compare the midpoint value with the target value, return the midpoint 
-        if it is equal to the target value. Otherwise, update its boundary according 
-        to left if the midpoint value is more than the target, and to right if it is 
+        if it is equal to the target value. Otherwise, update its boundary  
+        to left if the midpoint value exceeds the target, and to right if it is 
         less than the target value.
         3. if the target is not found in the nums list after binary search, return -1.
 
