@@ -26,3 +26,46 @@ All the integers in nums are unique.
 nums is sorted in ascending order.
 
 """
+
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        """
+        Goal: return the index of the target in the nums list, return -1 if the 
+        target doesn't exist in the the nums list.
+
+        Must be in O(logN) runtime complexity
+        - Divide and conquer (binary search)
+
+        Easy case:
+        if nums length is one, return nums[0] if it equals to the target, otherwise,
+        return -1
+
+        1. set a midpoint from the left and right boundary of the nums list.
+        2. loop and compare the midpoint value with the target value, return the midpoint 
+        if it is equal to the target value. Otherwise, update its boundary according 
+        to left if the midpoint value is more than the target, and to right if it is 
+        less than the target value.
+        3. if the target is not found in the nums list after binary search, return -1.
+
+        Runtime: O(logN)
+        Spacetime: O(1)
+
+        """
+
+        # Easy case
+        # if len(nums) == 1: return -1 if nums[0] != target else 0
+
+        # Divide and conquer
+
+        # left and right boundary
+        left, right = 0, len(nums) - 1
+
+        while left <= right:
+            mid = (left + right) // 2
+
+            if nums[mid] > target: right = mid - 1
+            elif nums[mid] < target: left = mid + 1
+            else: return mid
+        
+        return -1
