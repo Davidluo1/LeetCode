@@ -40,7 +40,7 @@ class Solution:
         if it is equal to the target value. Otherwise, update its boundary  
         to the left if the midpoint value exceeds the target, and to the right if it is 
         less than the target value.
-        3. if the target is not found in the nums list after binary search, return -1.
+        3. if the target is not found in the nums list after a binary search, return -1.
 
         Runtime: O(logN)
         Spacetime: O(1)
@@ -52,7 +52,7 @@ class Solution:
 
         # Divide and conquer
 
-        # left and right boundary
+        # Left and right boundary
         left, right = 0, len(nums) - 1
 
         while left <= right:
