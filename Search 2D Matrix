@@ -36,13 +36,13 @@ class Solution:
         Spacetime: O(1)
 
         1. divide and conquer the rows of the matrix
-        2. divide and conquer the target row of the Martix
-        3. return true if the target exist in the target row
+        2. divide and conquer the target row of the Matrix
+        3. return true if the target exists in the target row
 
         Create a binary search function
 
         check the left and right boundary elements
-        - early exist: if match the target or outside the left or right boundary
+        - early exists: if matches the target or outside the left or right boundary
 
         """
 
