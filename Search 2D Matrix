@@ -30,13 +30,13 @@ class Solution:
         """
         Goal: Check if the target value is found in the given matrix.
 
-        Must be O(logMN) runtime.
-        binary serach
+        It must be O(logMN) runtime.
+        binary search
         - divide and conquer
         Spacetime: O(1)
 
         1. divide and conquer the rows of the matrix
-        2. divide and conquer the target row of the martix
+        2. divide and conquer the target row of the Martix
         3. return true if the target exist in the target row
 
         Create a binary search function
