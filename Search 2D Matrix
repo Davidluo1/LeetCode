@@ -29,3 +29,61 @@ n == matrix[i].length
 -104 <= matrix[i][j], target <= 104
 
 """
+
+
+
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        """
+        Goal: Check if the target value is found in the given matrix.
+
+        Must be O(logMN) runtime.
+        binary serach
+        - divide and conquer
+        Spacetime: O(1)
+
+        1. divide and conquer the rows of the matrix
+        2. divide and conquer the target row of the martix
+        3. return true if the target exist in the target row
+
+        Create a binary search function
+
+        check the left and right boundary elements
+        - early exist: if match the target or outside the left or right boundary
+
+        """
+
+        left, right = 0, len(matrix) - 1
+
+        while left < right:
+            mid = (left+right) // 2
+
+            if matrix[mid][0] <= target <= matrix[mid][-1]:
+                left = mid
+                break
+            elif target < matrix[mid][0]:
+                right = mid - 1
+            elif target > matrix[mid][0]:
+                left = mid + 1   
+            else: 
+                return True
+        
+        row = left
+        # left and right boundary of the target row
+        # if target < matrix[row][0] or target > matrix[row][-1]: return False
+        # if target == matrix[row][-1] or target == matrix[row][0]: return True
+
+        left, right = 0, len(matrix[row]) - 1
+
+        while left <= right:
+            mid = (left+right) // 2
+
+            if target < matrix[row][mid]:
+                right = mid - 1
+            elif target > matrix[row][mid]:
+                left = mid + 1
+            else: 
+                return True
+
+        # not found in the target row
+        return False
