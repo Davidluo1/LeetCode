@@ -5,7 +5,7 @@ Each row is sorted in non-decreasing order.
 The first integer of each row is greater than the last integer of the previous row.
 Given an integer target, return true if the target is in the matrix or false otherwise.
 
-You must write a solution in O(log(m * n)) time complexity.
+Write a solution in O(log(m * n)) time complexity.
 
  
 
