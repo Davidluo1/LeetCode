@@ -62,7 +62,7 @@ class MyCircularQueue:
         return True
 
     def deQueue(self) -> bool:
-        """delete element from the queue, return false if the queue is empty.
+        """ delete element from the queue, return false if the queue is empty.
         - FIFO first in first out"""
         if self.isEmpty():
             return False
@@ -70,7 +70,7 @@ class MyCircularQueue:
         return True
 
     def Front(self) -> int:
-        """return the front item from the queue, return -1 if queue is empty """
+        """ return the front item from the queue, return -1 if queue is empty """
         if self.isEmpty():
             return -1
         return self.circular_q[0]
@@ -82,11 +82,11 @@ class MyCircularQueue:
         return self.circular_q[-1]
 
     def isEmpty(self) -> bool:
-        """return true if the queue is empty, false otherwise"""
+        """ return true if the queue is empty, false otherwise """
         return len(self.circular_q) == 0
 
     def isFull(self) -> bool:
-        """return true if the queue is full, false otherwise"""
+        """ return true if the queue is full, false otherwise """
         return len(self.circular_q) == self.k
 
 # Your MyCircularQueue object will be instantiated and called as such:
