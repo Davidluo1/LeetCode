@@ -58,6 +58,7 @@ class Solution:
             mid1 = len(arr) // 2
             mid2 = mid1-1
             x = (arr[mid1]+arr[mid2]) // 2
+
             if x < 0:
                 return -(-(arr[mid1]+arr[mid2]) / 2)
             return (arr[mid1]+arr[mid2]) / 2
