@@ -54,6 +54,7 @@ class Solution:
         def median(arr):
             if len(arr) % 2 != 0:
                 return arr[len(arr)//2]
+
             mid1 = len(arr) // 2
             mid2 = mid1-1
             x = (arr[mid1]+arr[mid2]) // 2
