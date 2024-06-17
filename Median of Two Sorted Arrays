@@ -38,7 +38,7 @@ class Solution:
         For negative number: if x//y < 0, then -(-x//y)
 
         Binary search:
-        use the smaller array, iterate through each integer, binary search, and place in the other array.
+        Use the smaller array, iterate through each integer, binary search, and place in the other array.
         Runtime: O(Mlog(N))
 
         array1.append(array2)
