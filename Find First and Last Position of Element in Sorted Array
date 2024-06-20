@@ -79,4 +79,4 @@ class Solution:
         while end < len(nums)-1 and nums[end+1] == target:
             end += 1
 
-        return [first,end]
+        return [first, end]
