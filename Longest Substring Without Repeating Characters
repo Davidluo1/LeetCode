@@ -71,7 +71,8 @@ class Solution:
         for i in range(len(s)):
             if len(visited) > longest:
                 longest = len(visited)
-            visited = [s[i]]
+            visited = [s[I]]
+
             for j in range(i+1,len(s)):
                 if s[j] not in visited:
                     visited.append(s[j])
