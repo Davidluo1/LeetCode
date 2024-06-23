@@ -61,7 +61,7 @@ class Solution:
                 while v[0] != char:
                     v.pop(0)
                 v.append(v.pop(0))
-            print(v, i)
+        
             if len(v) > longest:
                 longest = len(v)
         return longest
