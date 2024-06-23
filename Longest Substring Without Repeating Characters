@@ -78,8 +78,8 @@ class Solution:
                     visited.append(s[j])
                     if j == len(s)-1 and len(visited) > longest:
                         return len(visited)
-                else:
-                    break
+                else: break
+
             if len(s) - i <= longest:
                 break
 
