@@ -30,7 +30,7 @@ class Solution:
         - numbers in the list could be negative
 
         Edge case:
-        - when the length of num list is 3
+        - when the length of the num list is 3
 
         """
 
