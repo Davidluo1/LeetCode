@@ -30,7 +30,7 @@ class Solution:
         Goal: return the maximum depth of the binary tree
 
         Edge case:
-        - The number of node in the tree could be 0
+        - The number of nodes in the tree could be 0
         - node's value could be negative
 
         Solution: Recursively call the maxDepth function to the current root's left and right child. Update its current maximum depth and return the final maximum of the subtree, and add one to include the level of the begining root.
