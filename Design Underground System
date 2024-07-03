@@ -58,7 +58,7 @@ class UndergroundSystem:
         # calculate time t from check in time
         time = t - check_in_time
 
-        # update time list if travel item exist in the time list
+        # update time list if travel item exists in the time list
         if travel in self.time_list:
             travel_time, count = self.time_list[travel]
             self.time_list[travel] = (time+travel_time, count+1)
