@@ -11,7 +11,7 @@ Implement the MyCircularQueue class:
 - boolean enQueue(int value) Inserts an element into the circular queue. Return true if the operation is successful.
 - boolean deQueue() Deletes an element from the circular queue. Return true if the operation is successful.
 - boolean isEmpty() Checks whether the circular queue is empty.
-- boolean isFull() Checks whether the circular queue is full or not.
+- boolean isFull() Checks whether the circular queue is full.
 - You must solve the problem without using your programming language's built-in queue data structure. 
 
 Example 1:
