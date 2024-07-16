@@ -42,7 +42,7 @@ class MyQueue:
     [1,2]
     [2]
 
-    Push value x is betweeen 1 and 9
+    Push value x is between 1 and 9
     """
 
     # initilize queue
