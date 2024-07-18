@@ -42,7 +42,7 @@ class Solution:
         [6:2]
 
         dict: [0:1]     [target:#combination] 
-        if the [target:combination] is in the dictionary, add its count.
+        if the [target: combination] is in the dictionary, add its count.
 
         Runtime: O(N)
         Spacetime: O(N)
