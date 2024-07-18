@@ -33,7 +33,7 @@ class Solution:
         """
         Goal: return the possible unique paths to reach the bottom-right corner
 
-        There will be obstacle on the grid shown as 1
+        There will be obstacles on the grid shown as 1
 
         [1,0,0]
         [0,1,0]
