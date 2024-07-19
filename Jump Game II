@@ -27,7 +27,7 @@ Constraints:
 class Solution:
     def jump(self, nums: List[int]) -> int:
         """
-        Goal: Find the minimum number of jumps to reach the end of nums list
+        Goal: Find the minimum number of jumps to reach the end of the number list
 
         Edge case:
         - when nums length is 1, return 0
