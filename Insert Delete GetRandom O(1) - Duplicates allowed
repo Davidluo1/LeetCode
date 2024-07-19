@@ -25,7 +25,7 @@ randomizedCollection.insert(1);   // return true since the collection does not c
 randomizedCollection.insert(1);   // return false since the collection contains 1.
                                   // Inserts another 1 into the collection. The collection now contains [1,1].
 randomizedCollection.insert(2);   // return true since the collection does not contain 2.
-                                  // Inserts 2 into the collection. Collection now contains [1,1,2].
+                                  // Inserts 2 into the collection. The collection now contains [1,1,2].
 randomizedCollection.getRandom(); // getRandom should:
                                   // - return 1 with probability 2/3, or
                                   // - return 2 with probability 1/3.
