@@ -40,7 +40,7 @@ class Solution:
         Use a set variable to return unique combinations
 
         Easy case:
-        - if only one candidate, if the target is bigger than the candidate and target mod candidate equals to 0
+        - if only one candidate, if the target is bigger than the candidate and target mod candidate equals 0
             return [candidate*(target // candidate)], otherwise, return 
         - if target equals to 1, return
 
