@@ -37,7 +37,7 @@ class Solution:
         The same candidate could be reuse
         Chosen numbers sum up the target
 
-        Use a set variable to return unqiue combinations
+        Use a set variable to return unique combinations
 
         Easy case:
         - if only one candidate, if target is bigger than the candidate and target mod candidate equals to 0
