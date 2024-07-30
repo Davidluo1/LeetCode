@@ -32,7 +32,7 @@ Constraints:
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         """
-        Goal: return a list of all unique combinartions of candidates that could sum up to the target.
+        Goal: return a list of all unique combination of candidates that could sum up to the target.
 
         Same candidate could be reuse
         Chosen numbers sum up to target
