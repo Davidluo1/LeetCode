@@ -34,7 +34,7 @@ class Solution:
         """
         Goal: return a list of all unique combinations of candidates that could sum up to the target.
 
-        Same candidate could be reuse
+        The same candidate could be reuse
         Chosen numbers sum up to target
 
         Use set variable to return unqiue combinations
