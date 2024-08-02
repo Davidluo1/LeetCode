@@ -43,7 +43,7 @@ class Solution:
         Goal: check if the binary tree has a root-leaf sum equals to the targetSum.
 
         Easy case:
-        If there is no nodes in the binary tree, return False
+        If there are no nodes in the binary tree, return False
 
         Root-to-leaf
         Method: DFS
