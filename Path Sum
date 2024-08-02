@@ -53,7 +53,7 @@ class Solution:
         Runtime: O(N^2)
         Spacetime: O(1)
 
-        Create a memo to boost recursive calls memory usage
+        Create a memo to boost recursive calls' memory usage
         """
 
         if not root: return False
