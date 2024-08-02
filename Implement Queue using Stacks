@@ -60,7 +60,7 @@ class MyQueue:
         return self.queue.pop(0)
 
     def peek(self) -> int:
-        """Return the element at the front of the queue"""
+        """ Return the element at the front of the queue """
         # list index 0 is the front element of the queue
         return self.queue[0]
 
