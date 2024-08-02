@@ -65,7 +65,7 @@ class MyQueue:
         return self.queue[0]
 
     def empty(self) -> bool:
-        """Check if the queue is empty, return true, false otherwise"""
+        """ Check if the queue is empty, return true, false otherwise """
         # list length of 0 represents an empty
         if len(self.queue) == 0:
             return True
