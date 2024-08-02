@@ -55,7 +55,7 @@ class MyQueue:
         self.queue.append(x)
 
     def pop(self) -> int:
-        """Remove the element from the front of the queue, return the element"""
+        """ Remove the element from the front of the queue, return the element """
         # list pop(0) removes the front element
         return self.queue.pop(0)
 
