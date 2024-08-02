@@ -50,7 +50,7 @@ class MyQueue:
         self.queue = []
 
     def push(self, x: int) -> None:
-        """Add element to the back of the queue"""
+        """ Add element to the back of the queue """
         # list append puts the new item to the back
         self.queue.append(x)
 
