@@ -38,7 +38,7 @@ class Solution:
 
         Iterate through the list from left to right, and use a max function to keep 
         track of the current longest subsequence. It will require two lists to 
-        store and compare the length of subsequence while traversing through the 
+        store and compare the subsequence length while traversing through the 
         nums list.
 
         Runtime: O(N)
