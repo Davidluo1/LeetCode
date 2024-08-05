@@ -126,4 +126,5 @@ class Solution:
                     if nums[i] <= cur[j]:
                         cur[j] = nums[i]
                         break
+
         return len(cur)
