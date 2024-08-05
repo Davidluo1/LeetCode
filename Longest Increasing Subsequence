@@ -48,7 +48,7 @@ class Solution:
         [10]
         [10] [10]
         [9] 
-        [9] [10]    same length, compared the rightmost number
+        [9] [10]    same length, compared to the rightmost number
         [9] [9]
         [2]
         [2] [9]
