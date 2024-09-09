@@ -34,7 +34,7 @@ class Solution:
         Easy case:
         - when length order == length s == 1, return s
 
-        order: c:1, b:1, a:1    initlize the order map and track the count of each letter in string s
+        order: c:1, b:1, a:1    initialize the order map and track the count of each letter in string s
         rest += d
 
         for key, val in order_map:
