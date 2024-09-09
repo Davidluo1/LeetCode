@@ -45,7 +45,7 @@ class Solution:
         Goal: deep copy the input-linked list
 
         Easy case:
-        - when there is no node in the linked list / head is null
+        - when there is no node in the linked list/head is null
 
         Steps:
         - Copy each node in the linked list to a hash table
