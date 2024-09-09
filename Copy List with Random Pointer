@@ -42,7 +42,7 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         """
-        Goal: deep copy the input-linked list
+        Goal: Deep copy the input-linked list
 
         Easy case:
         - when there is no node in the linked list/head is null
