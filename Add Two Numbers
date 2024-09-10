@@ -90,6 +90,7 @@ class Solution:
             new_node = ListNode(temp[i])
             cur.next = new_node
             cur = new_node
+
         return head
 
     
