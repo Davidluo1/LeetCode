@@ -38,7 +38,7 @@ class Solution:
         Steps:
         1. Iterate through both linked lists and find out their integer sum
         2. Iterate the string sum reversely and create a linked list
-        3. return head of the new linked list
+        3. return the head of the new linked list
 
         Runtime: O(3N)
         Spacetime: O(N)
