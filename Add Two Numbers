@@ -85,6 +85,7 @@ class Solution:
         new_node = ListNode(temp[-1])
         head = new_node
         cur = head
+
         for i in range(len(temp)-2,-1,-1):
             new_node = ListNode(temp[i])
             cur.next = new_node
