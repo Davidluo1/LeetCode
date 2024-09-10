@@ -36,7 +36,7 @@ class Solution:
         Goal: get the total of the two linked list integer values, find their sum, and create a node in reverse
 
         Steps:
-        1. Iterate through both linked list and find out their integer sum
+        1. Iterate through both linked lists and find out their integer sum
         2. Iterate the string sum reversly and create linked list
         3. return head of the new linked list
 
