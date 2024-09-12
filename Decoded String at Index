@@ -83,6 +83,7 @@ class Solution:
                 if k == length or k == 0:
                     return s[i]
                 length -= 1
+        
         return 0
         
         # tape = []
