@@ -44,6 +44,7 @@ Constraints:
 class Solution:
     def deleteNode(self, node):
         """
+
         :type node: ListNode
         :rtype: void Do not return anything, modify node in-place instead.
 
@@ -58,6 +59,7 @@ class Solution:
 
         Runtime: O(1)
         Spcetime: O(1)
+
         """
         
         # swap the current node's value with the next node's value
