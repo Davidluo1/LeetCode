@@ -38,7 +38,7 @@ class Solution:
 
         i = 0
         while i < len(prices):
-            # update current min price
+            # update the current min price
             min_price = min(min_price, prices[i])
 
             if prices[i] > min_price:
