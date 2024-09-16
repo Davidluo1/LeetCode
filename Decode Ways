@@ -11,7 +11,7 @@ To decode an encoded message, all the digits must be grouped and then mapped bac
 "KJF" with the grouping (11 10 6)
 Note that the grouping (1 11 06) is invalid because "06" cannot be mapped into 'F' since "6" is different from "06".
 Given a string s containing only digits, return the number of ways to decode it.
-The test cases are generated so that the answer fits in a 32-bit integer.
+The test cases are generated to fit the answer in a 32-bit integer.
 
 Example 1:
 Input: s = "12"
