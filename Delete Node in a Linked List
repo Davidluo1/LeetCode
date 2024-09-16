@@ -8,7 +8,7 @@ Delete the given node. Note that by deleting the node, we do not mean removing i
 The value of the given node should not exist in the linked list.
 The number of nodes in the linked list should decrease by one.
 All the values before the node should be in the same order.
-All the values after node should be in the same order.
+All the values after the node should be in the same order.
 
 Custom testing:
 For the input, you should provide the entire linked list head and the node to be given node. node should not be the last node of the list and should be an actual node in the list.
