@@ -42,7 +42,7 @@ class Solution:
 
         "leet2code3", k = 10
         tape += if the current index is not a digit
-        if the current index is digit
+        if the current index is a digit
         tape = tape * int(digit)
 
         if k < current tape, return tape[k-1]
