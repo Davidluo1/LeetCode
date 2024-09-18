@@ -4,7 +4,7 @@ An underground railway system keeps track of customer travel times between diffe
 
 Implement the UndergroundSystem class:
 void checkIn(int id, string stationName, int t)
-A customer with a card ID equal to id, checks in at the station stationName at time t.
+A customer with a card ID equal to ID, checks in at the station stationName at time t.
 A customer can only be checked into one place at a time.
 void checkOut(int id, string stationName, int t)
 A customer with a card ID equal to id, checks out from the station stationName at time t.
