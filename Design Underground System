@@ -55,7 +55,7 @@ class UndergroundSystem:
         station, check_in_time = self.check_in_list.pop(id)
         travel = (station, stationName)
 
-        # calculate time t from check in time
+        # calculate time t from check-in time
         time = t - check_in_time
 
         # update time list if travel item exists in the time list
