@@ -51,7 +51,7 @@ class UndergroundSystem:
         self.check_in_list[id] = (stationName,t)
 
     def checkOut(self, id: int, stationName: str, t: int) -> None:
-        # get station and check in time from check in list
+        # get station and check-in time from check in list
         station, check_in_time = self.check_in_list.pop(id)
         travel = (station, stationName)
 
