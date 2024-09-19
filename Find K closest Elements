@@ -57,7 +57,7 @@ class Solution:
         Iterate through the new dictionary, store up to k elements, and return its index 
         of k if arr.length == k
         Otherwise, check the next item, if its absolute value is smaller than the 
-        the first item in the new dictionary, remove the first item and append the new item
+        the first item in the new dictionary, remove the first item, and append the new item
 
         [1,2,3,4,5] k=4
         1:d1, 2:d2, 3:d3, 4:d4, 5:d5
