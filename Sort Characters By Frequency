@@ -48,8 +48,8 @@ class Solution:
 
         Solution:
         1. Iterate through the string s and store the count of each character and digit.
-        2. Sort the dictionary by its count/value (lambda / sort).
-        3. Iterate through the sorted dictionary and store the number of characters and digits into a string varible
+        2. Sort the dictionary by its count/value (lambda/sort).
+        3. Iterate through the sorted dictionary and store the number of characters and digits into a string variable
         4. Return the output string.
 
         Runtime: O(N2D)
