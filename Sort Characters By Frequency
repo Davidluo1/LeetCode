@@ -1,0 +1,68 @@
+"""
+
+
+"""
+
+
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        """
+        Goal: return the frequency of the characters from the given string s.
+
+        Rules:
+        1. The character that appears the most gets to output first
+        2. Upper and lower case sensitive
+        3. Same frequency of the characters does not need to be sorted
+
+        Easy case:
+        when the length of the string s is 1, return s
+
+        Case: abaa
+
+        Tool:
+        - dictionary
+
+        Solution:
+        1. Iterate through the string s and store the count of each characters and digits.
+        2. Sort the dictionary by its count/value (lambda / sort).
+        3. Iterate through the sorted dictionary and store the number of characters and digits into a string varible
+        4. Return the output string.
+
+        Runtime: O(N2D)
+        Spacetime: O(2D)
+
+        t:1, r:1, e:2   -> e:2, t:1, r:1
+        eetr
+
+        "aaaaaaa"
+
+        a:20
+        If the size of the dictionary is one, retun the string s
+
+        """
+
+        # Easy case
+        if len(s) == 1: return s
+
+        my_dict = {}
+
+        # Store the characters and digits count into a dictionary
+        for element in s:
+            if my_dict.get(element):
+                my_dict[element] += 1
+            else:
+                my_dict[element] = 1
+
+        # Quick check
+        if len(my_dict) == 1: return s
+
+        # Sort the dictionary
+        my_dict = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+
+        output = []
+        # Combine the final output
+        for key,value in my_dict.items():
+            # output += key * value
+            output.append(key*value)
+        
+        return "".join(output)
