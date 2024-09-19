@@ -36,7 +36,7 @@ class Solution:
         Rules:
         1. The character that appears the most gets to output first
         2. Upper and lower case sensitive
-        3. Same frequency of the characters does not need to be sorted
+        3. The same frequency of the characters does not need to be sorted
 
         Easy case:
         when the length of the string s is 1, return s
