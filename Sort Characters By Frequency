@@ -61,7 +61,7 @@ class Solution:
         "aaaaaaa"
 
         a:20
-        If the size of the dictionary is one, retun the string s
+        If the size of the dictionary is one, return the string s
 
         """
 
