@@ -46,7 +46,7 @@ class Solution:
         Spacetime: O(1)
 
         mid = 3
-        check left and right ajacent elements
+        check left and right adjacent elements
         //\ , return mid
 
         mid = 3
