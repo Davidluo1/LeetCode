@@ -45,7 +45,7 @@ class Solution:
         Task:
         Keep track of the sum of the right and left numbers.
 
-        Solution: Assume one side of the sum is the total of nums array, taking one number out to the other side will increase the sum of that side and reduce the sum of current side. Check each swap of the number, if left and right sides are equal, return the current index as the pivot index. Otherwise when it reaches to the last index of the list, return -1.
+        Solution: Assume one side of the sum is the total of nums array, taking one number out to the other side will increase the sum of that side and reduce the sum of the current side. Check each swap of the number, if left and right sides are equal, return the current index as the pivot index. Otherwise when it reaches to the last index of the list, return -1.
         """
 
         leftSum, rightSum = 0, sum(nums)
