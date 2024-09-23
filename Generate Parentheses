@@ -19,6 +19,7 @@ Constraints:
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         """
+
         Goal: Generate all combinations of parentheses of n.
 
         Easy case:
