@@ -47,7 +47,7 @@ class Solution:
         Runtime: ((N-K)*K)
         Spacetime: O(K)
 
-        Iterate through the points list once, update the closest point in sliding windows
+        Iterate through the points list once, and update the closest point in sliding windows
         
         Easy:
         - when k equals to the length of the points list
