@@ -33,7 +33,7 @@ class Solution:
         [-2,2]: 8
         
         [-2,2]
-        Initialize res list with the k points from the points list
+        Initialize the res list with the k points from the points list
         Replacing the first item if the current point is closer to the origin
 
         [3,3],[5,-1]
