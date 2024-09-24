@@ -53,7 +53,7 @@ class Solution:
                     start = mid + 1
                 print(start, mid, end)
             else:
-                # check if target is in right half
+                # check if the target is in right half
                 if nums[mid] < target <= nums[end]:
                     start = mid + 1
                 else:
