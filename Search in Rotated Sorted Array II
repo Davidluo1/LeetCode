@@ -46,7 +46,7 @@ class Solution:
             # Check if the start half is sorted
             if nums[start] <= nums[mid]:
                 print(start, mid, end)
-                # check if target is in left half
+                # check if the target is in left half
                 if nums[start] <= target <= nums[mid]:
                     end = mid - 1
                 else:
