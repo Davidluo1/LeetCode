@@ -27,7 +27,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> bool:
         """
 
-        Since this is an advanced problem that includes duplicate values, to avoid checking each duplicate value everytime, simply pass on to the next left or right value when see a duplicate.
+        Since this is an advanced problem that includes duplicate values, to avoid checking each duplicate value every time, simply pass on to the next left or right value when see a duplicate.
 
         """
 
