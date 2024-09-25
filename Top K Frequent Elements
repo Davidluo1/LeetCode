@@ -31,7 +31,7 @@ class Solution:
         After sorting the dictionary from the highest count to the lowest, it runs O(N).
 
         Similar question to outputting the biggest number of a list. Used solution of sliding window
-        procedure: create a k-length list and update the list while iterating through the list, the final elements in the list will be the k-largest elements.
+        procedure: create a k-length list and update the list while iterating through the list, the final elements in the list will be the k-largest.
 
         """
 
