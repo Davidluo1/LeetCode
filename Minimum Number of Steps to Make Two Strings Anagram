@@ -47,7 +47,7 @@ class Solution:
 
         b, t.index(b), memo =[b:1]
         a, t.index(a), add to memo
-        find all index of b, each time you found a b in string, subtract 1 from the length of memo
+        find all indexes of b, each time you found a b in string, subtract 1 from the length of memo
         
         Runtime: O(2N)
         Spacetime: O(N)
