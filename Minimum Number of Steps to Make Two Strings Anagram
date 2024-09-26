@@ -30,7 +30,7 @@ Constraints:
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
         """
-        Goal: Find the minimum steps to make two string anagram.
+        Goal: Find the minimum steps to make two two-string anagrams.
 
         Easy case:
         - string s and t == 1, if s != t, return 1, otherwise return 0
