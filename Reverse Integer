@@ -28,7 +28,7 @@ class Solution:
 
         Restrictions:
         - has to be inside the range [-2^31,2^31 - 1], return 0 otherwise (10 digit starting 2)
-        - save negative sign
+        - save the negative sign
 
         Easy case:
         - if x is between -9 to 9, return x
