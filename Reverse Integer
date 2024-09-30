@@ -27,7 +27,7 @@ class Solution:
         Goal: Reverse the input integer.
 
         Restrictions:
-        - has to be inside the range [-2^31,2^31 - 1], return 0 otherwise (10 digit starting 2)
+        - has to be inside the range [-2^31,2^31 - 1], return 0 otherwise (10 digits starting 2)
         - save the negative sign
 
         Easy case:
