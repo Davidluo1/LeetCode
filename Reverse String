@@ -34,7 +34,7 @@ class Solution:
         
         Solution:
         - use the reverse built-in function to reverse the string list
-        - use list index to assign the characters in the string list reverse
+        - use the list index to assign the characters in the string list reverse
         - use two pointer from left and right, swap each element until both pointers meet
         
         Runtime: O(N)
