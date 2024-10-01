@@ -32,7 +32,7 @@ class Solution:
         Easy case:
         - when the linked list only has one node, return the head
 
-        Contraints:
+        Constraints:
         - nodes' value could be negative
         - left and right must be at least one
 
