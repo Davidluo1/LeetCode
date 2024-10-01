@@ -36,7 +36,7 @@ class Solution:
         - nodes' value could be negative
         - left and right must be at least one
 
-        Left could be the head of the linked list
+        The Left could be the head of the linked list
         right could be the tail of the linked list
 
         Method 1: swap value        left ->     <- right
