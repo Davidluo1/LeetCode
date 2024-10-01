@@ -30,7 +30,7 @@ class Solution:
         Goal: reverse the nodes of the list from position left to position right and return it
 
         Easy case:
-        - when the linked list only have one node, return head
+        - when the linked list only has one node, return head
 
         Contraints:
         - nodes' value could be negative
