@@ -37,7 +37,7 @@ class Solution:
         - left and right must be at least one
 
         The Left could be the head of the linked list
-        right could be the tail of the linked list
+        The right could be the tail of the linked list
 
         Method 1: swap value        left ->     <- right
         [1,*2,3,4,5,6,7,*8,9], left = 2, right = 8
