@@ -27,7 +27,7 @@ class Solution:
 
         Must be in O(1) extra memory
         Contains upper and lower characters
-        Length of the string list must be at least one.
+        The length of the string list must be at least one.
 
         Easy case:
         - string list is 1
