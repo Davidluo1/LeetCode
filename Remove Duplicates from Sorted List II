@@ -49,7 +49,7 @@ class Solution:
 
         v:[] [1,1]
         v:[1] [1,1]
-        v:[1] [1,2] only add to visit of the current node
+        v:[1] [1,2] only add to the visit of the current node
         v:[1] [2,3] [2]
         v:[1,2] [3,None] [1,2,3]
 
