@@ -35,7 +35,7 @@ class Solution:
 
         Method 1: Use a visited list
         - compare the current node with the next node, if not equal and not in the visited list, append the current node to the list
-        - append the current node in the visited list if not in visited list
+        - append the current node in the visited list if not in the visited list
         - increment nodes by one
         Runtime: O(2N)
         Spacetime: O(2N)
