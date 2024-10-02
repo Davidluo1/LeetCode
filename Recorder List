@@ -43,7 +43,7 @@ class Solution:
         Easy case:
         - If the number of nodes is 1, return head
 
-        Contraints:
+        Constraints:
         - Cannot change the values in the list's nodes
 
         l = [1,2,3,4]
