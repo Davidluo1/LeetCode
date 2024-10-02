@@ -38,7 +38,7 @@ class Solution:
 
         first node -> last node -> second first node -> second last node...
 
-        two pointer from left and right
+        two-pointer from left and right
 
         Easy case:
         - If the number of nodes is 1, return head
