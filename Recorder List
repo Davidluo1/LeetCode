@@ -32,7 +32,7 @@ Constraints:
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         """
-        Please don't return anything, modify head in-place instead.
+        Please don't return anything, modify the head in-place instead.
 
         Goal: Reorder a linked list in L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 
