@@ -34,7 +34,7 @@ class Solution:
         - when there is only one node in the linked list, return head
 
         Method 1: Use a visited list
-        - compare current node with the next node, if not equal and not in visited list, append current node to the list
+        - compare the current node with the next node, if not equal and not in visited list, append current node to the list
         - append current node in the visited list if not in visited list
         - increment nodes by one
         Runtime: O(2N)
