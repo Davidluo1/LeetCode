@@ -33,7 +33,7 @@ class Solution:
         Reverse the pointer of each node backward. 
 
         the linked list could be empty
-        node only have one attribute to other node
+        node only has one attribute to other node
 
         solution: use three pointers, one track the previous node, one link the next node to the previous node, and one guide to the next node.
         """
