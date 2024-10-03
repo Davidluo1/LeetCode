@@ -35,7 +35,7 @@ class Solution:
         the linked list could be empty
         node only has one attribute to the other node
 
-        solution: use three pointers, one track the previous node, one link the next node to the previous node, and one guide to the next node.
+        solution: use three pointers, one tracks the previous node, one link the next node to the previous node, and one guide to the next node.
         """
 
         # Method 1
