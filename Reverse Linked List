@@ -63,7 +63,7 @@ class Solution:
         def reverse(head):
 
             # If the head is empty or has reached the list end
-            if head is None or head.next is None:
+            if the head is None or head.next is None:
                 return head
     
             # Reverse the rest list
