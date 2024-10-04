@@ -69,7 +69,7 @@ class Solution:
             # Reverse the rest list
             rest = reverse(head.next)
     
-            # Put first element at the end
+            # Put the first element at the end
             head.next.next = head
             head.next = None
     
