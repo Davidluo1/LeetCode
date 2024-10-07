@@ -72,7 +72,7 @@ class Solution:
         [1,2] [d] ![1]
         [2,3] [d->*2] [2]
         [3,None] [d->2->*3] [2]
-        edge case: if last item is duplicate, dumy pointer.next = None
+        edge case: if last item is a duplicate, dumy pointer.next = None
         return dumy_head
         Runtime: O(N)
         Spacetime: O(N)
