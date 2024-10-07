@@ -162,7 +162,7 @@ class Solution:
         #         if cur.val not in visited:
         #             new_list.append(cur)
         #         else:
-        #             # skip the last duplicate item
+        #             # Skip the last duplicate item
         #             new_list[-1].next = None
 
         # # reconnect the linked list
