@@ -141,7 +141,7 @@ class Solution:
             dumy.next = cur 
             dumy = cur
         else:
-            # handle edge case when last node is a duplicate
+            # handle edge case when the last node is a duplicate
             dumy.next = None
 
         return dumy_head.next
