@@ -54,7 +54,7 @@ class Solution:
         v:[1,2] [3,None] [1,2,3]
 
         Method 2: Modify pointers
-        - Create a new dumy node
+        - Create a new dummy node
         - current node start from head. If current node = cur.next, cur = cur.next
         - if they are not equal, if current node = duplicate skip.
         - dumy node points to the current node if current node != duplicate
