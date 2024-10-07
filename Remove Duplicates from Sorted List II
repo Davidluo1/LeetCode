@@ -79,7 +79,7 @@ class Solution:
 
         Method 3: Hash Map
         - Iterate through the linked list, record its count
-        - iterate through the linked list, append unquie node where its count is 1 to a list
+        - iterate through the linked list, append unique node where its count is 1 to a list
         - Iterate through the list and reconnect the pointers
         [1,2,3,3,4,4,5]
         [1:c1, 2:c1, 3:c2, 4:c2, 5:1]
