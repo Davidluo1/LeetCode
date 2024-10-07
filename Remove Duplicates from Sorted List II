@@ -57,7 +57,7 @@ class Solution:
         - Create a new dummy node
         - The current node starts from head. If current node = cur.next, cur = cur.next
         - if they are not equal, if the current node = duplicate skip.
-        - dumy node points to the current node if current node != duplicate
+        - dummy node points to the current node if current node != duplicate
         [1,2] [d->*1] 
         [2,3] [d->1->*2] 
         [3,3] [d->1->*2] ![3]
