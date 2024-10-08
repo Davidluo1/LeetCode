@@ -40,7 +40,7 @@ Constraints:
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         """
-        Goal: check if the binary tree has a root-leaf sum equals to the targetSum.
+        Goal: check if the binary tree has a root-leaf sum equal to the targetSum.
 
         Easy case:
         If there are no nodes in the binary tree, return False
