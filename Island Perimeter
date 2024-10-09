@@ -40,11 +40,11 @@ class Solution:
                     # Subtract one for each intersection of each island
                     # Check boundary
                     if i+1 < len(grid):
-                        # bottom adjacent
+                        # Bottom adjacent
                         if grid[i+1][j] == 1:
                             perimeter -= 1
                     if i-1 >= 0:
-                        # top adjacent
+                        # Top adjacent
                         if grid[i-1][j] == 1:
                             perimeter -= 1
                     if j+1 < len(grid[0]):
