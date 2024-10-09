@@ -48,11 +48,11 @@ class Solution:
                         if grid[i-1][j] == 1:
                             perimeter -= 1
                     if j+1 < len(grid[0]):
-                        # right adjacent
+                        # Right adjacent
                         if grid[i][j+1] == 1:
                             perimeter -= 1
                     if j-1 >= 0:
-                        # left adjacent
+                        # Left adjacent
                         if grid[i][j-1] == 1:
                             perimeter -= 1
         return perimeter
