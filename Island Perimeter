@@ -38,7 +38,7 @@ class Solution:
                     perimeter += 4
 
                     # Subtract one for each intersection of each island
-                    # check boundary
+                    # Check boundary
                     if i+1 < len(grid):
                         # bottom adjacent
                         if grid[i+1][j] == 1:
