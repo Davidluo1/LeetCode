@@ -33,7 +33,7 @@ class Solution:
 
         for i in range(row):
             for j in range(col):
-                # assume this cell is surrounded by an island from all sides
+                # Assume this cell is surrounded by an island from all sides
                 if grid[i][j] == 1:
                     perimeter += 4
 
