@@ -26,13 +26,14 @@ Constraints:
 
 
  """
+
  Goal: Find k closest elements from integer x, and return the result in ascending order.
 
  Rule:
  - find the closest integer from x
  - if both a and b distance is the same from x, take a
 
- Does the input array contains duplicate values? (set)
+ Does the input array contain duplicate values? (set)
  Left and right boundary
  - if x is at either end, return k integers start from that end 
 
