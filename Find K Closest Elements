@@ -19,10 +19,7 @@ Input: arr = [1,1,2,3,4,5], k = 4, x = -1
 
 Output: [1,1,2,3]
 
- 
-
 Constraints:
-
 1 <= k <= arr.length
 1 <= arr.length <= 104
 arr is sorted in ascending order.
