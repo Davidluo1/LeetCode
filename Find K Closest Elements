@@ -73,7 +73,7 @@ Constraints:
 
  distance_list = []
 
- # Create a list with all the distance fron integer x
+ # Create a list with all the distances from integer x
  for num in arr:
      distance_list.append(abs(x-num))
 
