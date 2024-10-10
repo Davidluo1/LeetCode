@@ -84,7 +84,7 @@ Constraints:
      left += 1
      right += 1
  
- # backtrack to start at the smallest element distance from the left
+ # Backtrack to start at the smallest element distance from the left
  while distance_list[right-1] == distance_list[left-1] and left > 0:
      left -= 1
      right -= 1
