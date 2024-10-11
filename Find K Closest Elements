@@ -42,7 +42,7 @@ Constraints:
  - if k is equals to the length of the array minus one
      - if the mid element in the array is equal or bigger than integer x, return the whole array expect the last element
      - if the mid element in the array is less than integer x, return the whole array expect the first element.
- - if there is no more element on the left or right to compare, keep explore the other side
+ - if there is no more element on the left or right to compare, keep exploring the other side
 
  Approach if integer x is between the first and last element of the array:
  1. Divide and conquer
