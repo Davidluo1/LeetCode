@@ -50,7 +50,7 @@ Constraints:
  2. Window slicing
      - iterate the array from left to right and calculate the distance (absolute value) of the current element from integer x.
          - set window k
-         - stop when reach to a distance (boundary)
+         - stop when reaching a distance (boundary)
              left side: if the right distance is bigger than the left distance
              right side: continue until you reach the boundary
              - Compare the mid element with integer x
@@ -58,7 +58,7 @@ Constraints:
      - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
          - only the current closest element (left/right) gets to move down to the next element if exists. (set a boundary)
          - divide and conquer
- 3. Use the formula calculate and create a new list wit their distance.
+ 3. Use the formula calculate and create a new list with their distance.
      Iterate from left to right
      Utilize size k to find the window for the k closest elements
      Stop the iteration if the next element distance is equal or bigger to the first distance in the current window
