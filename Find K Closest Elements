@@ -35,7 +35,7 @@ Constraints:
 
  Does the input array contain duplicate values? (set)
  Left and right boundary
- - if x is at either end, return k integers start from that end 
+ - if x is at either end, return k integers starting from that end 
 
  Easy case:
  - if the length of the array is one, return the array 
