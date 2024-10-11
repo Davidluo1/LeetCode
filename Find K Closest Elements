@@ -55,7 +55,7 @@ Constraints:
              right side: continue until you reach the boundary
              - Compare the mid element with integer x
 
-     - iterate from mid and to both left and right and calculate the distance on both current left and right element from integer x.
+     - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
          - only the current closest element (left/right) gets to move down to the next element if exist. (set a boundary)
          - divide and conquer
  3. Use the formula calculate and create a new list wit their distance.
