@@ -50,7 +50,7 @@ Constraints:
  2. Window slicing
      - iterate the array from left to right and calculate the distance (absolute value) of the current element from integer x.
          - set window k
-         - stop when see a distance (boundary)
+         - stop when reach to a distance (boundary)
              left side: if the right distance is bigger than the left distance
              right side: continue until you reach the boundary
              - Compare the mid element with integer x
