@@ -48,7 +48,7 @@ Approach if integer x is between the first and last element of the array:
 1. Divide and conquer
 
 2. Window slicing
-    - iterate the array from left to right and calculate the distance (absolute value) of the current element from integer x.
+    - iterate the array from left to right and calculate the current element's distance (absolute value) from integer x.
         - set window k
         - stop when reaching a distance (boundary)
             left side: if the right distance is bigger than the left distance
