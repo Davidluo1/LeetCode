@@ -58,7 +58,7 @@ Approach if integer x is between the first and last element of the array:
     - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
         - only the current closest element (left/right) gets to move down to the next element if it exists. (set a boundary)
         - divide and conquer
-3. Use the formula calculate and create a new list with their distance.
+3. Use the formula to calculate and create a new list with their distance.
     Iterate from left to right
     Utilize size k to find the window for the k closest elements
     Stop the iteration if the next element distance is equal or bigger to the first distance in the current window
