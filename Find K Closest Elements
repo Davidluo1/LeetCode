@@ -88,4 +88,5 @@ while right < len(arr) and distance_list[right] <= distance_list[left]:
 while distance_list[right-1] == distance_list[left-1] and left > 0:
     left -= 1
     right -= 1
+
 return arr[left:right]
