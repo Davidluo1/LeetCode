@@ -41,7 +41,7 @@ Constraints:
  - if the length of the array is one, return the array 
  - if k is equal to the length of the array minus one
      - if the mid element in the array is equal to or bigger than integer x, return the whole array except the last element
-     - if the mid element in the array is less than integer x, return the whole array expect the first element.
+     - if the mid element in the array is less than integer x, return the whole array except the first element.
  - if there is no more element on the left or right to compare, keep exploring the other side
 
  Approach if integer x is between the first and last element of the array:
