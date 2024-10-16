@@ -22,9 +22,9 @@ Constraints:
 
 """
 
-
-
-"""
+class Solution:
+    def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
+       """
 
 Goal: Find k closest elements from integer x, and return the result in ascending order.
 
@@ -89,3 +89,6 @@ while distance_list[right-1] == distance_list[left-1] and left > 0:
     right -= 1
 
 return arr[left:right]
+
+
+
