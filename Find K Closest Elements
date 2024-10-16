@@ -26,69 +26,69 @@ class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
        """
 
-Goal: Find k closest elements from integer x, and return the result in ascending order.
-
-Rule:
-- find the closest integer from x
-- if both a and b distance is the same from x, take a
-
-Does the input array contain duplicate values? (set)
-Left and right boundary
-- if x is at either end, return k integers starting from that end 
-
-Easy case:
-- if the length of the array is one, return the array 
-- if k is equal to the length of the array minus one
-    - if the mid element in the array is equal to or bigger than integer x, return the whole array except the last element
-    - if the mid element in the array is less than integer x, return the whole array except the first element.
-- if there is no more element on the left or right to compare, keep exploring the other side
-
-Approach if integer x is between the first and last element of the array:
-1. Divide and conquer
-
-2. Window slicing
-    - iterate the array from left to right and calculate the current element's distance (absolute value) from integer x.
-        - set window k
-        - stop when reaching a distance (boundary)
-            left side: if the right distance is bigger than the left distance
-            right side: continue until you reach the boundary
-            - Compare the mid element with integer x
-
-    - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
-        - only the current closest element (left/right) gets to move down to the next element if it exists. (set a boundary)
-        - divide and conquer
-3. Use the formula to calculate and create a new list with their distance.
-    Iterate from left to right
-    Utilize size k to find the window for the k closest elements
-    Stop the iteration if the next element distance is equal or bigger to the first distance in the current window
-
-"""
-
-# Easy case
-if len(arr) == 1: return arr
-if x < arr[0]: return arr[:k]
-if k == len(arr): return arr
-if x > arr[-1]: return arr[len(arr)-k:]
-
-distance_list = []
-
-# Create a list with all the distances from integer x
-for num in arr:
-    distance_list.append(abs(x-num))
-
-left, right = 0, k
-
-# Uilize size k window and find the most closet elements in the arr
-while right < len(arr) and distance_list[right] <= distance_list[left]:
-    left += 1
-    right += 1
-
-# Backtrack to start at the smallest element distance from the left
-while distance_list[right-1] == distance_list[left-1] and left > 0:
-    left -= 1
-    right -= 1
-
-return arr[left:right]
+       Goal: Find k closest elements from integer x, and return the result in ascending order.
+       
+       Rule:
+       - find the closest integer from x
+       - if both a and b distance is the same from x, take a
+       
+       Does the input array contain duplicate values? (set)
+       Left and right boundary
+       - if x is at either end, return k integers starting from that end 
+       
+       Easy case:
+       - if the length of the array is one, return the array 
+       - if k is equal to the length of the array minus one
+           - if the mid element in the array is equal to or bigger than integer x, return the whole array except the last element
+           - if the mid element in the array is less than integer x, return the whole array except the first element.
+       - if there is no more element on the left or right to compare, keep exploring the other side
+       
+       Approach if integer x is between the first and last element of the array:
+       1. Divide and conquer
+       
+       2. Window slicing
+           - iterate the array from left to right and calculate the current element's distance (absolute value) from integer x.
+               - set window k
+               - stop when reaching a distance (boundary)
+                   left side: if the right distance is bigger than the left distance
+                   right side: continue until you reach the boundary
+                   - Compare the mid element with integer x
+       
+           - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
+               - only the current closest element (left/right) gets to move down to the next element if it exists. (set a boundary)
+               - divide and conquer
+       3. Use the formula to calculate and create a new list with their distance.
+           Iterate from left to right
+           Utilize size k to find the window for the k closest elements
+           Stop the iteration if the next element distance is equal or bigger to the first distance in the current window
+       
+       """
+       
+       # Easy case
+       if len(arr) == 1: return arr
+       if x < arr[0]: return arr[:k]
+       if k == len(arr): return arr
+       if x > arr[-1]: return arr[len(arr)-k:]
+       
+       distance_list = []
+       
+       # Create a list with all the distances from integer x
+       for num in arr:
+           distance_list.append(abs(x-num))
+       
+       left, right = 0, k
+       
+       # Uilize size k window and find the most closet elements in the arr
+       while right < len(arr) and distance_list[right] <= distance_list[left]:
+           left += 1
+           right += 1
+       
+       # Backtrack to start at the smallest element distance from the left
+       while distance_list[right-1] == distance_list[left-1] and left > 0:
+           left -= 1
+           right -= 1
+       
+       return arr[left:right]
 
 
 
