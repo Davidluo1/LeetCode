@@ -28,6 +28,7 @@ Constraints:
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         """
+
         Goal: find the median of two arrays merged.
 
         Two sorted arrays merge into a sorted array
