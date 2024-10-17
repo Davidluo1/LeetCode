@@ -53,6 +53,7 @@ class Solution:
 
         """
 
+        # A function to find the median of an arr in two scenarios: odd or even arr length
         def median(arr):
             if len(arr) % 2 != 0:
                 return arr[len(arr)//2]
