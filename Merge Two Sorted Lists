@@ -59,7 +59,7 @@ class Solution:
         merged_list = ListNode()
         head = merged_list
 
-        # compare both linked list
+        # Compare both the linked list and store the smallest value first
         while cur_list1 and cur_list2:
             if cur_list1.val <= cur_list2.val:
                 node = ListNode(cur_list1.val) 
