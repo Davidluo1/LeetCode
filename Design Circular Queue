@@ -64,7 +64,7 @@ class MyCircularQueue:
         return True
 
     def deQueue(self) -> bool:
-        """ delete element from the queue, return false if the queue is empty.
+        """ Delete element from the queue, return false if the queue is empty.
         - FIFO first in first out """
         if self.isEmpty():
             return False
