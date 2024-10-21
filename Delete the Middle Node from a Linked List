@@ -17,7 +17,7 @@ Input: head = [1,2,3,4]
 Output: [1,2,4]
 Explanation:
 The above figure represents the given linked list.
-For n = 4, node 2 with value 3 is the middle node, which is marked in red.
+For n = 4, node 2 with value 3 is the middle node marked in red.
 
 Example 3:
 Input: head = [2,1]
