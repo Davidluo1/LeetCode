@@ -57,7 +57,7 @@ class MyCircularQueue:
         self.k = k
 
     def enQueue(self, value: int) -> bool:
-        """ insert an element into the queue, return false if the queue is full """
+        """ Insert an element into the queue, return false if the queue is full """
         if self.isFull():
             return False
         self.circular_q.append(value)
