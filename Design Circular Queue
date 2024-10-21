@@ -84,11 +84,11 @@ class MyCircularQueue:
         return self.circular_q[-1]
 
     def isEmpty(self) -> bool:
-        """ return true if the queue is empty, false otherwise """
+        """ Return true if the queue is empty, false otherwise """
         return len(self.circular_q) == 0
 
     def isFull(self) -> bool:
-        """ return true if the queue is full, false otherwise """
+        """ Return true if the queue is full, false otherwise """
         return len(self.circular_q) == self.k
 
 # Your MyCircularQueue object will be instantiated and called as such:
