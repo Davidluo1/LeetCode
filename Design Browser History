@@ -74,7 +74,7 @@ class BrowserHistory:
     def forward(self, steps: int) -> str:
         """
 
-        only forward up to x steps
+        Only forward up to x steps
 
         """
 
