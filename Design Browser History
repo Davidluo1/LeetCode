@@ -32,7 +32,7 @@ Constraints:
 - 1 <= homepage.length <= 20
 - 1 <= url.length <= 20
 - 1 <= steps <= 100
-- homepage and URL consist of  '.' or lowercase English letters.
+- The homepage and URL consist of  '.' or lowercase English letters.
 - At most 5000 calls will be made to visit, back, and forward
 
 """
