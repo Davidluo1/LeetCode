@@ -59,7 +59,9 @@ class BrowserHistory:
 
     def back(self, steps: int) -> str:
         """
+
         Only return up to x steps
+
         """
 
         if steps <= self.cur:
@@ -71,7 +73,9 @@ class BrowserHistory:
 
     def forward(self, steps: int) -> str:
         """
+
         only forward up to x steps
+
         """
 
         if self.cur + steps < len(self.home_page_memo):
