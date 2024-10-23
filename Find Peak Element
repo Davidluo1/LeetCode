@@ -69,15 +69,15 @@ class Solution:
         while left < right:
             mid = (left + right) // 2
 
-            # peak
+            # Peak
             if nums[mid-1] < nums[mid] > nums[mid+1]:
                 return mid
-            # curve up
+            # Curve up
             elif nums[mid-1] < nums[mid] < nums[mid+1]:
                 left = mid + 1
                 if left == right:
                     return len(nums) - 1
-            # curve down
+            # Curve down
             else:
                 right = mid
                 if left == right:
