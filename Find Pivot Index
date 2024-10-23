@@ -53,7 +53,8 @@ class Solution:
 
         for i, val in enumerate(nums):
             rightSum -= val
-            # return index when found to match
+
+            # Return index when found to match
             if leftSum == rightSum:
                 return i   
             leftSum += val
