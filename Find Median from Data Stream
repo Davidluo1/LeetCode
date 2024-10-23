@@ -46,7 +46,7 @@ class MedianFinder:
         self.count += 1
 
     def findMedian(self) -> float:
-        # Find the median base on the stream length, odd or even
+        # Find the median based on the stream length, odd or even
         if self.count % 2 == 0:
             return (self.stream[self.count//2-1]+self.stream[self.count//2]) / 2
         else:
