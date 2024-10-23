@@ -27,6 +27,7 @@ Constraints:
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         """
+
         Goal: return the index of the peak element inside the nums array.
         Must runt O(logN)
 
