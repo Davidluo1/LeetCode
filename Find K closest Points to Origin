@@ -25,6 +25,7 @@ Example 2:
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         """
+
         Goal: find the k closest points to the origin.
 
         Formula: (x1-x2)^2 + (y1-y2)^2
@@ -59,6 +60,7 @@ class Solution:
 
         Runtime: O(N)
         Spacetime: O(1)
+
         """
 
         # Easy case
