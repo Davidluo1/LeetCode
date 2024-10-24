@@ -36,7 +36,7 @@ class Solution:
             heapq.heappush(heap,-i)
         heapq.heapify(heap)
 
-        # calculate new heap
+        # Calculate new heap
         while len(heap) > 1:
             print(heap)
             max1 = -heapq.heappop(heap)
