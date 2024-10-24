@@ -47,7 +47,7 @@ class Solution:
             if max1 != max2:
                 heapq.heappush(heap, -(max1-max2))
 
-        # return the heap if it contains an item
+        # Return the heap if it contains an item
         if heap:
             return -heapq.heappop(heap)
         else:
