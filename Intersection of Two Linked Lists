@@ -34,7 +34,7 @@ class Solution:
         first_set = []
         cur = headA
         
-        # get all elements from the head A
+        # Get all elements from the head A
         while cur:
             first_set.append(cur)
             cur = cur.next
