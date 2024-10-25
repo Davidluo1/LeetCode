@@ -24,7 +24,7 @@ Explanation: An empty string is also valid.
 
 Constraints:
 - 1 <= s.length <= 105
-- s[i] is either'(' , ')', or a lowercase English letter.
+- s[i] is either'(', ')', or a lowercase English letter.
 
 """
 
