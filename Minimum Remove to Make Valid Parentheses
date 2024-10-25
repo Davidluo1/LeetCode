@@ -36,7 +36,7 @@ class Solution:
         Goal: remove the minimum number of parentheses.
 
         Easy case:
-        - if the length of the string s is 1, if s[0] is ( or ), return empty string, otherwise, return s
+        - if the length of the string s is 1, if s[0] is ( or ), return an empty string, otherwise, return s
 
         dictionary
         open: 
