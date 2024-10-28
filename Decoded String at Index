@@ -38,6 +38,7 @@ Constraints:
 class Solution:
     def decodeAtIndex(self, s: str, k: int) -> str:
         """
+
         Goal: Decode the string to a tape and return the kth letter in the decoded string.
 
         "leet2code3", k = 10
