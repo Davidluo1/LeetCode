@@ -69,7 +69,7 @@ class Solution:
         """
         
         length = 0
-        # get the total length of the decoded string
+        # Get the total length of the decoded string
         for letter in s:
             if not letter.isdigit():
                 length += 1
