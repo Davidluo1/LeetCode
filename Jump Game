@@ -25,7 +25,7 @@ class Solution:
         max_step = 0
         
         for i in range(len(nums)):
-            # return false when the max step is less than the current step
+            # Return false when the max step is less than the current step
             if i > max_step:
                 return False  
             # update max step
