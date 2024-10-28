@@ -26,7 +26,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         """
         Goal: return the index of the target in the nums list, return -1 if the 
-        target doesn't exist in the the nums list.
+        the target doesn't exist on the nums list.
 
         Must be in O(logN) runtime complexity
         - Divide and conquer (binary search)
