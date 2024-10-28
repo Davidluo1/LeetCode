@@ -38,11 +38,11 @@ class Solution:
 
         i = 0
         while i < len(prices):
-            # update the current minimum price
+            # Update the current minimum price
             min_price = min(min_price, prices[i])
 
             if prices[i] > min_price:
-                # calculate profit
+                # Calculate profit
                 profit = prices[i] - min_price
                 max_profit = max(max_profit, profit)
             i += 1
