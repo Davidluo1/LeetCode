@@ -37,7 +37,7 @@ class RandomizedSet:
             self.my_dict[val] = 1
             return True
 
-    # remove item from dictionary
+    # Remove item from dictionary
     def remove(self, val: int) -> bool:
         try:
             if self.my_dict[val]:
