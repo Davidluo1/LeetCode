@@ -37,6 +37,7 @@ Constraints:
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
         """
+
         Goal: find the pivot index of an array, the sum of all the numbers strictly to the left of the index is equal to the sum of the right index.
 
         length of the nums list could be 1
