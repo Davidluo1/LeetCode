@@ -46,6 +46,6 @@ class RandomizedSet:
         except:
             return False
 
-    # get the random key from the dictionary
+    # Get the random key from the dictionary
     def getRandom(self) -> int:
         return random.choice(list(self.my_dict.keys()))
