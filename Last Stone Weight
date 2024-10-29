@@ -38,10 +38,10 @@ class Solution:
 
         # Calculate new heap
         while len(heap) > 1:
-            print(heap)
+            # print(heap)
             max1 = -heapq.heappop(heap)
             max2 = -heapq.heappop(heap)
-            print(max1,max2)
+            # print(max1,max2)
 
             # Push to the heap if the first and second biggest elements are not equal to each other
             if max1 != max2:
