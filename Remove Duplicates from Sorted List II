@@ -27,6 +27,7 @@ Constraints:
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
+
         Goal: Remove duplicate nodes with the same value.
 
         Easy case:
@@ -86,6 +87,7 @@ class Solution:
         [1,2,5]
         Runtime: O(3N)
         Spacetime: O(2N)
+
         """
 
         # Easy case
