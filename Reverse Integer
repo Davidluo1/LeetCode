@@ -45,7 +45,7 @@ class Solution:
         zero = true
         if cur = 0
         zero = false
-        add the rest integers to an empty string
+        add the rest of the integers to an empty string
         int(output string)
         
         Runtime: O(N+2NlogN)
