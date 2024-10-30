@@ -62,7 +62,7 @@ class Solution:
         # if len(nums) == 2: return [nums,nums[::-1]]
 
         def backtrack(start_index):
-            # base case
+            # Base case
             if start_index == len(nums):
                 permutation.append(nums[:])
             else:
