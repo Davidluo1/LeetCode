@@ -30,6 +30,7 @@ Constraints:
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
+
         Reverse the pointer of each node backward. 
 
         the linked list could be empty
