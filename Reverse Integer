@@ -38,7 +38,7 @@ class Solution:
         120, operator:+, 120 -> 021 -> 21
 
         while right integer is 0, jump to the next integer until an integer of not 0 is found,
-        then include all the rest integers.
+        then include all the rest of the integers.
 
         str(x)
         len(x)-1,-1,-1
