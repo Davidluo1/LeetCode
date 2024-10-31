@@ -29,7 +29,7 @@ class RandomizedSet:
         self.my_dict = {}
 
     def insert(self, val: int) -> bool:
-        # check if val key exist
+        # check if val key exists
         try:
             if self.my_dict[val]:
                 return False
