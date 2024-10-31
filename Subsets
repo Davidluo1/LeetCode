@@ -40,7 +40,7 @@ class Solution:
 
         for i in nums:
             subset = []
-            # new input
+            # New input
             subset = [item + [i] for item in res]
 
             # Add to the output
