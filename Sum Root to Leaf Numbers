@@ -42,6 +42,7 @@ Constraints:
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         """
+
         Goal: Return the sum of all roots to leaf numbers.
 
         Easy case:
@@ -64,6 +65,7 @@ class Solution:
 
         Runtime: O(N^2)
         Spacetime: O(1)
+
         """
 
         # Easy case
