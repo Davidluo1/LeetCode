@@ -37,12 +37,14 @@ Constraints:
 
 class MyQueue:
     """
+
     May stimulate a stack using a list or deque
     [1]
     [1,2]
     [2]
 
     Push value x is between 1 and 9
+
     """
 
     # initilize queue
