@@ -73,7 +73,7 @@ class Solution:
 
         # Depth first search
         def dfs(node, total):
-            # base case
+            # Base case
             if not node: return 0
 
             total = total * 10 + node.val
