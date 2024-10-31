@@ -38,7 +38,7 @@ class Solution:
         return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
 
     def isSameTree(self, p, q):
-        # both tree and subtree ended
+        # Both tree and subtree ended
         if not p and not q:
             return True
 
