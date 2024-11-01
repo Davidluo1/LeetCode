@@ -48,7 +48,7 @@ class Solution:
         # Check valid parentheses
         for bracket in s:
             if bracket in parentheses_dict:
-                # append open brakcet
+                # Append open bracket
                 stack.append(bracket)
             elif len(stack) == 0 or bracket != parentheses_dict[stack.pop()]:
                 return False
