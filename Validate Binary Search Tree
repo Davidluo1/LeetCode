@@ -37,7 +37,7 @@ class Solution:
             else:
                 arr.append(root.val)
 
-            # check the right subtree
+            # Check the right subtree
             if inorder(root.right) == False:
                 return False
 
