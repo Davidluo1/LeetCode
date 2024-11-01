@@ -41,7 +41,7 @@ class Solution:
             if inorder(root.right) == False:
                 return False
 
-        # return false if in order traversal outputs an incorrect list
+        # Return false if in order traversal outputs an incorrect list
         if inorder(root) == False:
             return False
 
