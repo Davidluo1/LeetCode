@@ -27,7 +27,7 @@ class Solution:
 
         def inorder(root):
             if the root is None: return None
-            # check the left subtree
+            # Check the left subtree
             if inorder(root.left) == False:
                 return False
 
