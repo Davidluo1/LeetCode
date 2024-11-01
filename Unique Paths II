@@ -93,7 +93,7 @@ class Solution:
                 if obstacleGrid[row][col] == 1:
                     continue
                 else:
-                    # check top
+                    # Check top
                     if type(obstacleGrid[row-1][col]) == str:
                         x = int(obstacleGrid[row][col]) + int(obstacleGrid[row-1][col])
                         obstacleGrid[row][col] = str(x)
