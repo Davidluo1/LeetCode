@@ -31,7 +31,7 @@ class Solution:
             if inorder(root.left) == False:
                 return False
 
-            # check if the next item is bigger or equal to the previous item
+            # Check if the next item is bigger or equal to the previous item
             if arr[-1] >= root.val:
                 return False
             else:
