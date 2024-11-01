@@ -45,7 +45,7 @@ class Solution:
             '[': ']'
         }
 
-        # check valid parentheses
+        # Check valid parentheses
         for bracket in s:
             if bracket in parentheses_dict:
                 # append open brakcet
