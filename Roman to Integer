@@ -42,7 +42,7 @@ Constraints:
 
 class Solution:
     def romanToInt(self, s: str) -> int:
-        # romnan numeral dictionary/memo
+        # Romnan numeral dictionary/memo
         Roman_numeral_dict = {
             'I': 1,
             'V': 5,
