@@ -55,7 +55,7 @@ class Solution:
        
         total_value = 0
        
-        # calculate the total value
+        # Calculate the total value
         for i in range(len(s)):
             # handle special cases (IV, IX, etc)
             if i < len(s) - 1 and Roman_numeral_dict[s[i]] < Roman_numeral_dict[s[i+1]]:
