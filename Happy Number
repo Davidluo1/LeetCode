@@ -32,7 +32,7 @@ class Solution:
     def isHappy(self, n: int) -> bool:
         visited = []
 
-        # loop while sum n is not seen before
+        # Loop while sum n is not seen before
         while n not in visited:
             # update visited list
             visited.append(n)
