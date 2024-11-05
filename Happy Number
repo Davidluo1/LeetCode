@@ -42,7 +42,7 @@ class Solution:
             for digit in str(n):
                 cur_sum += int(digit)*int(digit)
 
-            # base case
+            # Base case
             if cur_sum == 1:
                 return True
             # update new n
