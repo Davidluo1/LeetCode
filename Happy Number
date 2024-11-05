@@ -34,7 +34,7 @@ class Solution:
 
         # Loop while sum n is not seen before
         while n not in visited:
-            # update visited list
+            # Update visited list
             visited.append(n)
             cur_sum = 0
 
