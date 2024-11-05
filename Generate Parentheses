@@ -44,7 +44,7 @@ class Solution:
 
         def DFS(left, right, s):
 
-            # base case
+            # Base case
             if len(s) == 2 * n:
                 res.append(s)
                 return
