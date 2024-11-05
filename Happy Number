@@ -45,7 +45,8 @@ class Solution:
             # Base case
             if cur_sum == 1:
                 return True
-            # update new n
+
+            # Update new n
             n = cur_sum
 
         return False
