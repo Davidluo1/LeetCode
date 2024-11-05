@@ -31,7 +31,7 @@ class Solution:
             # Calculate the max with the next non-adjacent house and the next.next non-adjacent house
             current = max(rob_next, rob_next_next + nums[i])
            
-            # keep track of the previous sum
+            # Keep track of the previous sum
             rob_next_next = rob_next
 
             # Keep track of the current sum
