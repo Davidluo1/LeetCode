@@ -43,6 +43,7 @@ Constraints:
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
+
         Goal: Delete the middle node of a linked list.
 
         Easy case:
