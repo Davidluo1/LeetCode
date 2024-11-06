@@ -20,7 +20,7 @@ Constraints:
 - 1 <= order.length <= 26
 - 1 <= s.length <= 200
 - order and s consist of lowercase English letters.
-- All the characters of order are unique.
+- All the characters of the order are unique.
 
 """
 
