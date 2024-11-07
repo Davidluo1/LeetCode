@@ -39,7 +39,7 @@ class Solution:
         res = []
         length = 0
 
-        # assign element count into the dictionary
+        # Assign element count into the dictionary
         for ele in nums:
             if ele not in count_dictionary.keys():
                 count_dictionary[ele] = 1
