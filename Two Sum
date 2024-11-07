@@ -47,7 +47,7 @@ class Solution:
                 return [d[prefix_sum], i]
             d[nums[i]] = i
 
-        # method 2
+        # Method 2
         for i in range(len(nums)):
             for j in range(i+1, len(nums)):
                 if nums[i] + nums[j] == target:
