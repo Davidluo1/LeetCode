@@ -89,7 +89,6 @@ class Solution:
         return 0
         
         # tape = []
-
         # for letter in s:
         #     if not letter.isdigit():
         #         tape.append(letter)
