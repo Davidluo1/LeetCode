@@ -100,5 +100,4 @@ class Solution:
         #             tape = tape * count
         #             return tape[k-1]
         #         tape = tape * count
-        
         # return -1
