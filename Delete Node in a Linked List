@@ -62,7 +62,7 @@ class Solution:
 
         """
         
-        # swap the current node's value with the next node's value
+        # Swap the current node's value with the next node's value
         node.val, node.next.val = node.next.val, node.val
 
         # skip the next node
