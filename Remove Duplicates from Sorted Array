@@ -65,6 +65,8 @@ class Solution:
         index_ptr = 1
         prev = nums[0]
         i = 1
+
+        # Iterate through the nums array and swap each next unique item in order from the first index of the nums array
         while i < len(nums):
             if nums[i] != prev:
                 prev = nums[i]
