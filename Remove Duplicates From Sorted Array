@@ -43,6 +43,7 @@ Constraints:
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         """
+
         Goal: Remove the duplicate items in array nums in place while keeping their relative order.
 
         Approach (list):
