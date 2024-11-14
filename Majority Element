@@ -23,11 +23,12 @@ Constraints:
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         """
+
         Goal: return the element that appears more than n/2 times.
 
         Approach:
         Dictionary - extra memory
-        1. Iterate through the nums array, store the count of each numbers.
+        1. Iterate through the nums array, and store the count of each numbers.
         2. return the key if its value is more than n/2.
 
         """
