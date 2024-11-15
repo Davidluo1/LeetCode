@@ -66,11 +66,9 @@ class Solution:
                 if i == 0: 
                     total += map_dict[s[i]]
                     return total
-                #print(map_dict[s[i]], map_dict[s[i-1]])
                 total += map_dict[s[i]] - map_dict[s[i-1]]
                 i -= 2
             else:
-                #print(map_dict[s[i]])
                 total += map_dict[s[i]]
                 i -= 1
         
