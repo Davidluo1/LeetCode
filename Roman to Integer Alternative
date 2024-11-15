@@ -50,9 +50,9 @@ class Solution:
         Goal: Given a Roman numeral, convert it to an integer.
 
         Approach:
-        1. Create a mapping dictionary to store all the roman numerals and its value.
-        2. Iterate through the string s from right to left. If the left adjacent symbol has a samller value than the current 
-        symbol value, subtract the current value by the left adjacent value.
+        1. Create a mapping dictionary to store all the Roman numerals and their values.
+        2. Iterate through the string s from right to left. If the left adjacent symbol has a smaller value than the current 
+        symbol value, subtract the current value from the left adjacent value.
         3. Keep track of the total sum and return it at the end.
 
         """
