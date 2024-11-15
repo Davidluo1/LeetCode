@@ -46,24 +46,33 @@ Constraints:
 
 class Solution:
     def romanToInt(self, s: str) -> int:
-        Roman_numeral_dict = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
-        }
+        """
+        Goal: Given a roman numeral, convert it to an integer.
+
+        Approach:
+        1. Create a maping dictionary to store all the roman numerals and its value.
+        2. Iterate through the string s from right to left. If the left adjacent symbol has a samller value than the current 
+        symbol value, subtract the current value by the left adjacent value.
+        3. Keep track of the total sum and return it at the end.
+
+        """
         
-        total_value = 0
+        map_dict = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
+
+        total, i = 0, len(s) - 1
         
-        # calculate the total value
-        for i in range(len(s)):
-            # handle special case (IV, IX, etc)
-            if i < len(s) - 1 and Roman_numeral_dict[s[i]] < Roman_numeral_dict[s[i+1]]:
-                total_value -= Roman_numeral_dict[s[i]]
+
+        while i >= 0:
+            if map_dict[s[i-1]] < map_dict[s[i]]:
+                if i == 0: 
+                    total += map_dict[s[i]]
+                    return total
+                #print(map_dict[s[i]], map_dict[s[i-1]])
+                total += map_dict[s[i]] - map_dict[s[i-1]]
+                i -= 2
             else:
-                total_value += Roman_numeral_dict[s[i]]
+                #print(map_dict[s[i]])
+                total += map_dict[s[i]]
+                i -= 1
         
-        return total_value
+        return total
