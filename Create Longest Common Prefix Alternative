@@ -25,9 +25,10 @@ Constraints:
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         """
+
         Goal: return the longest common prefix in each string in the list strs.
 
-        Quick exit: if one of the string in the list strs is empty, return empty string.
+        Quick exit: if one of the string in the list strs is empty, return an empty string.
 
         Approach:
         1. Iterate through the list strs and loop through index of each string from 0 and up.
