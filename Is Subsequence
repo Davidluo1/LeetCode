@@ -6,8 +6,8 @@ A subsequence of a string is a new string formed from the original string by del
 Example 1:
 Input: s = "abc", t = "ahbgdc"
 Output: true
-Example 2:
 
+Example 2:
 Input: s = "axc", t = "ahbgdc"
 Output: false
 
