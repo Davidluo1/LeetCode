@@ -38,7 +38,7 @@ class Solution:
 
         """
 
-        # base case
+        # Base case
         if not root:
             return []
 
@@ -82,7 +82,7 @@ class Solution:
             if len(output) <= h:
                 output.append(0)
             output[h] = n.val
-            # move to the next level if a right child is found, otherwise, a left child
+            # Move to the next level if a right child is found, otherwise, a left child
             if n.left is not None:
                 helper(n.left, h + 1)
             if n.right is not None:
