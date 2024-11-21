@@ -25,6 +25,7 @@ Constraints:
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         """
+
         Goal: return the index of the target in the nums list, return -1 if the 
         the target doesn't exist on the nums list.
 
