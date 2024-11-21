@@ -33,8 +33,8 @@ class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         """
 
-        Patern: return the right nodes/child
-        Solution: tree search by level, store the right most child
+        Pattern: return the right nodes/child
+        Solution: tree search by level, store the rightmost child
 
         """
 
