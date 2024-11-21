@@ -75,14 +75,14 @@ class Solution:
 
         output = []
 
-        # update and add the current level node to its left most node val
+        # Update and add the current level node to its leftmost node val
         def helper(n, h):
             if n is None:
                 return
             if len(output) <= h:
                 output.append(0)
             output[h] = n.val
-            # move to the next level if a right child is found, otherwise, left child
+            # move to the next level if a right child is found, otherwise, a left child
             if n.left is not None:
                 helper(n.left, h + 1)
             if n.right is not None:
