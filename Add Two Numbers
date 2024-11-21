@@ -79,7 +79,6 @@ class Solution:
 
 
         total = int(l1s[::-1]) + int(l2s[::-1])
-        #print(total)
 
         temp = str(total)
         new_node = ListNode(temp[-1])
