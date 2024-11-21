@@ -33,6 +33,7 @@ Constraints:
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         """
+
         Goal: get the total of the two linked list integer values, find their sum, and create a node in reverse
 
         Steps:
