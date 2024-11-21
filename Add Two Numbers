@@ -77,7 +77,7 @@ class Solution:
         #     l2s += str(cur.val)
         #     cur = cur.next
 
-        #print(l1s, l2s)
+
         total = int(l1s[::-1]) + int(l2s[::-1])
         #print(total)
 
