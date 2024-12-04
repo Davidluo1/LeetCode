@@ -55,7 +55,7 @@ class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
         """
 
-        Use depth-first search to traverses trhough the tree and store into a dictionary.
+        Use depth-first search to traverse through the tree and store into a dictionary.
 
         """
 
