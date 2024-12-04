@@ -46,7 +46,7 @@ Constraints:
 class Node:
     def __init__(self, val = 0, neighbors = None):
         self.val = val
-        # assign empty list if neighbors is None
+        # assign empty list if neighbors are None
         self.neighbors = neighbors if neighbors is not None else []
 
 
