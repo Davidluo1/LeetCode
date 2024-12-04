@@ -49,6 +49,7 @@ class Solution:
 
         res = 1
         prev = 0
+
         for i in range(n):
             temp = res
             res += prev
