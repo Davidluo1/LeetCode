@@ -27,6 +27,7 @@ Constraints:
 class Solution:
     def climbStairs(self, n: int) -> int:
         """
+
         Goal: return the possible distinct ways to climb to the top
         
 
@@ -43,6 +44,7 @@ class Solution:
 
         Runtime: O(N-1)
         Spacetime: O(1)
+
         """
 
         res = 1
