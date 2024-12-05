@@ -27,7 +27,7 @@ class Solution:
         if len(height) == 2:
             return min(height)
 
-        # left and right starting pointer
+        # Left and right starting pointer
         left = 0      
         right = len(height) - 1
         maxWater = 0
