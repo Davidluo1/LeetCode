@@ -29,7 +29,7 @@ class Solution:
         No transactions are done on example 2, which means skipping the current price/day if the future price/day is equal to or bigger than the current price/day. 
         The question is asking for a maximum profit, similar question to a water container where we need to choose two heights of the wall from a list that could contain the most water.
 
-        Solution: use two pointers from the left and right to update the current max profit. Unlike the water container problem, this question is looking for a small cost and selling it at a high price. So instead of iterating through from the left and right border of the prices list, both pointer starts on the left side of the list where one pointer track the min stock price, and the other one track the max stock price. 
+        Solution: Use two pointers from the left and right to update the current max profit. Unlike the water container problem, this question is about finding a small cost and selling it at a high price. So, instead of iterating through from the left and right border of the price list, both pointers start on the left side of the list, where one pointer tracks the minimum stock price and the other tracks the maximum stock price. 
 
         """
 
