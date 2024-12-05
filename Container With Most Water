@@ -23,7 +23,7 @@ Constraints:
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        # easy case
+        # Easy case
         if len(height) == 2:
             return min(height)
 
