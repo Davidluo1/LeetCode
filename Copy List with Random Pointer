@@ -42,6 +42,7 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         """
+
         Goal: Deep copy the input-linked list
 
         Easy case:
@@ -55,6 +56,7 @@ class Solution:
 
         Runtime: O(n)
         Spacetime: O(1)
+
         """
 
         # Easy case
