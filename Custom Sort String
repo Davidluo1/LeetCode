@@ -62,8 +62,7 @@ class Solution:
                 order_map[letter] += 1
             else:
                 res += letter
-        print(order_map)
-        print(res)
+
 
         for letter, val in order_map.items():
             if val > 1:
