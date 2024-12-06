@@ -74,9 +74,9 @@ class Solution:
         cur = head
 
         while cur:
-            # new node.next = original node.next
+            # New node.next = original node.next
             hash_table[cur].next = hash_table.get(cur.next)
-            # new node.random = original node.random
+            # New node.random = original node.random
             hash_table[cur].random = hash_table.get(cur.random)
             cur = cur.next
 
