@@ -60,7 +60,7 @@ class Solution:
                 a , b = arr.pop() , arr.pop()
                 arr.append( int(b / a) ) 
             else:
-                # append integer into arr
+                # Append integer into arr
                 arr.append(int(token)) 
 
         return arr[0]          
