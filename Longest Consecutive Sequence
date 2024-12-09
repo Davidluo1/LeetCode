@@ -10,7 +10,7 @@ class Solution:
         Approach:
         1. Sorted the nums array.
         2. Iterate through the sorted nums array, use a variable to track the current longest consecutive sequence.
-        3. Update the longest consecutive seuqence and return it at the end.
+        3. Update the longest consecutive sequence and return it at the end.
 
         """
 
