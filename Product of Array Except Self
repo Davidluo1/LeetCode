@@ -23,7 +23,7 @@ class Solution:
         output = []
 
         # Calculate the total product of the nums array
-        # Early exist if there is more than one zero in the nums array
+        # Early exists if there is more than one zero in the nums array
         for i in range(len(nums)):
             if nums[i] == 0:
                 output.append('x')
