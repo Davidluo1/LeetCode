@@ -10,8 +10,8 @@ class Solution:
         1. Iterate through the nums array.
         2. Calculate the product excluding the current index value.
 
-        Appraoch 2:
-        Store the previous prodcut of the nums array.
+        Approach 2:
+        Store the previous product of the nums array.
 
         Easy case:
         If there is more than one zero in the nums array, return the length of the nums array in zeros.
