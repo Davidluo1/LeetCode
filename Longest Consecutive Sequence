@@ -1,0 +1,31 @@
+
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        """
+
+        Goal: return the length of the longest consecutive elements sequence.
+
+        Must be in O(N) runtime -> Iterate the nums array once.
+
+        Approach:
+        1. Sorted the nums array.
+        2. Iterate through the sorted nums array, use a variable to track the current longest consecutive sequence.
+        3. Update the longest consecutive seuqence and return it at the end.
+
+        """
+
+        if not nums: return 0
+
+        longest_length = tracker = 1
+        nums = sorted(nums)
+        
+        for i in range(len(nums)-1):
+            if nums[i]+1 == nums[i+1]:
+                tracker += 1
+            elif nums[i] == nums[i+1]:
+                continue
+            else:
+                tracker = 1
+            longest_length = max(longest_length, tracker)
+
+        return longest_length
