@@ -1,0 +1,47 @@
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        """
+
+        Goal: return an array with each index equal to the product of all the other elements in the nums array.
+
+        Approach 1:
+        Find a way to calculate the product at each index of the nums array.
+        1. Iterate through the nums array.
+        2. Calculate the product excluding the current index value.
+
+        Appraoch 2:
+        Store the previous prodcut of the nums array.
+
+        Easy case:
+        If there is more than one zero in the nums array, return the length of the nums array in zeros.
+
+        """
+
+        zero = [0,0]
+        product = [1,1]
+        output = []
+
+        # Calculate the total product of the nums array
+        # Early exist if there is more than one zero in the nums array
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                output.append('x')
+                zero[0] += 1
+                if zero[0] == 2:
+                    return [0] * len(nums)
+                zero[1] = i
+            else:
+                output.append(0)
+            product[0] *= nums[i]
+            if nums[i] != 0:
+                product[1] *= nums[i]
+
+
+        if zero[0] == 1:
+            output[zero[1]] = product[1]
+        else:
+            for i in range(len(output)):
+                output[i] = product[0] // nums[i]
+
+        return output
