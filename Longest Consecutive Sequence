@@ -3,7 +3,7 @@ class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         """
 
-        Goal: return the length of the longest consecutive elements sequence.
+        Goal: return the length of the longest consecutive element sequence.
 
         Must be in O(N) runtime -> Iterate the nums array once.
 
