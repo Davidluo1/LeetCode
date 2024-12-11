@@ -26,6 +26,7 @@ Constraints:
 class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
         """
+
         Goal: return the k closest integer in the arr list.
 
         Easy case:
