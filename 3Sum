@@ -3,10 +3,10 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         """
 
-        Goal: Find all triplets where they are not the same combination and sum up to 0.
+        Goal: Find all triplets that are not the same combination and sum up to 0.
 
         Approach 1:
-        Find all combinations of triplets and store the ones with sum of 0.
+        Find all combinations of triplets and store the ones with a sum of 0.
         i, j, k
 
         Runtime: O(N^3)
