@@ -39,7 +39,7 @@ class Solution:
         Must use only constant extra space
 
         Approach:
-        1. Iterate each element in the numbers array, calculate the sum with the current next element 
+        1. Iterate each element in the numbers array, and calculate the sum with the current next element 
         while the current sum is less than the target.
         2. Once a solution is found, return that solution.
 
