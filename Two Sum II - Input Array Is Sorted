@@ -33,6 +33,7 @@ Constraints:
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         """
+
         Goal: Find two numbers that add up to a specific target where the index1 is less than index2.
 
         Requirement:
