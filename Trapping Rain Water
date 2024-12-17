@@ -32,7 +32,7 @@ class Solution:
         Approach:
         Keep iterating through the array if the right wall is smaller than the left wall.
         Keep track of the walls in between.
-        Each iteration can contain up to the left wall height of water.
+        Each iteration can contain up to the height of water on the left wall.
         Ignore walls that are 0.
         Stop when the left wall index reaches the length of the array minus 2.
 
