@@ -45,7 +45,6 @@ class Solution:
         max_volume, left, right = 0, 0, len(height)-1
         l_wall, r_wall = height[left], height[right]
 
-
         while left < right:
             if height[left] < height[right]:
                 left += 1
