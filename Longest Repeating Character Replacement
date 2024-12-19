@@ -28,7 +28,7 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         """
         
-        Goal: find the longest substring containing the same letter you can get after performing k letter replacements.
+        Goal: find the longest substring containing the same letter you can get after performing k-letter replacements.
 
         The longest substring length is at least k+1 size.
 
