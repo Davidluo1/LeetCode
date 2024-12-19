@@ -33,7 +33,7 @@ class Solution:
         The longest substring length is at least k+1 size.
 
         Approach:
-        Inorder to count the number of each element in the current window => dictionary
+        In order to count the number of each element in the current window => dictionary
 
         """
 
