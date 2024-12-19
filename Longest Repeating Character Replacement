@@ -47,7 +47,6 @@ class Solution:
 
         for i in range(len(s)):
             counter[s[i]] += 1
-
             most_common = max(most_common, counter[s[i]])
             if longest - most_common >= k:
                 counter[s[i - longest]] -= 1
