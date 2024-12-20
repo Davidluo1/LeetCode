@@ -24,6 +24,7 @@ Constraints:
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         """
+
         Goal: Check whether s1 is the permutation of s2.
 
         Approach:
