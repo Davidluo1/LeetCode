@@ -40,3 +40,105 @@ Follow up: Could you find an algorithm that runs in O(m + n) time?
 
 
 
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        """
+        Goal: return the minimum window substring of s of t including duplicates, return an empty string otherwise.
+
+        Easy case:
+        if the size of string t is smaller than string s, return empty string.
+
+        Approach:
+        Dictionary, store the character count of string t.
+
+        The window size must be greater than the size of t.
+
+        previous substring: [ADOBEC] = size of 6
+        next: B at index 3
+        [BECODE]
+        next: C
+        [CODEBA]
+        next: B
+        [BANC]
+
+        Rule:
+        expand the right window if the current substring is not a valid substring
+        shrink the left window while the current substring is a valid substring
+        End when the left window reach to the size of string s - size of string t
+
+        Update the valid substring during the process
+
+        """
+        from collections import Counter
+
+        # Easy case
+        if len(s) < len(t): return ""
+
+        r, t_map, s_map, min_size, l = 0, Counter({}), Counter({}), "", 0
+        # Dictionary of chatacters count in string t and window s
+        for ele in t:
+            t_map[ele] += 1
+            s_map[s[r]] += 1
+            r += 1
+        
+        while r <= len(s):
+            # Find valid substring
+            for ele in set(t):
+                while ele not in s_map.keys() or t_map[ele] > s_map[ele]:
+                    if r >= len(s): return min_size
+                    s_map[s[r]] += 1
+                    r += 1
+
+            # Update minimum window substring
+            if len(min_size) > len(s[l:r]) or min_size == "":
+                min_size = s[l:r]
+
+            s_map[s[l]] -= 1
+            l += 1
+            if l < len(s):
+                while l < len(s) and s[l] not in t_map.keys():
+                    s_map[s[l]] -= 1
+                    l += 1
+            else: r += 1
+
+        return min_size
+
+        # while r <= len(s):
+        #     print(l,r)
+        #     valid = True
+        #     jump = False
+        #     if s[l] in memo.keys():
+        #         for ele in set(t):
+        #             if s[l:r].count(ele) < memo[ele]:
+        #                 r += 1
+        #                 valid = False
+        #                 if min_size != "" and len(s[l:r]) > len(min_size):
+        #                     jump = True
+        #                 break
+                    
+        #         if jump:
+        #             l += 1
+        #             while s[l] not in memo.keys(): l += 1
+        #             r = l + len(t)
+        #         if valid:
+        #             if min_size == "": min_size = s[l:r]
+        #             elif len(min_size) > len(s[l:r]):
+        #                 min_size = s[l:r]
+        #             l += 1
+        #             print(l)
+        #             if l == len(s) - len(t): return min_size
+        #             while s[l] not in memo.keys(): l += 1
+        #             r = l + len(t)
+
+        #     # else:
+        #     #     l += 1
+        #     #     r += 1
+
+
+
+        # return min_size
+
+        
+
+
+
