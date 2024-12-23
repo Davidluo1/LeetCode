@@ -1,48 +1,40 @@
 """
 
-class Solution:
-    def checkInclusion(self, s1: str, s2: str) -> bool:
-        """
-        Goal: Check whether s1 is the permutation of s2.
+Given two strings s and t of lengths m and n respectively, return the minimum window 
+substring
+ of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
 
-        Approach:
-        1. sort s1, iterate and compare size of s1 window in s2.
-        2. Return True if one matches.
+The testcases will be generated such that the answer is unique.
 
-        Rutnime: O(2N or (LogN)N) O(N^2)
-        Spacetime O(K)
+ 
 
-        Dictionary
-        [a:1, b:1]
-        [e:1, i:1]
+Example 1:
 
-        [i:1, d:1]
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+Example 2:
 
-        [e:1, i:1]
-        [i:1, d:1]
+Input: s = "a", t = "a"
+Output: "a"
+Explanation: The entire string s is the minimum window.
+Example 3:
 
-        """
+Input: s = "a", t = "aa"
+Output: ""
+Explanation: Both 'a's from t must be included in the window.
+Since the largest window of s only has one 'a', return empty string.
+ 
 
-        # memo = {}
-        # for i in range(len(s1)):
-        #     if s1[i] not in memo:
-        #         memo[s1[i]] = 1
-        #     else:
-        #         memo[s1[i]] += 1
+Constraints:
 
-        match = True
+m == s.length
+n == t.length
+1 <= m, n <= 105
+s and t consist of uppercase and lowercase English letters.
+ 
 
-        for i in range(len(s2)-len(s1)+1):
-            temp = s2[i:i+len(s1)]
-            for ele in s1:
-                if ele not in temp:
-                    # match = False
-                    break
-
-            if sorted(s2[i:i+len(s1)]) == sorted(s1): return True
-            # else: match = True
-
-        return False
+Follow up: Could you find an algorithm that runs in O(m + n) time?
 
 """
 
