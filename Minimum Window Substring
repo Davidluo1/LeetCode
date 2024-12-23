@@ -67,7 +67,7 @@ class Solution:
         if len(s) < len(t): return ""
 
         r, t_map, s_map, min_size, l = 0, Counter({}), Counter({}), "", 0
-        # Dictionary of chatacters count in string t and window s
+        # Dictionary of characters count in string t and window s
         for ele in t:
             t_map[ele] += 1
             s_map[s[r]] += 1
