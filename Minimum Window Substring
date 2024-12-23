@@ -35,6 +35,7 @@ Follow-up: Could you find an algorithm that runs in O(m + n) time?
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         """
+
         Goal: return the minimum window substring of s of t including duplicates, return an empty string otherwise.
 
         Easy case:
