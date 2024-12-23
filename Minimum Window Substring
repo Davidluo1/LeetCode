@@ -56,7 +56,7 @@ class Solution:
         Rule:
         expand the right window if the current substring is not a valid substring
         shrink the left window while the current substring is a valid substring
-        End when the left window reach to the size of string s - size of string t
+        End when the left window reaches the size of string s - size of string t
 
         Update the valid substring during the process
 
