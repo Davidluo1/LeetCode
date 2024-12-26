@@ -47,7 +47,7 @@ class MyQueue:
 
     """
 
-    # initilize queue
+    # Initilize queue
     def __init__(self):
         self.queue = []
 
