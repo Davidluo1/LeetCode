@@ -29,6 +29,7 @@ Constraints:
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
         """
+
         Goal: return all start index of p's anagrams in s.
 
         Anagram: len(a) == len(b) and sorted(a) == sorted(b)
@@ -44,6 +45,7 @@ class Solution:
 
         Runtime: O((s-p-1)*2NlogN)
         Spacetime: O(N)
+
         """
 
 
