@@ -58,7 +58,7 @@ class Solution:
         res = []
         sorted_p = sorted(p)
         for i in range(len(s)-len(p)+1):
-            # check anagram
+            # Check anagram
             if sorted(s[i:i+len(p)]) == sorted_p:
                 res.append(i)
         
