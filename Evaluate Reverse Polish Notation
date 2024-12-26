@@ -42,7 +42,6 @@ Constraints:
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         arr = []
-
         # Iterate through the tokens from left to right
         for token in tokens:
             if token == '+' :
