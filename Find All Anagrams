@@ -48,7 +48,6 @@ class Solution:
 
         """
 
-
         #Easy case
         if len(s) == len(p):
             if sorted(s) == sorted(p):
