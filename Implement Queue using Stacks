@@ -63,12 +63,12 @@ class MyQueue:
 
     def peek(self) -> int:
         """ Return the element at the front of the queue """
-        # list index 0 is the front element of the queue
+        # List index 0 is the front element of the queue
         return self.queue[0]
 
     def empty(self) -> bool:
         """ Check if the queue is empty, return true, false otherwise """
-        # list length of 0 represents an empty
+        # List length of 0 represents an empty
         if len(self.queue) == 0:
             return True
         return False
