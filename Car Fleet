@@ -37,3 +37,43 @@ Constraints:
 - 0 < speed[i] <= 106
 
 """
+
+
+
+class Solution:
+    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
+        """
+        
+        Goal: return the number of fleets that will arrive at the destination.
+
+        (target - position) / speed
+        12 - 10 = 2 / 2 = 1         Output: 1
+        12 - 8 = 4 / 4 = 1
+        12 - 0 = 12 / 1 = 12        Their output is the input divisor
+        12 - 5 = 7 / 1 = 7
+        12 - 3 = 9 / 3 = 3          Output: 3
+
+        note: [1]
+
+        100-0 = 100 / 4 = 25
+        100-2 = 98 / 2 = 49
+        100-4 = 96 / 1 = 96
+
+        If position plus speed are the same, they are in a fleet
+
+        """
+
+        pairs = []
+        res = []
+
+        for i in range(len(position)):
+            pairs.append([position[i],speed[i]])
+
+
+        for p,s in sorted(pairs,reverse = True):
+            res.append((target - p) / s)
+
+            if len(res) > 1 and res[-1] <= res[-2]:
+                res.pop()
+        
+        return len(res)
