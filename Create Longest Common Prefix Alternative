@@ -53,6 +53,7 @@ class Solution:
         #     if strs[0] == "":
         #         return ""
         #     return strs[0]
+
         for word in strs:
             smallest_length = min(len(word), smallest_length)
             if word == "":
