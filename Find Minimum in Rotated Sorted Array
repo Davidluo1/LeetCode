@@ -40,7 +40,7 @@ class Solution:
         Goal: Find the minimum element of a rotated array.
 
         Easy case:
-        If rotated n times, return first element: nums[0]
+        If rotated n times, return the first element: nums[0]
 
         Approach:
         Find the rotated index
