@@ -39,3 +39,37 @@ nums is sorted and rotated between 1 and n times.
 
 """
 
+
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        """
+
+        Goal: Find the minimum element of a rotated array.
+
+        Easy case:
+        If rotated n times, return first element: nums[0]
+
+        Approach:
+        Find the rotated index
+
+        from n in 1-4
+        Minimum element: nums[n]
+        
+        rule:
+        If size % n != 0, return nums[size % n + 1]
+
+        4 % 4 = 0
+
+        """
+
+        # Find the total rotation
+        # Easy case
+        if nums[0] < nums[-1] or len(nums) == 1: return nums[0]
+
+        for i in range(len(nums)-1):
+            if nums[i] > nums[i+1]:
+                rotation = i+1
+
+
+        return nums[rotation]
+
