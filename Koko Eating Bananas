@@ -45,7 +45,7 @@ class Solution:
         Approach:
         1. Sort the banana piles.
         2. If h is bigger than the banana piles size, calculate its difference and find the dth largest element.
-        3. Check if the total (speed * h) is equal or bigger than the total bananas in the piles.
+        3. Check if the total (speed * h) is equal to or bigger than the total bananas in the piles.
         4. If not, add one to the speed until (speed * h) is equal or bigger.
         5. Return the final speed.  
 
