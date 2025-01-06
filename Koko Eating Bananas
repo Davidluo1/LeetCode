@@ -30,7 +30,7 @@ class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
         """
 
-        Goal: Return the minimun speed of k to eat all the bananas within h hours.
+        Goal: Return the minimum speed of k to eat all the bananas within h hours.
 
         total of bananas
         h hours -> h times
@@ -40,7 +40,7 @@ class Solution:
         total // h = speed
         
         Easy case:
-        If h equals to the banana piles size, return the max banana pile.
+        If h equals to the banana pile size, return the max banana pile.
 
         Approach:
         1. Sort the banana piles.
