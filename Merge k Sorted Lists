@@ -57,7 +57,7 @@ class Solution:
         if not res:
             return
 
-        # get a sorted list
+        # Get a sorted list
         res = sorted(res)
         head = ListNode(res[0])
         tail = head
