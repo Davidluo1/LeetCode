@@ -53,7 +53,7 @@ class Solution:
                 res.append(cur.val)
                 cur = cur.next
 
-        # edge case when lists are empty
+        # Edge case when lists are empty
         if not res:
             return
 
