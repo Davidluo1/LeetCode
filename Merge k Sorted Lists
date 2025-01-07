@@ -62,7 +62,7 @@ class Solution:
         head = ListNode(res[0])
         tail = head
 
-        # get a linked list out of the sorted list
+        # Get a linked list out of the sorted list
         for val in res[1:]:
             temp = ListNode(val)
             tail.next = temp
