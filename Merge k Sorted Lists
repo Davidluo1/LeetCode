@@ -43,7 +43,7 @@ Constraints:
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         res = []
-        # edge case when lists are empty
+        # Edge case when lists are empty
         if len(lists) == 0:
             return
 
