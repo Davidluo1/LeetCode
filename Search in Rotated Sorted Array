@@ -47,7 +47,7 @@ class Solution:
                 else:
                     start = mid + 1
             else:
-                # check if the target is in the right half
+                # Check if the target is in the right half
                 if nums[mid] < target <= nums[end]:
                     start = mid + 1
                 else:
