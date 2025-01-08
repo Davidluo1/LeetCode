@@ -41,7 +41,7 @@ class Solution:
         total // h = speed
         
         Easy case:
-        If h equals to the banana pile size, return the max banana pile.
+        If h equals the banana pile size, return the max banana pile.
 
         Approach:
         1. Sort the banana piles.
