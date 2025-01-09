@@ -59,7 +59,6 @@ class Solution:
 
         left, right, found = 0, len(nums) - 1, False
 
-
         while left <= right:
             mid = (left+right) // 2
 
