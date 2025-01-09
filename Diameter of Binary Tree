@@ -39,7 +39,7 @@ class Solution:
             left = dfs(node.left)
             right = dfs(node.right)
            
-            # update max depth
+            # Update max depth
             depth[0] = max(depth[0], left + right)
            
             return  1 + max(left, right)
