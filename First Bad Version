@@ -29,6 +29,7 @@ Constraints:
 class Solution:
     def firstBadVersion(self, n: int) -> int:
         """
+
         [5,4,3,2,1]
         [T,T,F,F,F]
         """
