@@ -40,7 +40,7 @@ class Solution:
         Return false if missing a key to open a room
 
         Easy case:
-        - where the length of the rooms list is two, if room 0 doesn't have the key 1, return False.
+        - Where the length of the rooms list is two, if room 0 doesn't have the key 1, return False.
 
         The keys in a room could be 0 to 1000
 
