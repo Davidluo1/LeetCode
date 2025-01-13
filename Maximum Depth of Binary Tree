@@ -27,6 +27,7 @@ Constraints:
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         """
+
         Goal: return the maximum depth of the binary tree
 
         Edge case:
