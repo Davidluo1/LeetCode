@@ -39,7 +39,7 @@ class Solution:
         v: 
         biggest = 3
 
-        if the length of the string s minus the current index is equal to or less than the biggest value, break
+        If the length of the string s minus the current index is equal to or less than the biggest value, break
 
         Runtime: O(N^2)
         Spacetime: O(N)
