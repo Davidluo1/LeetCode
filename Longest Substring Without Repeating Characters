@@ -42,7 +42,7 @@ class Solution:
         if the length of the string s minus the current index is equal to or less than the biggest value, break
 
         Runtime: O(N^2)
-        spacetime: O(N)
+        Spacetime: O(N)
 
         """
 
