@@ -66,6 +66,7 @@ class Solution:
         
             if len(v) > longest:
                 longest = len(v)
+
         return longest
 
         longest = 0
