@@ -62,7 +62,7 @@ class MinStack:
         return self.stack[-1]
 
     def getMin(self) -> int:
-        # Return last item in min Stack
+        # Return the last item in min Stack
         return self.MinStack[-1]
 
 
