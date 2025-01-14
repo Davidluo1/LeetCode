@@ -53,7 +53,7 @@ class MinStack:
         self.MinStack.append(cur_min)
 
     def pop(self) -> None:
-        # pop the last item from stack and MinStack
+        # Pop the last item from stack and MinStack
         self.stack.pop()
         self.MinStack.pop()
 
