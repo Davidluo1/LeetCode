@@ -46,7 +46,7 @@ class MinStack:
         # Add the item to the stack
         self.stack.append(val)
 
-        # update the min comparing val with previous min
+        # update the min comparing val with the previous min
         cur_min = min(val , self.MinStack[-1] if self.MinStack else val)
 
         # update min stack
