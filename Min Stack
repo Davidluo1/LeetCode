@@ -49,7 +49,7 @@ class MinStack:
         # Update the min comparing val with the previous min
         cur_min = min(val , self.MinStack[-1] if self.MinStack else val)
 
-        # update min stack
+        # Update min stack
         self.MinStack.append(cur_min)
 
     def pop(self) -> None:
