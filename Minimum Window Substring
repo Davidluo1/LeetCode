@@ -64,6 +64,7 @@ class Solution:
         Update the valid substring during the process
 
         """
+
         from collections import Counter
 
         # Easy case
