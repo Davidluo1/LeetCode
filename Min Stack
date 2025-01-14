@@ -43,7 +43,7 @@ class MinStack:
         self.MinStack = []
 
     def push(self, val: int) -> None:
-        # add the item into the stack
+        # Add the item to the stack
         self.stack.append(val)
 
         # update the min comparing val with previous min
