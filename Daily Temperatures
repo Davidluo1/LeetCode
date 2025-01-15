@@ -30,7 +30,7 @@ class Solution:
         Approach:
         1. Have a right and left index pointer and iterate through the temperatures array from left to right.
         2. Compare each two elements from the left, if the next day is colder, record the difference or put 1 otherwise.
-        However, if there is not future warmer days availble by iterating the right index pointer, put a 0 instead.
+        However, if there are no future warmer days available by iterating the right index pointer, put a 0 instead.
 
         Runtime: O(N^2)
         Spacetime: O(N)
