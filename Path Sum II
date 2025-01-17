@@ -63,7 +63,6 @@ class Solution:
             if root.val == SumSum:
                 return [[root.val]]
 
-        # def dfs(node, path, total):
         def dfs(node, path):
             # Base case
             if not node: return
