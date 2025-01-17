@@ -65,7 +65,7 @@ class Solution:
 
         # def dfs(node, path, total):
         def dfs(node, path):
-            # base case
+            # Base case
             if not node: return
 
             # Leaf node
