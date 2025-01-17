@@ -25,6 +25,7 @@ Constraints:
 class Solution:
     def numSquares(self, n: int) -> int:
         """
+
         Goal: return the least number of perfect square numbers that sum to n.
 
         4 = 2**2
@@ -56,6 +57,7 @@ class Solution:
 
         Runtime: O(sqrt(k)+n*m)
         Spacetime: O(N)
+
         """
 
         # Easy case
