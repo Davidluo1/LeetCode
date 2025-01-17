@@ -68,7 +68,7 @@ class Solution:
             # base case
             if not node: return
 
-            # leaf node
+            # Leaf node
             if not node.left and not node.right:
                 path.append(node.val)
                 if sum(path) == SumSum:
