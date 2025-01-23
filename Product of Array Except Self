@@ -37,7 +37,6 @@ class Solution:
             if nums[i] != 0:
                 product[1] *= nums[i]
 
-
         if zero[0] == 1:
             output[zero[1]] = product[1]
         else:
