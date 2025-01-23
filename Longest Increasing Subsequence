@@ -28,6 +28,7 @@ Constraints:
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         """
+
         Goal: find the longest length of increasing subsequence
 
         The nums list length has to be at least one
