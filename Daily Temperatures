@@ -65,7 +65,6 @@ class Solution:
         return res
 
 
-
         output, bingo = [], []
 
         for i in range(len(temperatures)-1):
