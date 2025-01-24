@@ -8,7 +8,7 @@ Example 1:
 Input: order = "cba", s = "abcd"
 Output: "cbad"
 Explanation: "a", "b", "c" appear in order, so the order of "a", "b", and "c" should be "c", "b", and "a".
-Since "d" does not appear in order, it can be at any position in the returned string. "dcba", "cdba", "cbda" are also valid outputs.
+Since "d" does not appear in order, it can be at any position in the returned string. "dcba", "cdba", and "cbda" are also valid outputs.
 
 Example 2:
 Input: order = "bcafg", s = "abcd"
