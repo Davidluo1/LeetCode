@@ -49,7 +49,7 @@ class Solution:
         """
 
         Goal: return the number of elements in array nums that are not equal to the variable val, and the nums array 
-        with all elements that are not equal to the varibale val in front.
+        with all elements that are not equal to the variable value in front.
 
         Approach:
         1. Iterate through the array nums, find the index where the elements are equal to the variable val, and remove (pop) them.
