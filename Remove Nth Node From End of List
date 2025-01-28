@@ -61,7 +61,7 @@ Solution 2:
 
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        # move pointer one to n position
+        # Move pointer one to n position
         while n > 0:
             p2 = p2.next
             n -= 1
