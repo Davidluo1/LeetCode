@@ -44,7 +44,7 @@ class Solution:
         Easy case:
         - if only one candidate, if the target is bigger than the candidate, and the target mod the candidate equals 0
             return [candidate*(target // candidate)], otherwise, return 
-        - if target equals to 1, return
+        - if target equals 1, return
 
         7-2 = 5
         5-2 = 3
