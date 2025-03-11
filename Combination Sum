@@ -56,7 +56,7 @@ class Solution:
         [7]
 
         Push all candidates in a dictionary
-        every time to find that prefix, use the get function
+        Every time to find that prefix, use the get function
         8-2 = 6
         6-2 = 4
         4-2 = 2
