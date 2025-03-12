@@ -44,7 +44,7 @@ class Solution:
 
         The known range and the unknown range
 
-        Record j index value that has an output zero.
+        Record the j index value that has an output zero.
 
         Stack storage and iterate through the array.
         Runtime: O(N)
