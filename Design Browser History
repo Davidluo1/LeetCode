@@ -59,9 +59,7 @@ class BrowserHistory:
 
     def back(self, steps: int) -> str:
         """
-
         Only return up to x steps
-
         """
 
         if steps <= self.cur:
