@@ -55,7 +55,6 @@ class Solution:
         print(order_map)
 
         res = ""
-    
         for letter in s:
             if order_map.get(letter):
                 order_map[letter] += 1
