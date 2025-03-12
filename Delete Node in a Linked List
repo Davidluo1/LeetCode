@@ -49,7 +49,7 @@ class Solution:
         :rtype: void Do not return anything, modify node in-place instead.
 
         Not be given access to the first node of the head
-        Given node is not the last node in the linked list
+        Given the node is not the last node in the linked list
 
         Given a node before the last, it has .next link to the next node but 
         does not have any access to the previous node. Thus, the next node will 
