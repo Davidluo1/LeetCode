@@ -51,7 +51,6 @@ class Solution:
 
         # Easy case
         if len(order) == 1 or len(s) == 1: return s
-
         order_map = {key : 1 for key in order}
         print(order_map)
 
