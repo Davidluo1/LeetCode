@@ -62,7 +62,6 @@ class Solution:
             else:
                 res += letter
 
-
         for letter, val in order_map.items():
             if val > 1:
                 res += letter*(val-1)
