@@ -83,7 +83,7 @@ class BrowserHistory:
         else:
             self.cur = len(self.home_page_memo)-1
         return self.home_page_memo[self.cur]
-        
+
 
 # Your BrowserHistory object will be instantiated and called as such:
 # obj = BrowserHistory(homepage)
