@@ -1,6 +1,6 @@
 """
 
-Randomized collection is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements, and also reporting a random element.
+Randomized collection is a data structure that contains a collection of numbers, possibly duplicates (i.e., a multiset). It should support inserting and removing specific elements and reporting random elements.
 
 Implement the RandomizedCollection class:
 RandomizedCollection() Initializes the empty RandomizedCollection object.
