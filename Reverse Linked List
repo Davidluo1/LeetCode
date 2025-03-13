@@ -44,7 +44,7 @@ class Solution:
 
         # Method 1
 
-        # base/edge case
+        # Base/edge case
         if not head:
             return None
 
