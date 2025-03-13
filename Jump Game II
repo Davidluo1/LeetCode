@@ -63,5 +63,4 @@ class Solution:
             if i == end:
                 step += 1
                 end = maxstep
-        
         return step
