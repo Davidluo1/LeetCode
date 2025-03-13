@@ -58,7 +58,6 @@ class Solution:
             cur = nex
             if nex:
                 nex = nex.next
-
         return prev
 
 
