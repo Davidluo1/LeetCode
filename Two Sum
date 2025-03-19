@@ -38,7 +38,6 @@ class Solution:
 
         # Method 1
         d = {}
-        
         for i, value in enumerate(nums):
             prefix_sum = target - value
             if prefix_sum in d:
