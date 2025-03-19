@@ -33,9 +33,11 @@ class Solution:
             return False
 
         """
+
         Method:
         Use a parentheses dictionary to store an open bracket with its corresponding closing bracket. Append the open bracket to a stack, and pop it off if its corresponding closing bracket is found on the next bracket. If all open brackets are matched, the item size should be empty.
         Since it only iterates the string once, the runtime should be O(N), with a space-time of O(N).
+
         """
 
         stack = []
