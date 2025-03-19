@@ -54,5 +54,4 @@ class Solution:
                 stack.append(bracket)
             elif len(stack) == 0 or bracket != parentheses_dict[stack.pop()]:
                 return False
-
         return len(stack) == 0
