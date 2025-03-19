@@ -44,5 +44,4 @@ class Solution:
         # Return false if in order traversal outputs an incorrect list
         if inorder(root) == False:
             return False
-
         return True
