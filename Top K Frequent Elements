@@ -58,7 +58,7 @@ class Solution:
            res.append(sorted_dict[n][0])
            n -= 1
 
-        #for i in range(length-1,-1,-1):
+        # for i in range(length-1,-1,-1):
             #if k == 0: break
             #res.append(sorted_dictionary[i][0])
             #k -= 1
