@@ -28,7 +28,7 @@ Constraints:
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        # edge cases when the item length is odd  
+        # Edge cases when the item length is odd  
         if len(s)%2 != 0:
             return False
 
