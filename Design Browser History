@@ -81,6 +81,7 @@ class BrowserHistory:
         return self.home_page_memo[self.cur]
 
 
+
 # Your BrowserHistory object will be instantiated and called as such:
 # obj = BrowserHistory(homepage)
 # obj.visit(url)
