@@ -50,7 +50,7 @@ class Solution:
             top_to_bottom_biggest = 0
             top_to_bottom_match = []
 
-            # find the biggest cell from left to right and top to bottom
+            # Find the biggest cell from left to right and top to bottom
             for j in range(n):
                 if heights[i][j] >= left_to_right_biggest:
                     if heights[i][j] == left_to_right_biggest:
