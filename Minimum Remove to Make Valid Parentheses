@@ -43,7 +43,7 @@ class Solution:
         close: ):12
         if there is a closed bracket but no open bracket, remove the closed bracket using replace to ''
         remove(index)
-        append open bracket, remove open bracket when a close braket is found
+        append open bracket, remove open bracket when a close bracket is found
         Runtime: O(3N)
         Spacetime: O(2N)
 
