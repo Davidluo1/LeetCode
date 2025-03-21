@@ -41,7 +41,7 @@ class Solution:
         dictionary
         open: 
         close: ):12
-        if closed bracket but no open bracket, remove the closed bracket using replace to ''
+        if there is closed bracket but no open bracket, remove the closed bracket using replace to ''
         remove(index)
         append open bracket, remove open brakcet when a close braket is found
         Runtime: O(3N)
