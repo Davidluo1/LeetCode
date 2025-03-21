@@ -69,6 +69,7 @@ class Solution:
             #     s_map[s[i]] = 1
             # else:
             #     s_map[s[i]] += 1
+
             if not t_map.get(t[i]):
                 t_map[t[i]] = 1
             else:
