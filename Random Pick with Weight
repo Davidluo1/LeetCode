@@ -58,6 +58,7 @@ class Solution:
 
     """
 
+    # Constructor
     def __init__(self, w: List[int]):
         self.w = w
         total = sum(self.w)
