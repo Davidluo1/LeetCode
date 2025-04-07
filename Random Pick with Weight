@@ -39,12 +39,11 @@ All of the following outputs can be considered correct:
 [null,1,0,1,0,0]
 ......
 and so on.
- 
 
 Constraints:
-1 <= w.length <= 104
-1 <= w[i] <= 105
-pickIndex will be called at most 104 times.
+-1 <= w.length <= 104
+-1 <= w[i] <= 105
+-pickIndex will be called at most 104 times.
 
 
 """
