@@ -54,7 +54,7 @@ class Solution:
     """
     [[val,prob]]
 
-    1. Create a list, for each item in the input list, calculate its probability and store as a nested list.
+    1. Create a list, for each item in the input list, calculate its probability and store it as a nested list.
 
     """
 
