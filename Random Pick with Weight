@@ -72,8 +72,8 @@ class Solution:
         #     new_w.append([i,ele,ele/total])
 
         # Generate a random value based on the probabilities
-        random_value = random.choices(self.w, [sublist[1] for sublist in self.w])[0]
 
+        random_value = random.choices(self.w, [sublist[1] for sublist in self.w])[0]
         return random_value[0]
         
 
