@@ -35,7 +35,7 @@ class Solution:
         Caution:
         There are empty spaces in the string
 
-        Appraoch: Stack
+        Approach: Stack
         1. Push all the integer and operators in separate stack. Skip spaces.
         2. Calculate all the multiplication and divisions.
 
