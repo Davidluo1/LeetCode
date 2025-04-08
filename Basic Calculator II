@@ -87,8 +87,8 @@ class Solution:
                 if s[i] == '*' or s[i] == '/':
                     operator.append(s[i])
             i += 1
-
         return sum(stack)
+
 
         # stack  = []
         # operator = []
