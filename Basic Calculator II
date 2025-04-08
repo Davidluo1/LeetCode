@@ -14,10 +14,8 @@ Output: 1
 Example 3:
 Input: s = " 3+5 / 2 "
 Output: 5
- 
 
 Constraints:
-
 1 <= s.length <= 3 * 105
 s consists of integers and operators ('+', '-', '*', '/') separated by some number of spaces.
 s represents a valid expression.
