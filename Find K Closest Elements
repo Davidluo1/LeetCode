@@ -51,7 +51,7 @@ class Solution:
                - set window k
                - stop when reaching a distance (boundary)
                    left side: if the right distance is bigger than the left distance
-                   right side: continue until you reach the boundary
+                   right side: Continue until you reach the boundary
                    - Compare the mid element with integer x
        
            - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
