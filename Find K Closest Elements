@@ -55,8 +55,8 @@ class Solution:
                    - Compare the mid element with integer x
        
            - iterate from mid and to both left and right and calculate the distance on both current left and right elements from integer x.
-               - only the current closest element (left/right) gets to move down to the next element if it exists. (set a boundary)
-               - divide and conquer
+               - Only the current closest element (left/right) gets to move down to the next element if it exists. (set a boundary)
+               Divide and conquer
        3. Use the formula to calculate and create a new list with their distance.
            Iterate from left to right
            Utilize size k to find the window for the k closest elements
