@@ -26,7 +26,7 @@ class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
        """
 
-       Goal: Find k closest elements from integer x, and return the result in ascending order.
+       Goal: Find k closest elements from integer x and return the result in ascending order.
        
        Rule:
        - find the closest integer from x
