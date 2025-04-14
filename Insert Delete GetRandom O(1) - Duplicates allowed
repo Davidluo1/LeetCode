@@ -31,7 +31,7 @@ randomizedCollection.getRandom(); // getRandom should:
                                   // - return 2 with probability 1/3.
 randomizedCollection.remove(1);   // return true since the collection contains 1.
                                   // Removes 1 from the collection. The collection now contains [1,2].
-randomizedCollection.getRandom(); // getRandom should return 1 or 2, both equally likely.
+randomizedCollection.getRandom(); // getRandom should return 1 or 2, equally likely.
  
 Constraints:
 - -231 <= val <= 231 - 1
