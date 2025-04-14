@@ -30,5 +30,4 @@ class Solution:
                 return False  
             # Update max step
             max_step = max(max_step, i+nums[i])
-
         return True
