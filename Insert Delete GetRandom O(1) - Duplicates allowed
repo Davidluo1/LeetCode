@@ -47,6 +47,7 @@ class RandomizedCollection:
         self.collection_list = []
         self.collection_dict = {}
 
+    # Add item to the collection
     def insert(self, val: int) -> bool:
         self.collection_list.append(val)
         if self.collection_dict.get(val):
