@@ -45,5 +45,4 @@ class Solution:
             if cur in first_set:
                 return cur
             cur = cur.next
-
         return None
