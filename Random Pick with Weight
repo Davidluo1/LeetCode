@@ -28,7 +28,7 @@ solution.pickIndex(); // return 1. It returns the second element (index = 1), wh
 solution.pickIndex(); // return 1
 solution.pickIndex(); // return 1
 solution.pickIndex(); // return 1
-solution.pickIndex(); // return 0. It is returning the first element (index = 0) that has a probability of 1/4.
+solution.pickIndex(); // return 0. It returns the first element (index = 0) that has a probability of 1/4.
 
 Since this is a randomization problem, multiple answers are allowed.
 All of the following outputs can be considered correct:
