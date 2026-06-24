@@ -1,0 +1,19 @@
+Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i], you have to count the number of valid j's such that j!=i and nums[j]<nums[i].
+
+nums = [8, 0, 1, 2, 3, 2]
+d = {}
+
+# Sort in ascending order: [0, 1, 2, 2, 3, 8]
+sorted_nums = sorted(nums)
+
+# Map each number to its first seen index
+# The index 'i' is exactly how many elements are smaller
+for i, num in enumerate(sorted_nums):
+    if num not in d:
+        d[num] = i
+
+# Build the output based on the original list
+output = [d[num] for num in nums]
+
+print(output)
+# Output: [5, 0, 1, 2, 4, 2]
