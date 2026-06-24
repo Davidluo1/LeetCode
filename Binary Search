@@ -65,7 +65,8 @@ class Solution:
 
         left = 0
         right = len(nums) - 1
-    
+
+        # Repeatly search the left and right halves of the array based on the current mid number
         while left <= right:
             mid = (left + right) // 2
             if target == nums[mid]:
