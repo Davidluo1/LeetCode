@@ -1,0 +1,11 @@
+There are 3n piles of coins of varying size. You and your friends will take piles of coins as follows: In each step, you will choose any 3 piles of coins; you will always pick the second largest coin in the piles, repeat until there are no more piles of coins.
+
+
+def maxCoins(piles: list[int]) -> int:
+    # Sort the list
+    piles.sort()
+    
+    # We only care about the top 2/3 of the piles
+    # Starting from the end, skip every 2nd element
+    n = len(piles) // 3
+    return sum(piles[n::2])
