@@ -1,0 +1,16 @@
+Given an array of characters, find the length of the longest possible palindrome substring combination.
+
+
+def longestpal(arr: list) -> int:
+    odd_chars = set()
+    length = 0
+    
+    for char in arr:
+        if char in odd_chars:
+            length += 2
+            odd_chars.remove(char)
+        else:
+            odd_chars.add(char)
+            
+    # If the set is not empty, we have at least one leftover char for the middle
+    return length + (1 if odd_chars else 0)
